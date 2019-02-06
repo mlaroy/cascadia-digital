@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+import Input from './input';
+import Textarea from './textarea';
+
+class ContactForm extends Component {
+  render() {
+    return (
+      <form method="post" action="/success" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
+        <Input type="hidden" name="bot-field" />
+        <Input name="name" label={true}/>
+        <Input name="email" type="email" label={true} />
+        <Textarea name="message" id="message" rows="10" />
+        <Input name="submit" type="submit" label={false} value="Send" />
+    </form>
+    );
+  }
+}
+
+export default ContactForm

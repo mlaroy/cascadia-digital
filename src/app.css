@@ -1,0 +1,102 @@
+@tailwind preflight;
+
+:root {
+  --jp-indigo:#223843;
+  --dark-sea-green: #83B692;
+  --terra-cotta: #ED6A5A;
+  --khaki: #B7AD99;
+  --grey-asparagus: #3E5641;
+  --font-sans: Helvetica Neue, pragmatica, helvetica, arial, sans-serif;
+  --font-serif: adobe-caslon-pro, Garamond, Times New Roman, serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  @apply .text-jp-indigo .text-lg;
+  font-family: var(--font-serif);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 5px;
+  @apply .px-8 .py-4 .bg-white;
+}
+
+.skip-link:focus {
+  left: 0;
+  z-index: 100;
+
+}
+
+.button {
+  @apply .text-white .bg-terra-cotta .px-8 .py-4 .no-underline .rounded;
+  font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.link {
+  @apply .text-jp-indigo;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.field {
+  @apply .mb-8;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  @apply .text-jp-indigo;
+}
+
+h1 {
+  @apply .text-5xl .mb-8;
+}
+
+h2 {
+  @apply .text-5xl .mb-8;
+}
+
+h3 {
+  @apply .text-3xl .mb-4;
+}
+
+.hero {
+  @apply .w-full .flex .justify-center .flex-col;
+  height: 70vh;
+}
+
+.bg-gradient {
+  @apply .bg-jp-indigo .text-white .flex .justify-center .flex-col;
+  background-color: var(--jp-indigo);
+  background: linear-gradient(120deg, var(--jp-indigo) 0%, var(--jp-indigo) 20%, var(--dark-sea-green) 100%);
+}
+
+@tailwind utilities;

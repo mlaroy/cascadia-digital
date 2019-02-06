@@ -1,0 +1,4 @@
+.hero {
+  background: red;
+  @apply .w-full .h-screen .flex .justify-center .flex-col;
+}
