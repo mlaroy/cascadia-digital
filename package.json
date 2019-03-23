@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
+  "name": "Cascadia Digital Gatsby Site",
+  "description": "from - Gatsby default starter",
+  "version": "1.1.0",
   "author": "Michael LaRoy <mike.laroy@gmail.com>",
   "dependencies": {
     "css-loader": "^1.0.0",
