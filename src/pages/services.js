@@ -1,33 +1,22 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Section from '../components/section'
 import Layout from '../components/layout'
-
-const SecondPage = () => (
+import Services from '../components/serviceTeaser'
+import Hero from '../components/hero'
+const ServicesPage = () => (
   <Layout>
-    <Section>
-      <h1>Our Services</h1>
-      <Link to="/" className="link">Go back to the homepage</Link>
-    </Section>
-    <section className="bg-grey">
+    <Hero title="Services">
+      Let’s work together to find the solution for you. <br /> Here are some of the things we do.
+    </Hero>
+    <div className="bg-grey-lightest">
       <Section>
-        <h2 className="text-3xl">WordPress Development</h2>
-        <p className="leading-normal">Welcome to about</p>
-        <ul>
-          <li>E-Commerce</li>
-          <li>Enterprice CMS solution</li>
-          <li>Blogs</li>
+        <ul className="services-list">
+          <Services />
         </ul>
       </Section>
-    </section>
-    <section className="bg-white">
-      <Section>
-        <h2 className="text-3xl">JavaScript Development</h2>
-        <p>Welcome to about</p>
-      </Section>
-    </section>
-
+    </div>
   </Layout>
 )
 
-export default SecondPage
+export default ServicesPage
