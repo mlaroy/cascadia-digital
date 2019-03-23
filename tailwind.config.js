@@ -44,11 +44,11 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   'transparent': 'transparent',
 
-  'dark-sea-green': '#83B692',
   'jp-indigo': '#223843',
-  'terra-cotta': '#ED6A5A',
-  'khaki': '#B7AD99',
-  'grey-asparagus': '#3E5641',
+  'cream':  '#C8F0FF',
+  'light-blue':  '#53ABCF',
+  'lighter-blue':  '#67D6FF',
+  'greyish-blue':  '#637780',
 
   'black': '#22292f',
   'grey-darkest': '#3d4852',
@@ -196,6 +196,8 @@ module.exports = {
 
   fonts: {
     'sans': [
+      'brandon-grotesque',
+      'Futura',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -206,10 +208,11 @@ module.exports = {
       'Cantarell',
       'Fira Sans',
       'Droid Sans',
-      'Helvetica Neue',
-      'sans-serif',
+      'Helvetica Neue'
     ],
     'serif': [
+      'Garamond',
+      'Georgia',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -218,8 +221,7 @@ module.exports = {
       'DejaVu Serif',
       'Bitstream Vera Serif',
       'Liberation Serif',
-      'Georgia',
-      'serif',
+      'serif'
     ],
     'mono': [
       'Menlo',
@@ -260,6 +262,8 @@ module.exports = {
     '3xl': '1.875rem',  // 30px
     '4xl': '2.25rem',   // 36px
     '5xl': '3rem',      // 48px
+    '6xl': '4rem',      // 48px
+    '8xl': '5rem',      // 96px
   },
 
   /*

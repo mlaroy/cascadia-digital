@@ -9,7 +9,7 @@ const SuccessPage = () => (
     <Section>
       <h1>Thank you!</h1>
       <p className="text-xl">We'll get back to you as soon as possible.</p>
-      <Link to="/about" className="link">About us</Link>
+      <Link to="/" className="link">Back home</Link>
     </Section>
   </Layout>
 )

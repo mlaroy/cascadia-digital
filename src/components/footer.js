@@ -1,22 +1,23 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Section from './section'
+import MainNav from './main-nav';
+import whitelogo from '../images/cascadia-logo-5-white.svg'
 
 const Footer = ({ siteTitle }) => (
-  <footer className="footer bg-grey-lightest text-white">
-    <Section>
-      <h1 className="text-cascadia-green m-auto">
-        <Link
-          to="/"
-          className="text-cascadia-green no-underline"
-        >
-          <span className="hidden">
-            {siteTitle}
-          </span>
-        </Link>
-      </h1>
+  <footer className="footer bg-black text-white">
+    <Section className="flex items-center justify-between flex-col md:flex-row">
+      <img src={whitelogo} width="150" alt="" />
+      <div className="footer-nav text-center">
+        <MainNav linkColor="text-white" />
+        <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a>
+      </div>
+      &copy; {getYear()} {siteTitle}
     </Section>
   </footer>
 )
 
+const getYear = () => {
+  return new Date().getFullYear();
+}
 export default Footer

@@ -13,7 +13,8 @@ const Layout = ({ children }) => (
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title
+            title,
+            url
           }
         }
       }
@@ -23,15 +24,41 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Cascadia Digial | Fraser Valley web development | Abbotsford' },
-            { name: 'keywords', content: 'Web Development, front-end, WordPress, blog, JavaScript, React, Vue, Fraser Valley, Abbotsford' },
+            { name: 'description', content: 'Cascadia Digial | Vancouver - Fraser Valley web development partner | Abbotsford' },
+            { name: 'keywords', content: 'Web Development, front-end, WordPress, blog, JavaScript, React, Vue, Fraser Valley, Abbotsford, Vancouver, Gatsby, Accessiblity' },
+            {
+              property: `og:title`,
+              content: data.site.siteMetadata.title
+            },
+            {
+              property: `og:image`,
+              content: `${data.site.siteMetadata.url}/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`
+            },
+            {
+              property: `og:url`,
+              content: data.site.siteMetadata.url
+            },
+            {
+              property: `og:image:url`,
+              content: `${data.site.siteMetadata.url}/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`,
+            },
+            {
+              property: `og:image:secure_url`,
+              content: `${data.site.siteMetadata.url}/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`,
+            },
+            {
+              property: `og:image:type`,
+              content: `image/jpg`,
+            },
           ]}
         >
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        {children}
-        <Footer />
+          <main id="main-content">
+            {children}
+          </main>
+        <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}
   />
