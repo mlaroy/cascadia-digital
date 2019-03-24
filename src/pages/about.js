@@ -1,5 +1,5 @@
 import React from 'react'
-// import Helmet from 'react-helmet'
+import Helmet from 'react-helmet'
 // import { Link } from 'gatsby'
 import Section from '../components/section'
 import Hero from '../components/hero'
@@ -9,8 +9,13 @@ import collaborate from '../images/collaborate.svg';
 import mark from '../images/cascadia-mark-5.svg'
 import ContactBumper from '../components/contactBumper'
 
-const SecondPage = ({ siteTitle }) => (
+const About = props => (
   <Layout>
+    <Helmet>
+      <title>About | Cascadia Digital</title>
+      <meta property="og:title" content="About | Cascadia Digital" />
+      <meta property="og:url" content={ props.location.href } />
+    </Helmet>
     <Hero title="About Cascadia Digital" img={collaborate}>
       At Cascadia, your business goals are our goals. We help you identify <br className="hidden md:block" />
       your needs, and work together with you to find solutions.
@@ -25,7 +30,7 @@ const SecondPage = ({ siteTitle }) => (
             </figure>
           </div>
           <div className="md:w-2/3 mx-auto">
-            <img src={mark} alt={siteTitle} width="50" className="block mb-8" />
+            <img src={mark} alt={props.siteTitle} width="50" className="block mb-8" />
             <p className="text-lg md:text-2xl leading-normal mb-8">
               Cascadia Digital was founded by Michael LaRoy, a front-end developer from Vancouver
               with a concern for accessibilty and good user experiences. Cascadia’s vision is to be a partner
@@ -51,4 +56,4 @@ const SecondPage = ({ siteTitle }) => (
   </Layout>
 )
 
-export default SecondPage
+export default About

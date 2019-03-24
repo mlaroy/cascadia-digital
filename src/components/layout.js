@@ -8,14 +8,15 @@ import Header from './header'
 import Footer from './footer'
 import '../app.css'
 
-const Layout = ({ children }) => (
+const Layout = props => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title,
+            title
             url
+            image
           }
         }
       }
@@ -25,7 +26,7 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Cascadia Digial | Cascadia Digital is your trusted web development partner. | Vancouver - Fraser Valley ' },
+            { name: 'description', content: 'Cascadia Digital is your trusted web development partner  |  Vancouver - Fraser Valley ' },
             { name: 'keywords', content: 'Web Development, front-end, WordPress, blog, JavaScript, React, Vue, Fraser Valley, Abbotsford, Vancouver, Gatsby, Accessiblity' },
             {
               property: `og:title`,
@@ -57,7 +58,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
           <main id="main-content">
-            {children}
+            {props.children}
           </main>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>

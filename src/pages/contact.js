@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-// import { Link } from 'gatsby'
-
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
-import Section from '../components/section'
 import fun from '../images/fun.svg'
 
 class ContactPage extends Component {
@@ -23,8 +21,14 @@ class ContactPage extends Component {
     }
   }
   render() {
+    const { location } = this.props;
     return(
       <Layout>
+        <Helmet>
+          <title>Contact | Cascadia Digital</title>
+          <meta property="og:title" content="Contact | Cascadia Digital" />
+          <meta property="og:url" content={ location.href } />
+        </Helmet>
         <Hero title="Work with Cascadia Digital" img={fun}>
           Get in touch to find out how we can work together
           {renderContactLink(this.state)}
