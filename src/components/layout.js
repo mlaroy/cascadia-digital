@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Cascadia Digial | Vancouver - Fraser Valley web development partner | Abbotsford' },
+            { name: 'description', content: 'Cascadia Digial | Cascadia Digital is your trusted web development partner. | Vancouver - Fraser Valley ' },
             { name: 'keywords', content: 'Web Development, front-end, WordPress, blog, JavaScript, React, Vue, Fraser Valley, Abbotsford, Vancouver, Gatsby, Accessiblity' },
             {
               property: `og:title`,

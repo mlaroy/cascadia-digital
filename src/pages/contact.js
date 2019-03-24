@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Section from '../components/section'
 import ContactForm from '../components/contact-form'
 import Hero from '../components/hero'
+import fun from '../images/fun.svg'
 
 class ContactPage extends Component {
   state = {
@@ -25,7 +26,7 @@ class ContactPage extends Component {
   render() {
     return(
       <Layout>
-        <Hero title="Work with Cascadia Digital">
+        <Hero title="Work with Cascadia Digital" img={fun}>
           Get in touch to find out how we can work together
         </Hero>
         {renderContactLink(this.state)}
@@ -41,7 +42,7 @@ const renderContactLink = ({hasJS})  => {
     );
   } else {
     return (
-      <p className="text-center">
+      <p className="md:text-center px-4">
         <a href="mailto&#58;info%40c&#97;s%63%61d%&#54;9%61&#46;di&#103;&#37;&#54;&#57;&#116;al" className="button">Send an Email</a>
       </p>
     );

@@ -1,10 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
+import Hero from '../components/hero'
+import notFound from '../images/not-found.svg'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Hero title="Not Found" img={notFound}>
+      <p>You just hit a route that doesn&#39;t exist...</p>
+    </Hero>
   </Layout>
 )
 

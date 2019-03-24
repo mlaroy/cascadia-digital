@@ -150,7 +150,6 @@ blockquote {
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 700;
-  /* text-transform: uppercase; */
   @apply .text-jp-indigo;
 }
 
@@ -178,16 +177,18 @@ h3 {
 }
 
 .service-grid {
-  @apply .list-reset;
-  margin: 0;
+  /* margin: 0;
   display: grid;
-  grid-column-gap: 2rem;
-  grid-row-gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fill, 2fr); */
 
-    /* @media (min-width: 576px) {
-      grid-template-columns: repeat(auto-fit,, minmax(500px, 1fr));
-    } */
+  /* @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  } */
+}
+
+.service-item + .service-item {
+  @apply .mt-24;
 }
 
 

@@ -7,13 +7,16 @@ import whitelogo from '../images/cascadia-logo-5-white.svg'
 const Footer = ({ siteTitle }) => (
   <footer className="footer bg-black text-white">
     <Section className="flex items-center justify-between flex-col md:flex-row">
-      <img src={whitelogo} width="150" alt="" />
+      <img src={whitelogo} width="150" alt="" className="mb-16 md:mb-0"/>
       <div className="footer-nav text-center">
         <MainNav linkColor="text-white" />
-        <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a>
+
+        {/* <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a> */}
       </div>
-      &copy; {getYear()} {siteTitle}
     </Section>
+    <div className="md:mx-auto md:w-5/6 pb-8">
+      <p className="text-sm text-center md:text-right">&copy; {getYear()} {siteTitle}</p>
+    </div>
   </footer>
 )
 
