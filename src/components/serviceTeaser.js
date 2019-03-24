@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import wordpress from '../images/wordpress.svg';
 import jamStack from '../images/static.svg';
 import performance from '../images/performance.svg';
@@ -13,12 +13,12 @@ const ServiceTeaser = () => (
     render={({allMarkdownRemark}) => (
       <>
           {allMarkdownRemark.edges.map(edge => {
-            const { title, description, slug, image } = edge.node.frontmatter;
-            const img = getImage(image);
+            const { title, description, img } = edge.node.frontmatter;
+            const image = getImage(img);
             return(
               <div key={title} className="flex flex-col md:flex-row service-item">
                 <div className="md:w-1/3 md:mr-32">
-                  <img src={img} width="300" className="block mb-4 w-1/2 md:w-auto" />
+                  <img src={image} alt="" width="300" className="block mb-4 w-1/2 md:w-auto" />
                 </div>
                 <div className="md:w-2/3 md:flex flex-col justify-center">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal">{title}</h2>
@@ -66,7 +66,7 @@ const SERVICE_TEASER_QUERY = graphql`
               title
               slug
               description
-              image
+              img
             }
           }
       }
