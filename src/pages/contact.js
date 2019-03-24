@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 // import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Section from '../components/section'
-import ContactForm from '../components/contact-form'
 import Hero from '../components/hero'
 import fun from '../images/fun.svg'
 
