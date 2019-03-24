@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import og from '../images/og.png'
 
 import Header from './header'
 import Footer from './footer'
@@ -32,7 +33,7 @@ const Layout = ({ children }) => (
             },
             {
               property: `og:image`,
-              content: `${data.site.siteMetadata.url}/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`
+              content: og
             },
             {
               property: `og:url`,
@@ -40,15 +41,15 @@ const Layout = ({ children }) => (
             },
             {
               property: `og:image:url`,
-              content: `${data.site.siteMetadata.url}/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`,
+              content: og
             },
             {
               property: `og:image:secure_url`,
-              content: `${data.site.siteMetadata.url}/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`,
+              content: og
             },
             {
               property: `og:image:type`,
-              content: `image/jpg`,
+              content: `image/png`,
             },
           ]}
         >

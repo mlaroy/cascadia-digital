@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Services from '../components/serviceTeaser'
 import Hero from '../components/hero'
 import business from '../images/business.svg'
+import ContactBumper from '../components/contactBumper'
 
 const ServicesPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const ServicesPage = () => (
         </ul>
       </Section>
     </div>
+    <ContactBumper />
   </Layout>
 )
 
