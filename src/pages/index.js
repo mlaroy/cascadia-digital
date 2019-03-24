@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link';
 import Layout from '../components/layout'
 // import Section from '../components/section'
-import Hero from '../components/homeHero'
+import HomeHero from '../components/homeHero'
 import WorkTeaser from '../components/work-teaser'
 import Bumper from '../components/bumper'
-import team from '../images/team.svg'
+import ContactBumper from '../components/contactBumper'
 import servicesSVG from '../images/services.svg'
 import Services from '../components/serviceTeaser'
 import Partners from '../components/partners'
@@ -17,10 +17,9 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <Hero />
-        <div className="bg-grey-lightest py-32 flex flex-col">
+        <HomeHero />
+        <div className="bg-grey-lightest py-16 md:py-24 flex flex-col">
           <div className="md:mx-auto md:w-5/6 px-4 flex items-center flex-col">
-            <img src={mark} alt="Cascadia Digial" width="70" className="block md:mx-auto mb-8" />
             <p className="text-xl md:text-2xl leading-normal md:w-3/4 md:mx-auto mb-8 md:text-center ">
               Cascadia Digital is your trusted web development partner. With experience in WordPress, Vue, React,
               and other tools and tech, we work with all manner of clients, whether you are a business
@@ -34,14 +33,14 @@ class IndexPage extends Component {
 
 
 
-        <div className="bg-white py-32 flex flex-col">
+        <div className="bg-white py-16 md:py-24 flex flex-col">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-center leading-normal mb-8 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl sm:text-center leading-normal mb-16 leading-none">
               Services
             </h2>
-            <ul className="service-grid">
+            <div className="service-grid md:px-16">
               <Services />
-            </ul>
+            </div>
           </div>
         </div>
 
@@ -67,30 +66,12 @@ class IndexPage extends Component {
           </div>
         </div> */}
 
-        <div className="bg-white py-32 flex flex-col">
-          <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
-            <div className="md:flex">
-              <div className="md:w-1/2 text-center">
-                <img src={team} className="w-3/4" alt=""/>
-              </div>
-              <div className="md:w-1/2 flex flex-col justify-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none">
-                  Team up with Cascadia Digital
-                </h2>
-                <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-                  With Cascadia, you become a partner, not a client. <br /> Let's team up to meet your business goals.
-                </p>
-                <p>
-                  <Link to="contact" className="button hover:bg-lighter-blue shadow">Get in touch</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ContactBumper className="bg-grey-lightest" />
 
-        <div className="bg-grey-lightest  py-32 flex flex-col">
+        <div className="bg-white py-16 md:py-24 flex flex-col">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl sm:text-center leading-normal mb-16 leading-none">
+            {/* <img src={mark} alt="Cascadia Digial" width="40" className="block md:mx-auto mb-8" /> */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl sm:text-center leading-normal mb-16 leading-none">
               Clients &amp; Agency Partners
             </h2>
             <Partners />

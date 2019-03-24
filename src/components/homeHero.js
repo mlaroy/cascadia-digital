@@ -5,11 +5,11 @@ import React from 'react'
 import investing from '../images/investing.svg'
 import Section from './section'
 
-const Hero = () => (
+const HomeHero = () => (
   <div className="hero">
     <Section className="p-4 fadeIn md:flex items-center justify-center">
       <div className="md:w-1/2 flex justify-center items-center">
-        <img src={investing} alt="" className="w-2/3"/>
+        <img src={investing} alt="" className="w-2/3  mx-auto mb-8 md:mb-0"/>
       </div>
       <div className="md:w-1/2 flex justify-center items-center">
         <div>
@@ -28,4 +28,4 @@ const Hero = () => (
   </div>
 )
 
-export default Hero
+export default HomeHero
