@@ -30,6 +30,11 @@ html > * {
   }
 }
 
+hr {
+  height: auto;
+  border-top: 1px solid var(--greyish-blue);
+}
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 1.5s;
@@ -90,7 +95,7 @@ body.nav-open {
 }
 
 .main-nav .link.is-active {
-  @apply .underline;
+  @apply .underline .text-light-blue;
 }
 
 blockquote {

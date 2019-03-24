@@ -5,7 +5,7 @@ import Section from './section'
 
 const ContactBumper = props => {
   const { className } = props;
-  const css = `${className} py-12 md:py-24 flex flex-col`;
+  const css = `${className}`;
   return (
     <div className={css}>
       <Section>
