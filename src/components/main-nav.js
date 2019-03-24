@@ -9,7 +9,7 @@ class MainNav extends Component {
       <ul className="list-reset sm:flex justify-between">
         {pages && pages.map(page => {
           return (
-            <li className="flex text-center items-center ml-4" key={page.url}>
+            <li className="flex text-center items-center sm:ml-4" key={page.url}>
               <Link
                 to={page.url}
                 activeClassName={activeClass}
@@ -32,10 +32,10 @@ const pages = [
   //   url: '/work',
   //   text: 'Work'
   // },
-  // {
-  //   url: '/services',
-  //   text: 'Services'
-  // },
+  {
+    url: '/services',
+    text: 'Services'
+  },
   {
     url: '/contact',
     text: 'Contact'
