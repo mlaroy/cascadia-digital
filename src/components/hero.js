@@ -5,7 +5,7 @@ class Hero extends Component {
   render() {
     const { title, children, img } = this.props;
     return (
-      <Section>
+      <Section className="fadeIn">
         {img && (
           <div className="w-2/3 md:w-auto mx-auto">
             <img src={img} alt="" width="320" className="mx-auto block my-8"/>

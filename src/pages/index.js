@@ -33,7 +33,7 @@ class IndexPage extends Component {
 
 
 
-        <div className="bg-white py-16 md:py-24 flex flex-col">
+        {/* <div className="bg-white py-16 md:py-24 flex flex-col">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
             <h2 className="text-3xl md:text-4xl lg:text-5xl sm:text-center leading-normal mb-16 leading-none">
               Services
@@ -42,14 +42,14 @@ class IndexPage extends Component {
               <Services />
             </div>
           </div>
-        </div>
+        </div> */}
 
-        {/* <div className="bg-white py-32 flex flex-col">
+        <div className="bg-white py-16 md:py-24 flex flex-col">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
             <div className="md:flex">
               <div className="md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none">
-                  Is your website letting you down?
+                  Services
                 </h2>
                 <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
                   Get solutions for improving your online presence. <br />
@@ -64,14 +64,14 @@ class IndexPage extends Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <ContactBumper className="bg-grey-lightest" />
 
         <div className="bg-white py-16 md:py-24 flex flex-col">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
             {/* <img src={mark} alt="Cascadia Digial" width="40" className="block md:mx-auto mb-8" /> */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl sm:text-center leading-normal mb-16 leading-none">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-center leading-normal mb-16 leading-none">
               Clients &amp; Agency Partners
             </h2>
             <Partners />

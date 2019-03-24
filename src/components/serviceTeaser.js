@@ -22,7 +22,7 @@ const ServiceTeaser = () => (
                 </div>
                 <div className="md:w-2/3 md:flex flex-col justify-center">
                   <h3 className="text-2xl sm:text-3xl leading-normal">{title}</h3>
-                  <p className="mb-4 text-lg sm:text-xl">{description}</p>
+                  <p className="mb-4 text-lg sm:text-xl leading-normal">{description}</p>
                   {/* <p className="mb-4"><strong>Starts at $10,000</strong></p> */}
                   {/* <Link to={`/services/${slug}`} className="button button--small">Learn more</Link> */}
                 </div>
