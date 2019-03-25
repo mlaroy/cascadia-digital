@@ -45,7 +45,7 @@ const renderContactLink = ({hasJS})  => {
     );
   } else {
     return (
-      <p className="md:text-center px-4 mt-16">
+      <p className="md:text-center mt-16">
         <a href="mailto&#58;info%40c&#97;s%63%61d%&#54;9%61&#46;di&#103;&#37;&#54;&#57;&#116;al" className="button">Send an email</a>
       </p>
     );
