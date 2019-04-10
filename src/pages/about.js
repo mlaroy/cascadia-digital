@@ -8,6 +8,7 @@ import portrait from '../images/portrait.jpg';
 import collaborate from '../images/collaborate.svg';
 import mark from '../images/cascadia-mark-5.svg'
 import ContactBumper from '../components/contactBumper'
+import ServicesBumper from '../components/servicesBumper'
 
 const About = props => (
   <Layout>
@@ -51,7 +52,8 @@ const About = props => (
         </div>
       </Section>
     </div>
-    <ContactBumper className="bg-white" />
+    <ServicesBumper className="bg-white" />
+    <ContactBumper className="bg-grey-lightest" />
 
   </Layout>
 )
