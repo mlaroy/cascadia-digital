@@ -10,7 +10,7 @@ class Partners extends Component {
       <ul className="list-reset flex flex-col md:flex-row mx-auto">
       {images.map(item => {
         return (
-          <li className="flex flex-col justify-center mx-16 py-8" key={item.title}>
+          <li className="flex flex-col justify-center mx-2 py-8 lg:mx-8 " key={item.title}>
             <img src={item.src} alt={item.title} className="block w-48"/>
           </li>
         )

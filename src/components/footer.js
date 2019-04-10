@@ -9,8 +9,9 @@ const Footer = ({ siteTitle }) => (
     <Section>
       <div className="flex items-center justify-between flex-col md:flex-row mb-16">
         <img src={whitelogo} width="150" alt="" className="mb-16 md:mb-0"/>
-        <div className="footer-nav text-center">
+        <div className="footer-nav text-center md:text-right">
           <MainNav linkColor="text-white" />
+          <a href="https://twitter.com/digitalcascadia" className="link text-white text-sm mt-4 block">Follow on Twitter</a>
           {/* <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a> */}
         </div>
       </div>

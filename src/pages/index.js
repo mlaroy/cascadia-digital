@@ -6,8 +6,9 @@ import HomeHero from '../components/homeHero'
 import Section from '../components/section'
 // import Bumper from '../components/bumper'
 import ContactBumper from '../components/contactBumper'
+import ServicesBumper from '../components/servicesBumper'
+import AgencyBumper from '../components/agencyBumper'
 import servicesSVG from '../images/services.svg'
-import Partners from '../components/partners'
 import cascadiaSVG from '../images/cascadia-logo-5.svg'
 
 class IndexPage extends Component {
@@ -29,56 +30,11 @@ class IndexPage extends Component {
           </Section>
         </div>
 
-        <Section>
-          <div className="md:flex flex-row-reverse">
-            <div className="md:w-1/2 md:text-center">
-              <img src={servicesSVG} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt=""/>
-            </div>
-            <div className="md:w-1/2 flex flex-col justify-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none">
-                Services
-              </h2>
-              <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-                Get solutions for improving your online presence. <br />
-                Find out what services we can offer.
-              </p>
-              <p>
-                <Link to="services" className="button hover:bg-lighter-blue shadow">See services</Link>
-              </p>
-            </div>
-          </div>
-        </Section>
-        {/* <Section>
-          <div className="md:flex">
-            <div className="md:w-1/2 flex flex-col justify-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none">
-                Services
-              </h2>
-              <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-                Get solutions for improving your online presence. <br />
-                Find out what services we can offer.
-              </p>
-              <p>
-                <Link to="services" className="button hover:bg-lighter-blue shadow">See services</Link>
-              </p>
-            </div>
-            <div className="md:w-1/2 text-center">
-              <img src={servicesSVG} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt=""/>
-            </div>
-          </div>
-        </Section> */}
+        <ServicesBumper />
 
         <ContactBumper className="bg-grey-lightest" />
 
-        <Section>
-          <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
-            {/* <img src={mark} alt="Cascadia Digial" width="40" className="block md:mx-auto mb-8" /> */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-12 text-center leading-none">
-              Clients &amp; Agency Partners
-            </h2>
-            <Partners />
-          </div>
-        </Section>
+        <AgencyBumper />
 
         {/* <div className="bg-white py-32">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
