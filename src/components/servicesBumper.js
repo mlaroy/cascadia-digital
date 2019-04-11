@@ -5,7 +5,7 @@ import Section from './section'
 
 const ServicesBumper = props => {
   const { className } = props;
-  const css = `${className}`;
+  const css = className || null;
   return (
     <div className={css}>
       <Section>

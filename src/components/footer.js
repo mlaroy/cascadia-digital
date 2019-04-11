@@ -11,7 +11,11 @@ const Footer = ({ siteTitle }) => (
         <img src={whitelogo} width="150" alt="" className="mb-16 md:mb-0"/>
         <div className="footer-nav text-center md:text-right">
           <MainNav linkColor="text-white" />
-          <a href="https://twitter.com/digitalcascadia" className="link text-white text-sm mt-4 block">Follow on Twitter</a>
+          <h3 class="text-white text-md md:justify-end mt-8">Follow</h3>
+          <div className="flex justify-end">
+            <a href="https://twitter.com/digitalcascadia" className="link text-white text-sm block">Twitter</a>
+            <a href="https://instagram.com/cascadiadigital" className="link text-white text-sm block ml-4">Instagram</a>
+          </div>
           {/* <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a> */}
         </div>
       </div>

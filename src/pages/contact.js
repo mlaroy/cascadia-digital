@@ -30,7 +30,7 @@ class ContactPage extends Component {
           <meta property="og:url" content={ location.href } />
         </Helmet>
         <Hero title="Work with Cascadia Digital" img={fun}>
-          Get in touch to find out how we can work together
+          Get in touch to find out how we can work together.
           {renderContactLink(this.state)}
         </Hero>
       </Layout>

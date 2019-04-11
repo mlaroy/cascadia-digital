@@ -5,7 +5,8 @@ module.exports = {
     title: 'Cascadia Digital',
     url: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
-    image: '/images/og.png'
+    instagram: '@cascadiadigital',
+    metaImage: '/public/cascadia-logo.png'
   },
   plugins: [
     {
@@ -27,7 +28,7 @@ module.exports = {
         background_color: '#003846',
         theme_color: '#2AACD2',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/cascadia-mark-5.svg', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

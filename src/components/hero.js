@@ -12,8 +12,8 @@ class Hero extends Component {
           </div>
         )}
         <div className="md:text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl">{title}</h1>
-          <p className="text-xl sm:text-2xl md:text-3xl leading-normal">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl">{title}</h1>
+          <p className="text-xl sm:text-2xl lg:text-3xl leading-normal">
             {children}
           </p>
         </div>
