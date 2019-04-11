@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import og from '../images/og.png'
+// import og from '../images/og.png'
 
 import Header from './header'
 import Footer from './footer'
@@ -16,7 +16,7 @@ const Layout = props => (
           siteMetadata {
             title
             url
-            image
+            metaImage
           }
         }
       }
@@ -34,7 +34,7 @@ const Layout = props => (
             },
             {
               property: `og:image`,
-              content: og
+              content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
             },
             {
               property: `og:url`,
@@ -42,11 +42,11 @@ const Layout = props => (
             },
             {
               property: `og:image:url`,
-              content: og
+              content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
             },
             {
               property: `og:image:secure_url`,
-              content: og
+              content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
             },
             {
               property: `og:image:type`,
