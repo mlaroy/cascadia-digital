@@ -6,7 +6,7 @@ module.exports = {
     url: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
-    metaImage: '/public/cascadia-logo.png'
+    metaImage: '/cascadia-logo.png'
   },
   plugins: [
     {
