@@ -49,6 +49,14 @@ const Layout = props => (
               content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
             },
             {
+              property: `og:image:width`,
+              content: `472 × 247`,
+            },
+            {
+              property: `og:image:height`,
+              content: `472 × 247`,
+            },
+            {
               property: `og:image:type`,
               content: `image/png`,
             },
