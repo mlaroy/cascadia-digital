@@ -45,7 +45,7 @@ const About = props => (
             <hr className="my-16 block"/>
             <p className="text-lg md:text-2xl leading-normal">
               Cascadia Digital is based in British Columbia’s Fraser Valley.
-              While serving clients local to the Valley, we also parter with business and agencies in nearby Vancouver,
+              While serving clients local to the Valley, we also parter with businesses and agencies in nearby Vancouver,
               and across the country.
             </p>
           </div>
