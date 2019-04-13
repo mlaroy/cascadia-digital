@@ -8,6 +8,24 @@ import Header from './header'
 import Footer from './footer'
 import '../app.css'
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "legalName": "Cascadia Digital Inc.",
+  "name": "Cascadia Digital",
+  "url": "https://cascadia.digital",
+  "logo": "https://cascadia.digital/public/images/cascadia-logo.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "info@cascadia.digital",
+    "contactType": "information"
+  }],
+  "sameAs": [
+    "https://instagram.com/cascadiadigital",
+    "https://twitter.com/digitalcascadia"
+  ]
+};
+
 const Layout = props => (
   <StaticQuery
     query={graphql`
@@ -62,6 +80,9 @@ const Layout = props => (
             },
           ]}
         >
+          <script>
+            {JSON.stringify(schemaData)}
+          </script>
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
