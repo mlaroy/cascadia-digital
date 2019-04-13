@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Cascadia Digital',
-    url: 'https://cascadia.digital',
+    siteUrl: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
     metaImage: '/images/cascadia-logo-jpg.jpg'
@@ -106,6 +106,7 @@ module.exports = {
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-netlify'
   ],
 }
