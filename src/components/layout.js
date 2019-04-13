@@ -33,7 +33,7 @@ const Layout = props => (
         site {
           siteMetadata {
             title
-            url
+            siteUrl
             metaImage
           }
         }
@@ -52,19 +52,19 @@ const Layout = props => (
             },
             {
               property: `og:image`,
-              content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
+              content: data.site.siteMetadata.siteUrl + data.site.siteMetadata.metaImage
             },
             {
               property: `og:url`,
-              content: data.site.siteMetadata.url
+              content: data.site.siteMetadata.siteUrl
             },
             {
               property: `og:image:url`,
-              content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
+              content: data.site.siteMetadata.siteUrl + data.site.siteMetadata.metaImage
             },
             {
               property: `og:image:secure_url`,
-              content: data.site.siteMetadata.url + data.site.siteMetadata.metaImage
+              content: data.site.siteMetadata.siteUrl + data.site.siteMetadata.metaImage
             },
             {
               property: `og:image:width`,
