@@ -80,7 +80,7 @@ const Layout = props => (
             },
           ]}
         >
-          <script>
+          <script type="application/ld+json">
             {JSON.stringify(schemaData)}
           </script>
           <html lang="en" />
