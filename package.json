@@ -1,7 +1,7 @@
 {
   "name": "cascadia-digital-gatsby-site",
   "description": "from - Gatsby default starter",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "author": "Michael LaRoy <mike.laroy@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.33",
