@@ -16,7 +16,7 @@ class IndexPage extends Component {
         <HomeHero />
         <div className="bg-grey-lightest">
           <Section>
-            <img src={cascadiaSVG} width="200" className="block mb-8" />
+            <img src={cascadiaSVG} width="200" className="block mb-8"  alt="Cascadia Logo"/>
             <p className="text-xl md:text-3xl leading-normal md:w-3/4 mb-8 ">
               Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help you
               create a strategy to execute on better web experiences. We have experience working in a range of

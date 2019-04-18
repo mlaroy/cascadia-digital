@@ -96,23 +96,4 @@ class Header extends Component {
   }
 }
 
-const pages = [
-  {
-    url: '/about',
-    text: 'About'
-  },
-  {
-    url: '/work',
-    text: 'Work'
-  },
-  {
-    url: '/services',
-    text: 'Services'
-  },
-  {
-    url: '/contact',
-    text: 'Contact'
-  }
-];
-
 export default Header

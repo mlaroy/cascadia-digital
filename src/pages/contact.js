@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import fun from '../images/fun.svg'
-import ServicesBumper from '../components/ServicesBumper'
+import ServicesBumper from '../components/servicesBumper'
 
 class ContactPage extends Component {
   state = {
