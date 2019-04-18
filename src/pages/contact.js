@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import fun from '../images/fun.svg'
+import ServicesBumper from '../components/ServicesBumper'
 
 class ContactPage extends Component {
   state = {
@@ -33,6 +34,7 @@ class ContactPage extends Component {
           Get in touch to find out how we can work together.
           {renderContactLink(this.state)}
         </Hero>
+        <ServicesBumper className="bg-grey-lightest" />
       </Layout>
     )
   }
@@ -46,7 +48,7 @@ const renderContactLink = ({hasJS})  => {
   } else {
     return (
       <p className="md:text-center mt-16">
-        <a href="mailto&#58;info%40c&#97;s%63%61d%&#54;9%61&#46;di&#103;&#37;&#54;&#57;&#116;al" className="button">Send an email</a>
+        <a href="mailto&#58;info%40c&#97;s%63%61d%&#54;9%61&#46;di&#103;&#37;&#54;&#57;&#116;al" className="button">Contact Cascadia Digital</a>
       </p>
     );
   }
