@@ -4,11 +4,9 @@ import Layout from '../components/layout'
 import HomeHero from '../components/homeHero'
 // import WorkTeaser from '../components/work-teaser'
 import Section from '../components/section'
-// import Bumper from '../components/bumper'
 import ContactBumper from '../components/contactBumper'
 import ServicesBumper from '../components/servicesBumper'
 import AgencyBumper from '../components/agencyBumper'
-import servicesSVG from '../images/services.svg'
 import cascadiaSVG from '../images/cascadia-logo-5.svg'
 
 class IndexPage extends Component {
@@ -18,13 +16,13 @@ class IndexPage extends Component {
         <HomeHero />
         <div className="bg-grey-lightest">
           <Section>
-            <img src={cascadiaSVG} width="200" className="block mx-auto mb-8" />
-            <p className="text-xl md:text-2xl leading-normal md:w-3/4 md:mx-auto mb-8 md:text-center ">
-              Cascadia Digital is your trusted web development partner. With experience in WordPress, Vue, React,
-              and other tools and tech, we work with all manner of clients, whether you are a business
-              in need of a website, or an agency in need of a partner for your web project.
+            <img src={cascadiaSVG} width="200" className="block mb-8" />
+            <p className="text-xl md:text-3xl leading-normal md:w-3/4 mb-8 ">
+              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help you
+              create a strategy to execute on better web experiences. We have experience working in a range of
+              tools and frameworks such as WordPress, Vue, and Laravel, with a focus on the front end.
             </p>
-            <p className="sm:w-3/4 sm:mx-auto sm:text-center ">
+            <p className="sm:w-3/4 ">
               <Link to="about" className="button hover:bg-lighter-blue shadow">Read more</Link>
             </p>
           </Section>
@@ -32,9 +30,10 @@ class IndexPage extends Component {
 
         <ServicesBumper />
 
-        <ContactBumper className="bg-grey-lightest" />
+        <AgencyBumper className="bg-grey-lightest" />
 
-        <AgencyBumper />
+        <ContactBumper  />
+
 
         {/* <div className="bg-white py-32">
           <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">

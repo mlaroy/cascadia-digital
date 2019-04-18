@@ -6,7 +6,8 @@ module.exports = {
     siteUrl: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
-    metaImage: '/images/cascadia-logo-jpg.jpg'
+    metaImage: '/images/cascadia-logo-jpg.jpg',
+    description: 'Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help you create a strategy to execute on better web experiences. We have experience working in a range of tools and frameworks such as WordPress, Vue, and Laravel, with a focus on the front end.'
   },
   plugins: [
     {

@@ -192,6 +192,11 @@ h3 {
   } */
 }
 
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
 .service-item + .service-item {
   @apply .mt-24;
 }
