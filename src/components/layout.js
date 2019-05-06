@@ -33,6 +33,7 @@ const Layout = props => (
         site {
           siteMetadata {
             title
+            footerTitle
             siteUrl
             metaImage
             description
@@ -90,7 +91,7 @@ const Layout = props => (
           <main id="main-content">
             {props.children}
           </main>
-        <Footer siteTitle={data.site.siteMetadata.title} />
+        <Footer siteTitle={data.site.siteMetadata.footerTitle} />
       </>
     )}
   />

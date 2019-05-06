@@ -35,7 +35,7 @@ const About = props => (
             <p className="text-lg md:text-2xl leading-normal mb-8">
               Cascadia Digital was founded by Michael LaRoy, a front-end developer from Vancouver
               with a concern for accessibilty and good user experiences. Cascadia Digital’s vision is to be a partner
-              to agencies and businesses alike, making lives easier when it comes to your web projects.
+              to agencies and businesses alike, bringing valuable experience to your web projects.
             </p>
             <p className="text-lg md:text-2xl leading-normal">
               Michael has worked with small startups, mid-size agencies, as well as large national corporations.
@@ -44,9 +44,8 @@ const About = props => (
             </p>
             <hr className="my-16 block"/>
             <p className="text-lg md:text-2xl leading-normal">
-              Cascadia Digital is based in British Columbia’s Fraser Valley.
-              While serving clients local to the Valley, we also parter with businesses and agencies in nearby Vancouver,
-              and across the country.
+              Cascadia Digital is based in British Columbia’s Fraser Valley. We parter with businesses and agencies in nearby Vancouver
+              and across the country, while also serving clients local to the Valley.
             </p>
           </div>
         </div>

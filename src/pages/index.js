@@ -16,16 +16,16 @@ class IndexPage extends Component {
         <HomeHero />
         <div className="bg-grey-lightest">
           <Section>
-            <img src={cascadiaSVG} width="200" className="block mb-8"  alt="Cascadia Logo"/>
-            <p className="text-xl md:text-3xl leading-normal md:w-4/5 mb-8 ">
-              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help you
-              create a strategy to execute on better web experiences. With a focus on the front end,
-              our experience working in WordPress, Vue, and Laravel (and more) enables us to help you
-              get the website solution you really need, done right.
+            <img src={cascadiaSVG} width="200" className="block mb-8 mx-auto"  alt="Cascadia Logo"/>
+            <p className="text-xl md:text-2xl leading-normal text-center mx-auto md:w-4/5">
+              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help agencies
+              deliver on their web development projects. With a focus on the front end, our experience working in WordPress,
+              Vue, React, and Laravel (and more) enables us to help you get the website solution you really need,
+              done right the first time.
             </p>
-            <p className="sm:w-3/4 ">
+            {/* <p className="sm:w-3/4 ">
               <Link to="about" className="button hover:bg-lighter-blue shadow">Read more</Link>
-            </p>
+            </p> */}
           </Section>
         </div>
 
