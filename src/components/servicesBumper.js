@@ -18,7 +18,7 @@ const ServicesBumper = props => {
               Services
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-              Find solutions for improving your online presence. <br />
+              Start your next website project on the right foot. <br />
               See what services we can offer.
             </p>
             <p>
