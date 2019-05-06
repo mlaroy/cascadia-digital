@@ -14,7 +14,7 @@ const schemaData = {
   "legalName": "Cascadia Digital Inc.",
   "name": "Cascadia Digital",
   "url": "https://cascadia.digital",
-  "logo": "https://cascadia.digital/public/images/cascadia-logo.png",
+  "logo": "https://cascadia.digital/images/cascadia-logo.png",
   "contactPoint": [{
     "@type": "ContactPoint",
     "email": "info@cascadia.digital",
