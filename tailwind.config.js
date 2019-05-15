@@ -196,7 +196,9 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'brandon-grotesque',
+      'benton-sans',
+      'Helvetica Neue',
+      // 'brandon-grotesque',
       'Futura',
       'system-ui',
       'BlinkMacSystemFont',
@@ -207,10 +209,11 @@ module.exports = {
       'Ubuntu',
       'Cantarell',
       'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue'
+      'Droid Sans'
+
     ],
     'serif': [
+      'benton-modern-display',
       'Garamond',
       'Georgia',
       'Constantia',

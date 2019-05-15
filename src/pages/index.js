@@ -16,8 +16,8 @@ class IndexPage extends Component {
         <HomeHero />
         <div className="bg-grey-lightest">
           <Section>
-            <img src={cascadiaSVG} width="200" className="block mb-8 mx-auto"  alt="Cascadia Logo"/>
-            <p className="text-xl md:text-2xl leading-normal text-center mx-auto md:w-4/5">
+            <img src={cascadiaSVG} width="200" className="block mb-8 md:mx-auto"  alt="Cascadia Logo"/>
+            <p className="text-lg md:text-xl lg:text-2xl leading-normal md:text-center mx-auto md:w-4/5">
               Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help agencies
               deliver on their web development projects. With a focus on the front end, our experience working in WordPress,
               Vue, React, and Laravel (and more) enables us to help you get the website solution you really need,
