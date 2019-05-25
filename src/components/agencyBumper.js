@@ -10,7 +10,7 @@ const AgencyBumper = props => {
     <div className={css}>
       <Section>
         <div className="md:mx-auto md:w-5/6 px-4 flex flex-col">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-12 text-center leading-none">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl leading-normal mb-12 text-center leading-none">
             Clients &amp; Agency Partners
           </h2>
           <Partners />

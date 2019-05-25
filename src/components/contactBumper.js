@@ -18,7 +18,7 @@ const ContactBumper = props => {
               Team up with Cascadia Digital
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-              With Cascadia, you become a partner, not a client. <br /> Let's team up to meet your business goals.
+              Let's team up to meet your business goals.
             </p>
             <p>
               <Link to="contact" className="button hover:bg-lighter-blue shadow">Get in touch</Link>

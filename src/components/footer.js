@@ -15,6 +15,7 @@ const Footer = ({ siteTitle }) => (
           <div className="flex justify-center md:justify-end">
             <a href="https://twitter.com/digitalcascadia" className="link text-white text-sm block">Twitter</a>
             <a href="https://instagram.com/cascadiadigital" className="link text-white text-sm block ml-4">Instagram</a>
+            <a href="https://www.linkedin.com/company/cascadia-digital/" className="link text-white text-sm block ml-4">LinkedIn</a>
           </div>
           {/* <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a> */}
         </div>
