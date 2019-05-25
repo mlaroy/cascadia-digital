@@ -8,6 +8,7 @@ import ContactBumper from '../components/contactBumper'
 import ServicesBumper from '../components/servicesBumper'
 import AgencyBumper from '../components/agencyBumper'
 import cascadiaSVG from '../images/cascadia-logo-5.svg'
+import done from '../images/done.svg'
 
 class IndexPage extends Component {
   render() {
@@ -17,7 +18,7 @@ class IndexPage extends Component {
         <div className="bg-grey-lightest">
           <Section>
             <img src={cascadiaSVG} width="200" className="block mb-8 md:mx-auto"  alt="Cascadia Logo"/>
-            <p className="text-lg md:text-xl lg:text-2xl leading-normal md:text-center mx-auto md:w-4/5">
+            <p className="text-lg md:text-xl lg:text-2xl leading-normal md:text-center mx-auto md:w-4/5 lg:w-3/4">
               Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help agencies
               deliver on their web development projects. With a focus on the front end, our experience working in WordPress,
               Vue, React, and Laravel (and more) enables us to help you get the website solution you really need,
@@ -26,14 +27,38 @@ class IndexPage extends Component {
             {/* <p className="sm:w-3/4 ">
               <Link to="about" className="button hover:bg-lighter-blue shadow">Read more</Link>
             </p> */}
+
           </Section>
         </div>
 
-        <ServicesBumper />
+        {/* <Section>
+          <h3 class="text-2xl sm:text-4xl md:text-5xl leading-normal mb-8 leading-none md:text-center">Why choose Cascadia Digital?</h3>
+          <div className="flex flex-col md:flex-row">
 
-        <AgencyBumper className="bg-grey-lightest" />
+            <div className="md:w-1/2 flex flex-col justify-center">
+              <div>
+                <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 md:mx-auto"  alt="Cascadia Logo"/>
+              </div>
+            </div>
+            <div className="md:w-1/2 flex flex-col justify-center">
+              <ul>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">Agency experience</li>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">Collaboration with your team</li>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">Concern for accessibility</li>
+              </ul>
+            </div>
+          </div>
+        </Section> */}
+
+
+        <ServicesBumper />
+        {/* <ServicesBumper className="bg-grey-lightest" /> */}
+
+        <AgencyBumper className="bg-grey-lightest"  />
+        {/* <AgencyBumper  /> */}
 
         <ContactBumper  />
+        {/* <ContactBumper className="bg-grey-lightest"  /> */}
 
 
         {/* <div className="bg-white py-32">

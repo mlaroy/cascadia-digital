@@ -32,7 +32,7 @@ const About = props => (
               </figcaption>
             </figure>
           </div>
-          <div className="md:w-2/3 mx-auto md:pl-4">
+          <div className="md:w-2/3 lg:w-3/5 mx-auto md:pl-4 max-w-lg">
             {/* <img src={mark} alt={props.siteTitle} width="50" className="block mb-8" /> */}
             <p className="text-lg md:text-2xl leading-normal mb-8">
               Cascadia Digital was founded by Michael LaRoy, a front-end developer from Vancouver

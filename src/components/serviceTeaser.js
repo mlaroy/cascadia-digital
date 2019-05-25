@@ -21,8 +21,8 @@ const ServiceTeaser = () => (
                   <img src={image} alt="" width="300" className="block mb-4 w-1/2 md:w-auto" />
                 </div>
                 <div className="md:w-2/3 md:flex flex-col justify-center">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal">{title}</h2>
-                  <p className="mb-4 text-xl sm:text-2xl leading-normal">{description}</p>
+                  <h2 className="text-3xl md:text-5xl leading-normal">{title}</h2>
+                  <p className="mb-4 text-lg sm:text-xl sm:text-2xl leading-normal">{description}</p>
                   {/* <p className="mb-4"><strong>Starts at $10,000</strong></p> */}
                   {/* <Link to={`/services/${slug}`} className="button button--small">Learn more</Link> */}
                 </div>
