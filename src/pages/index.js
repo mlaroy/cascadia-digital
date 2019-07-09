@@ -9,6 +9,7 @@ import ServicesBumper from '../components/servicesBumper'
 import AgencyBumper from '../components/agencyBumper'
 import cascadiaSVG from '../images/cascadia-logo-5.svg'
 import done from '../images/done.svg'
+import MdCheckmark from 'react-ionicons/lib/MdCheckmark'
 
 class IndexPage extends Component {
   render() {
@@ -19,7 +20,7 @@ class IndexPage extends Component {
           <Section>
             <img src={cascadiaSVG} width="200" className="block mb-8 md:mx-auto"  alt="Cascadia Logo"/>
             <p className="text-lg md:text-xl lg:text-2xl leading-normal md:text-center mx-auto md:w-4/5 lg:w-3/4">
-              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help agencies
+              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help agencies and businesses
               deliver on their web development projects. With a focus on the front end, our experience working in WordPress,
               Vue, React, and Laravel (and more) enables us to help you get the website solution you really need,
               done right the first time.
@@ -31,7 +32,7 @@ class IndexPage extends Component {
           </Section>
         </div>
 
-        {/* <Section>
+        <Section>
           <h3 class="text-2xl sm:text-4xl md:text-5xl leading-normal mb-8 leading-none md:text-center">Why choose Cascadia Digital?</h3>
           <div className="flex flex-col md:flex-row">
 
@@ -41,23 +42,35 @@ class IndexPage extends Component {
               </div>
             </div>
             <div className="md:w-1/2 flex flex-col justify-center">
-              <ul>
-                <li className="py-2 text-lg md:text-xl lg:text-2xl">Agency experience</li>
-                <li className="py-2 text-lg md:text-xl lg:text-2xl">Collaboration with your team</li>
-                <li className="py-2 text-lg md:text-xl lg:text-2xl">Concern for accessibility</li>
+              <ul className="list-reset">
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">
+                  <MdCheckmark /> Your business goals are paramount
+                </li>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">
+                  <MdCheckmark /> We value a collaborative, strategic approach
+                </li>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">
+                  <MdCheckmark /> Timely communication and clear expectations
+                </li>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">
+                  <MdCheckmark /> We prioritize substance over flashiness
+                </li>
+                <li className="py-2 text-lg md:text-xl lg:text-2xl">
+                  <MdCheckmark /> Get the right thing, the first time
+                </li>
               </ul>
             </div>
           </div>
-        </Section> */}
+        </Section>
 
 
-        <ServicesBumper />
+        <ServicesBumper  className="bg-grey-lightest"/>
         {/* <ServicesBumper className="bg-grey-lightest" /> */}
 
-        <AgencyBumper className="bg-grey-lightest"  />
+        <AgencyBumper />
         {/* <AgencyBumper  /> */}
 
-        <ContactBumper  />
+        <ContactBumper className="bg-grey-lightest"  />
         {/* <ContactBumper className="bg-grey-lightest"  /> */}
 
 
