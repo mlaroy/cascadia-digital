@@ -14,7 +14,7 @@ const HomeHero = () => (
             Start your next project with Cascadia Digital
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl leading-normal">
-            Helping agencies meet their client needs with solid front-end development
+            Helping you achieve your business goals
           </p>
         </div>
       </div>

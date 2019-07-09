@@ -9,6 +9,9 @@ import collaborate from '../images/collaborate.svg';
 import mark from '../images/cascadia-mark-5.svg'
 import ContactBumper from '../components/contactBumper'
 import ServicesBumper from '../components/servicesBumper'
+import LogoTwitter from 'react-ionicons/lib/LogoTwitter'
+import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin'
+
 
 const About = props => (
   <Layout>
@@ -28,7 +31,13 @@ const About = props => (
             <figure className="w-64 mx-auto block text-center px-4 pb-16 responsive-img">
               <img src={portrait} alt="" className="shadow-md rounded block mb-2 responsive-img"/>
               <figcaption>
-                <a href="https://mikelaroy.ca" className="link hover:underline">Michael LaRoy</a>
+                <a href="https://mikelaroy.ca" className="link hover:underline block mb-4">Michael LaRoy</a>
+                <a href="https://twitter.com/laroymike" className="link mx-2">
+                  <LogoTwitter color="#223843" />
+                </a>
+                <a href="https://ca.linkedin.com/in/mikelaroy" className="link mx-2">
+                  <LogoLinkedin color="#223843" />
+                </a>
               </figcaption>
             </figure>
           </div>

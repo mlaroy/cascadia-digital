@@ -141,11 +141,19 @@ blockquote {
   font-family: var(--font-sans);
   font-weight: 400;
   transition: all 0.2s ease;
+
+  svg {
+    fill: var(--jp-indigo) !important;
+  }
 }
 
 .link:hover,
 .link:focus {
   @apply .text-light-blue;
+
+  svg {
+    fill: var(--light-blue) !important;
+  }
 }
 
 .field {
