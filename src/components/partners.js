@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import domain7 from '../images/domain7.svg';
 import engine from '../images/engine.svg';
 import gwl from '../images/greatwest.png';
+import bch from '../images/bchydro.svg';
 
 class Partners extends Component {
   render() {
@@ -28,6 +29,10 @@ const images = [
   {
     src: domain7,
     title: 'Domain7'
+  },
+  {
+    src: bch,
+    title: 'BC Hydro'
   },
   {
     src: engine,
