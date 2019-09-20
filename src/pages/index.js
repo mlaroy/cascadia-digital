@@ -44,7 +44,7 @@ class IndexPage extends Component {
             <div className="md:w-1/2 flex flex-col justify-center">
               <ul className="list-reset">
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Your business goals are paramount
+                  <MdCheckmark /> Your business success is our goal
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
                   <MdCheckmark /> We value a collaborative, strategic approach
@@ -56,7 +56,7 @@ class IndexPage extends Component {
                   <MdCheckmark /> We prioritize substance over flashiness
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Get the right thing, the first time
+                  <MdCheckmark /> Get the best solution, not the easiest
                 </li>
               </ul>
             </div>
