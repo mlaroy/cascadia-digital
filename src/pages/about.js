@@ -21,7 +21,7 @@ const About = props => (
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
     <Hero title="About Cascadia Digital" img={collaborate}>
-      At Cascadia, your business goals are our goals. We help you identify <br className="hidden md:block" />
+      At Cascadia, your business goals are our goals. I help you identify <br className="hidden md:block" />
       your needs, and work together with you to find solutions.
     </Hero>
     <div className="bg-grey-lightest">
@@ -55,7 +55,7 @@ const About = props => (
             </p>
             <hr className="my-16 block"/>
             <p className="text-lg md:text-2xl leading-normal">
-              Cascadia Digital is based in British Columbia’s Fraser Valley. We parter with businesses and agencies in nearby Vancouver
+              Cascadia Digital is based in British Columbia’s Fraser Valley. I parter with businesses and agencies in nearby Vancouver
               and across the country, while also serving clients local to the Valley.
             </p>
           </div>

@@ -13,9 +13,10 @@ class Hero extends Component {
         )}
         <div className="md:text-center mb-16">
           <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl">{title}</h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl leading-normal">
+          {children && (<p className="text-xl sm:text-2xl lg:text-3xl leading-normal">
             {children}
           </p>
+          )}
         </div>
       </Section>
     );

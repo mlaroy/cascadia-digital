@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Section from './section'
 import MainNav from './main-nav';
 import whitelogo from '../images/cascadia-logo-5-white.svg'
@@ -20,6 +20,11 @@ const Footer = ({ siteTitle }) => (
           {/* <a href="#" className="link text-white text-sm">Terms &amp; Privacy Policy</a> */}
         </div>
       </div>
+      <p className="text-sm text-center md:text-right mb-2">
+        <Link to="/privacy-terms"
+            className="link text-white text-sm"
+          >Privacy &amp; Terms</Link>
+      </p>
       <p className="text-sm text-center md:text-right">&copy; {getYear()} {siteTitle}</p>
     </Section>
   </footer>

@@ -16,7 +16,7 @@ const ServicesPage = props => (
     </Helmet>
     <Hero title="Services" img={business}>
       Let’s work together to find the solution for you. <br className="hidden md:block" />
-      Here are some of the things we do.
+      Here are some of the things I do.
     </Hero>
     <div className="bg-grey-lightest">
       <Section>
