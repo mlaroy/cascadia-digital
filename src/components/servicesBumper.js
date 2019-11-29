@@ -19,10 +19,10 @@ const ServicesBumper = props => {
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
               Start your next website project on the right foot. <br />
-              See what services we can offer.
+              Find out which service best suits your needs.
             </p>
             <p>
-              <Link to="services" className="button hover:bg-lighter-blue shadow">See services</Link>
+              <Link to="services" className="button hover:bg-lighter-blue shadow">Find your fit</Link>
             </p>
           </div>
         </div>

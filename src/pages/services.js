@@ -14,9 +14,9 @@ const ServicesPage = props => (
       <meta property="og:title" content="Services | Cascadia Digital" />
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
-    <Hero title="Services" img={business}>
+    <Hero title="Services" img={business} fade={true}>
       Let’s work together to find the solution for you. <br className="hidden md:block" />
-      Here are some of the things we do.
+      Here are some of the things I do.
     </Hero>
     <div className="bg-grey-lightest">
       <Section>

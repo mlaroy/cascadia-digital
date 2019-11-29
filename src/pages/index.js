@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link';
 import Layout from '../components/layout'
 import HomeHero from '../components/homeHero'
 // import WorkTeaser from '../components/work-teaser'
@@ -20,9 +19,9 @@ class IndexPage extends Component {
           <Section>
             <img src={cascadiaSVG} width="200" className="block mb-8 md:mx-auto"  alt="Cascadia Logo"/>
             <p className="text-lg md:text-xl lg:text-2xl leading-normal md:text-center mx-auto md:w-4/5 lg:w-3/4">
-              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help agencies and businesses
-              deliver on their web development projects. With a focus on the front end, our experience working in WordPress,
-              Vue, React, and Laravel (and more) enables us to help you get the website solution you really need,
+              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, I help agencies and businesses
+              deliver on their web development projects. With a focus on the front end, my experience working in WordPress,
+              Vue, React, and Laravel (and more) enables me to help you get the website solution you really need,
               done right the first time.
             </p>
             {/* <p className="sm:w-3/4 ">
@@ -44,16 +43,16 @@ class IndexPage extends Component {
             <div className="md:w-1/2 flex flex-col justify-center">
               <ul className="list-reset">
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Your business success is our goal
+                  <MdCheckmark /> Your business success is my goal
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> We value a collaborative, strategic approach
+                  <MdCheckmark /> Value a collaborative, strategic approach
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
                   <MdCheckmark /> Timely communication and clear expectations
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> We prioritize substance over flashiness
+                  <MdCheckmark /> Prioritize substance over flashiness
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
                   <MdCheckmark /> Get the best solution, not the easiest

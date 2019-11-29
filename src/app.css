@@ -89,7 +89,7 @@ body.nav-open {
   }
 }
 
-.footer-nav .link,
+.footer .link,
 .main-nav .link {
   @apply .no-underline;
 }
