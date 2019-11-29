@@ -21,7 +21,7 @@ const ContactBumper = props => {
               Let's team up to meet your business goals.
             </p>
             <p>
-              <Link to="contact" className="button hover:bg-lighter-blue shadow">Get in touch</Link>
+              <Link to="contact" className="button hover:bg-lighter-blue shadow">Schedule your project</Link>
             </p>
           </div>
         </div>

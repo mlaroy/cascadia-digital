@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link';
 import Layout from '../components/layout'
 import HomeHero from '../components/homeHero'
 // import WorkTeaser from '../components/work-teaser'
