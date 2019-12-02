@@ -11,7 +11,7 @@ const HomeHero = () => (
       <div className="md:w-3/5 flex justify-center items-center">
         <div>
           <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight">
-            Fill your agency developent needs with Cascadia Digital
+            Fill your agency development needs with Cascadia Digital
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl leading-normal">
             Helping you achieve your business goals
