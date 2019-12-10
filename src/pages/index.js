@@ -22,7 +22,7 @@ class IndexPage extends Component {
               Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, I help agencies and businesses
               deliver on their web development projects. With a focus on the front end, my experience working in WordPress,
               Vue, React, and Laravel (and more) enables me to help you get the website solution you really need,
-              done right the first time.
+              done right.
             </p>
             {/* <p className="sm:w-3/4 ">
               <Link to="about" className="button hover:bg-lighter-blue shadow">Read more</Link>
