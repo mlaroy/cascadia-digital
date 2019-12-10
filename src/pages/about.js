@@ -21,7 +21,7 @@ const About = props => (
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
     <Hero title="About Cascadia Digital" img={collaborate} fade={true}>
-      At Cascadia, your business goals are our goals. I help you identify <br className="hidden md:block" />
+      At Cascadia, your business goals are my goals. I help you identify <br className="hidden md:block" />
       your needs, and work together with you to find solutions.
     </Hero>
     <div className="bg-grey-lightest">
