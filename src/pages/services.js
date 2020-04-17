@@ -20,7 +20,7 @@ const ServicesPage = props => (
     </Hero>
     <div className="bg-grey-lightest">
       <Section>
-        <ul className="services-list">
+        <ul className="service-grid">
           <Services />
         </ul>
       </Section>
