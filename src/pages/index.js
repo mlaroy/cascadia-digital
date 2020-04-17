@@ -17,12 +17,11 @@ class IndexPage extends Component {
         <HomeHero />
         <div className="bg-grey-lightest">
           <Section>
-            <img src={cascadiaSVG} width="200" className="block mb-8 md:mx-auto"  alt="Cascadia Logo"/>
-            <p className="text-lg md:text-xl lg:text-2xl leading-normal md:text-center mx-auto md:w-4/5 lg:w-3/4">
-              Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, I help agencies and businesses
-              deliver on their web development projects. With a focus on the front end, my experience working in WordPress,
-              Vue, React, and Laravel (and more) enables me to help you get the website solution you really need,
-              done right.
+            <p className="text-lg md:text-xl lg:text-2xl leading-normal mx-auto md:w-4/5 lg:w-3/4">
+              <img src={cascadiaSVG} width="200" className="block mb-8"  alt="Cascadia Logo"/>
+              At Cascadia Digital, I help agencies and businesses deliver on their web development projects. Cascadia Digital
+              is a Shopify Partner, and is experienced working in WordPress, Vue, React (and more), enabling me to help you get the
+              website solution you really need to help your business succeed.
             </p>
             {/* <p className="sm:w-3/4 ">
               <Link to="about" className="button hover:bg-lighter-blue shadow">Read more</Link>
@@ -46,16 +45,16 @@ class IndexPage extends Component {
                   <MdCheckmark /> Your business success is my goal
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Value a collaborative, strategic approach
+                  <MdCheckmark /> I value a collaborative, strategic approach
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Timely communication and clear expectations
+                  <MdCheckmark /> Get timely communication and clear expectations
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Prioritize substance over flashiness
+                  <MdCheckmark /> I prioritize substance over flashiness
                 </li>
                 <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                  <MdCheckmark /> Get the best solution, not the easiest
+                  <MdCheckmark /> Get the best solution, not the cheapest
                 </li>
               </ul>
             </div>

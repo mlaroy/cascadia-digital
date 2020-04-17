@@ -6,6 +6,7 @@ import jamStack from '../images/static.svg';
 import performance from '../images/performance.svg';
 import programmer from '../images/programmer.svg';
 import accessibility from '../images/accessibility.svg';
+import ecommerce from '../images/ecommerce.svg';
 
 const ServiceTeaser = () => (
   <StaticQuery
@@ -16,11 +17,11 @@ const ServiceTeaser = () => (
             const { title, description, img } = edge.node.frontmatter;
             const image = getImage(img);
             return(
-              <div key={title} className="flex flex-col md:flex-row service-item">
-                <div className="md:w-1/3 md:mr-32">
-                  <img src={image} alt="" width="300" className="block mb-4 w-1/2 md:w-auto" />
+              <div key={title} className="flex flex-col service-item">
+                <div className="service-item-img-container mb-8">
+                  <img src={image} alt="" width="200" className="block mb-4 w-1/2 md:w-auto" />
                 </div>
-                <div className="md:w-2/3 md:flex flex-col justify-center">
+                <div className="md:flex flex-col justify-center">
                   <h2 className="text-3xl md:text-5xl leading-normal">{title}</h2>
                   <p className="mb-4 text-lg sm:text-xl sm:text-2xl leading-normal">{description}</p>
                   {/* <p className="mb-4"><strong>Starts at $10,000</strong></p> */}
@@ -46,6 +47,8 @@ const getImage = img => {
       return accessibility;
     case 'programmer':
       return programmer;
+    case 'ecommerce':
+        return ecommerce;
     default:
       return wordpress;
 

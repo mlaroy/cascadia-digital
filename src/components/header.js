@@ -57,7 +57,7 @@ class Header extends Component {
     const { isOpen, view } = this.state;
     const { siteTitle } = this.props;
     return (
-      <div className="header w-full bg-white shadow sticky pin-t pin-r pin-l">
+      <div className="header w-full bg-white shadow sticky pin-t pin-r pin-l z-10">
         <div className="md:mx-auto md:w-5/6  p-4 flex justify-between">
           <Link
             to="#main-content"

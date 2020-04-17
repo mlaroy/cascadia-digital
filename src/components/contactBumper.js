@@ -14,7 +14,7 @@ const ContactBumper = props => {
             <img src={team} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt=""/>
           </div>
           <div className="md:w-1/2 flex flex-col justify-center">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl leading-normal mb-8 leading-none">
+            <h2 className="text-2xl sm:text-4xl leading-normal mb-8 leading-none">
               Team up with Cascadia Digital
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
