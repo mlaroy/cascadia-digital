@@ -19,8 +19,8 @@ class IndexPage extends Component {
           <Section>
             <p className="text-lg md:text-xl lg:text-2xl leading-normal mx-auto md:w-4/5 lg:w-3/4">
               <img src={cascadiaSVG} width="200" className="block mb-8"  alt="Cascadia Logo"/>
-              At Cascadia Digital, I help agencies and businesses deliver on their web development projects. Cascadia Digital
-              is a Shopify Partner, and is experienced working in WordPress, Vue, React (and more), enabling me to help you get the
+              I help agencies and businesses deliver on their web development projects. As a Shopify Partner, and with
+              experience working in WordPress, Vue, React (and more), Cascadia Digital has the tools to help you get the
               website solution you really need to help your business succeed.
             </p>
             {/* <p className="sm:w-3/4 ">
