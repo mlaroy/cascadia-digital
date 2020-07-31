@@ -12,7 +12,7 @@ class Hero extends Component {
             <img src={img} alt="" width="320" className="mx-auto block my-8"/>
           </div>
         )}
-        <div className="md:text-center mb-16">
+        <div className="w-full lg:w-3/4 mx-auto md:text-center mb-16">
           <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl">{title}</h1>
           {children && (<p className="text-xl sm:text-2xl lg:text-3xl leading-normal">
             {children}

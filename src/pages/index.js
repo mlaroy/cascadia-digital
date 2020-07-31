@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
-import HomeHero from '../components/homeHero'
+// import HomeHero from '../components/homeHero'
+import Hero from '../components/hero'
 // import WorkTeaser from '../components/work-teaser'
+import growth from '../images/growth.svg'
 import Section from '../components/section'
 import ContactBumper from '../components/contactBumper'
 import ServicesBumper from '../components/servicesBumper'
@@ -14,7 +16,9 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <HomeHero />
+        <Hero title="Helping you build your business with a great new website" img={growth} fade={true}>
+          Cascadia Digita is your trusted partner to help you <br className="hidden md:block" />  grow your digital business
+        </Hero>
         <div className="bg-grey-lightest">
           <Section>
             <p className="text-lg md:text-xl lg:text-2xl leading-normal mx-auto md:w-4/5 lg:w-3/4">
