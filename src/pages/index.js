@@ -17,7 +17,7 @@ class IndexPage extends Component {
     return (
       <Layout>
         <Hero title="Helping you build your business with a great new website" img={growth} fade={true}>
-          Cascadia Digita is your trusted partner to help you <br className="hidden md:block" />  grow your digital business
+          Cascadia Digital is your trusted partner to help you <br className="hidden md:block" />  grow your digital business
         </Hero>
         <div className="bg-grey-lightest">
           <Section>
