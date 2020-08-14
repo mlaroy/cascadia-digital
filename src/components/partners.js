@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import domain7 from '../images/domain7.svg';
 import engine from '../images/engine.svg';
-import gwl from '../images/greatwest.png';
+import cl from '../images/canadalife.svg';
 import bch from '../images/bchydro.svg';
 
 class Partners extends Component {
@@ -23,8 +23,8 @@ class Partners extends Component {
 
 const images = [
   {
-    src: gwl,
-    title: 'Great-West Life'
+    src: cl,
+    title: 'Canada Life'
   },
   {
     src: domain7,
