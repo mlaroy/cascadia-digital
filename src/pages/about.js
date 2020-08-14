@@ -22,7 +22,7 @@ const About = props => (
     </Helmet>
     <Hero title="About Cascadia Digital" img={collaborate} fade={true}>
       At Cascadia, your business goals are my goals. I help you identify
-      your needs, and work together with you <br className="hidden md:block" /> to find solutions.
+      your needs, and work together with you to find solutions.
     </Hero>
     <div className="bg-grey-lightest">
       <Section>
