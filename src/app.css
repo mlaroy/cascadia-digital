@@ -20,6 +20,19 @@ html > * {
   --font-body: /*brandon-grotesque, Futura,*/ benton-sans, helvetica, Helvetica Neue, arial, sans-serif;
 }
 
+.wf-loading {
+  opacity: 0;
+}
+
+.wf-active {
+  transition: opacity 0.25s ease-in;
+  opacity: 1;
+}
+
+.wf-inactive {
+  opacity: 1;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -30,6 +43,10 @@ html > * {
   }
 }
 
+p {
+  line-height: 1.5;
+}
+
 hr {
   height: auto;
   border-top: 1px solid var(--greyish-blue);
@@ -37,7 +54,7 @@ hr {
 
 .fadeIn {
   animation-name: fadeIn;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 
 html {
@@ -76,15 +93,27 @@ body.nav-open {
   z-index: 100;
 }
 
+.container {
+  max-width: 1200px;
+  @apply .mx-auto;
+}
+
+.header {
+  transition: all 0.25s ease;
+}
+
 @media (max-width: 575px) {
   .header-logo {
     max-width: 120px;
   }
   .main-nav {
-    @apply .fixed .w-full .pin-t .pin-r .p-8 .bg-white .h-screen .shadow-lg;
+    @apply .fixed .w-full .pin-t .pin-r .p-4 .bg-white .h-screen .shadow-lg;
     display: none;
+    /* transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1.0);
+    transform: translateX(100%); */
   }
   .main-nav.js-is-open {
+    /* transform: translateX(0); */
     display: block;
   }
 }
@@ -99,8 +128,16 @@ body.nav-open {
 }
 
 blockquote {
-  @apply .text-2xl .font-sans .border-l-4 .border-jp-indigo .my-16 .pl-4;
-  font-weight: bold;
+  @apply .text-xl .font-sans .my-8 .pl-4 .relative;
+}
+
+blockquote:before {
+  content: '“';
+  @apply .font-serif;
+  font-size: 6rem;
+  color: var(--light-blue);
+  line-height: 1rem;
+  font-weight: 700;
 }
 
 .drop-capfirst-letter {
@@ -108,7 +145,7 @@ blockquote {
 }
 
 .button {
-  @apply .text-white .text-lg .bg-light-blue .px-8 .py-4 .no-underline .rounded;
+  @apply .text-white .text-base .bg-light-blue .px-8 .py-4 .no-underline .rounded;
   /* font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif; */
   font-family: var(--font-sans);
   font-weight: 600;
@@ -123,7 +160,7 @@ blockquote {
 }
 
 .button--small {
-  @apply .text-lg .px-4 py-2;;
+  @apply .text-lg .px-4 py-2;
 }
 
 @media (min-width: 768px) {
@@ -171,7 +208,7 @@ h1 {
 }
 
 h2 {
-  @apply .text-5xl .mb-8;
+  @apply .text-3xl .mb-8;
 }
 
 h3 {
@@ -180,8 +217,31 @@ h3 {
 
 .hero {
   @apply .w-full .flex .justify-center .flex-col;
-  height: 70vh;
+  /* height: 70vh; */
+  overflow: hidden;
 }
+
+@media (min-width: 768px) {
+  .hero-image {
+    transform: translateY(-50%);
+    top: 50%;
+  }
+}
+
+.hero-bg {
+  object-position: center;
+  object-fit: cover;
+}
+
+/* .hero.h-screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, #fff);
+} */
 
 .bg-gradient {
   @apply .bg-jp-indigo .text-white .flex .justify-center .flex-col;
@@ -192,7 +252,7 @@ h3 {
 .service-grid {
   margin: 0;
   display: grid;
-  grid-gap: 5rem;
+  grid-gap: 4rem;
   padding: 0;
   grid-template-columns: 1fr;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -201,7 +261,7 @@ h3 {
 @media (min-width: 768px) {
   .service-grid {
     /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
   }
 }
 
@@ -211,7 +271,7 @@ h3 {
 }
 
 .service-item-img-container {
-  height: 180px;
+  height: 140px;
   width: 100%;
   position: relative;
 }
@@ -219,18 +279,33 @@ h3 {
 .service-item-img-container img {
   object-fit: contain;
   object-position: left;
-  max-width: 100%;
+  max-width: 140px;
   display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* .service-item + .service-item {
   @apply .mt-24;
 } */
+
+.has-bg {
+  @apply .relative;
+}
+.has-bg:before {
+  content: '';
+  width: 60%;
+  height: calc(60% + 75px);
+  @apply .rounded .bg-grey-light .opacity-25;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  z-index: -1;
+}
 
 
 .services-list {
@@ -241,4 +316,25 @@ h3 {
   @apply .mb-16 .block;
 }
 
+.newsletter-form {
+ max-width: 400px;
+ @apply .relative;
+}
+
+.newsletter-form .button {
+  /* border-radius: 0; */
+  @apply .text-base;
+}
+
+.newsletter-form .form-message {
+  @apply .absolute;
+  bottom: -2rem;
+}
+
 @tailwind utilities;
+
+
+input[type="text"],
+input[type="email"] {
+  @apply .p-4 .rounded .border .w-full .text-sm;
+}

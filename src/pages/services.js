@@ -15,8 +15,8 @@ const ServicesPage = props => (
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
     <Hero title="Services" img={business} fade={true}>
-      Let’s work together to find the solution for you. <br className="hidden md:block" />
-      Here are some of the things I do.
+      Let’s work together to find the solution for your project. <br className="hidden md:block" />
+      Here are some of the ways I can help.
     </Hero>
     <div className="bg-grey-lightest">
       <Section>
@@ -24,6 +24,7 @@ const ServicesPage = props => (
           <Services />
         </ul>
       </Section>
+      {/* <h3>Not seeing what you need?  Get in touch to see how else I can </h3> */}
     </div>
     <ContactBumper />
   </Layout>

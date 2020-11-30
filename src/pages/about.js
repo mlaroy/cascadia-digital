@@ -21,8 +21,7 @@ const About = props => (
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
     <Hero title="About Cascadia Digital" img={collaborate} fade={true}>
-      At Cascadia, your business goals are my goals. I help you identify
-      your needs, and work together with you to find solutions.
+      I help branding agencies deliver better web <br className="hidden md:block" /> development projects.
     </Hero>
     <div className="bg-grey-lightest">
       <Section>
@@ -44,13 +43,18 @@ const About = props => (
           <div className="md:w-2/3 lg:w-3/5 mx-auto md:pl-4 max-w-lg">
             {/* <img src={mark} alt={props.siteTitle} width="50" className="block mb-8" /> */}
             <p className="text-lg md:text-2xl leading-normal mb-8">
-              Cascadia Digital was founded by Michael LaRoy, a front-end developer from Vancouver
-              with a concern for accessibilty and good user experiences. Cascadia Digital’s vision is to be the preferred partner
-              to agencies and businesses alike, bringing valuable experience to your web projects.
+              Cascadia Digital is Michael LaRoy, a front-end developer from Vancouver
+              with a concern for accessibilty and good user experiences. My vision is
+              to be the preferred development partner to agencies and businesses alike,
+              bringing valuable experience to your web projects.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal mb-8 font-bold">
+              I believe businesses should be able to have high-quality, accessible websites,
+              without a complicated or confusing Content Management System, tailored to their needs.
             </p>
             <p className="text-lg md:text-2xl leading-normal">
-              Michael has worked with small startups, mid-size agencies, as well as large national corporations.
-              His experience enables him to fit right in as an embedded member of your dev team, or to lead
+              I have worked with small startups, mid-size agencies, as well as large national corporations.
+              My experience enables me to work right along side your dev team, or to lead
               and execute your website project from start to finish.
             </p>
             <hr className="my-16 block"/>

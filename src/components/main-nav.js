@@ -24,10 +24,7 @@ class MainNav extends Component {
 }
 
 const pages = [
-  {
-    url: '/about',
-    text: 'About'
-  },
+
   // {
   //   url: '/work',
   //   text: 'Work'
@@ -35,6 +32,10 @@ const pages = [
   {
     url: '/services',
     text: 'Services'
+  },
+  {
+    url: '/about',
+    text: 'About'
   },
   {
     url: '/contact',

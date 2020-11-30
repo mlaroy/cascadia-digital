@@ -3,23 +3,31 @@ import Section from './section';
 
 class Hero extends Component {
   render() {
-    const { title, children, img, fade } = this.props;
-    const classes = fade ? "fadeIn" : ''
+    const { title, children, bg, bgAlt = '', img, fade = false, full = false } = this.props;
+    const fladeClass = fade ? "fadeIn" : '';
     return (
-      <Section className={classes}>
-        {img && (
-          <div className="w-2/3 md:w-auto mx-auto">
-            <img src={img} alt="" width="320" className="mx-auto block my-8"/>
-          </div>
+      <div className={`hero relative ${full ? 'min-h-screen' : ''} ${bg ? 'bg-jp-indigo text-white' : ''}`}>
+        {bg && (
+          <img src={bg} alt={bgAlt} className="hero-bg mx-auto block absolute h-full w-full pin-t z-0 opacity-25"/>
         )}
-        <div className="w-full lg:w-3/4 mx-auto md:text-center mb-16">
-          <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl">{title}</h1>
-          {children && (<p className="text-xl sm:text-2xl lg:text-3xl leading-normal">
-            {children}
-          </p>
-          )}
-        </div>
-      </Section>
+        <Section className={`pt-32 ${fladeClass} ${full ? 'md:mt-16' : ''}`}>
+          <div className="md:py-12">
+            {img && (
+              <div className="w-1/3 mb-8 md:w-auto md:absolute pin-r md:opacity-75 z-10 hero-image">
+                <img src={img} alt="" width="320" className="mx-auto block"/>
+              </div>
+            )}
+            <div className={`w-full lg:w-3/4 relative z-20`}>
+              <h1 className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${bg ? 'text-white' : ''}`}>{title}</h1>
+              {children && (
+                <div className={`text-xl sm:text-2xl leading-normal ${bg ? 'text-white' : ''}`}>
+                  {children}
+                </div>
+              )}
+            </div>
+          </div>
+        </Section>
+      </div>
     );
   }
 }

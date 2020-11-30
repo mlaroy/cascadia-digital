@@ -1,99 +1,105 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import MainNav from './main-nav';
-import cascadiaSVG from '../images/cascadia-logo-5.svg'
+import logo from '../images/cascadia-logo-5.svg'
+import logoWhite from '../images/cascadia-logo-5-white.svg'
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      view: '',
-      isOpen: false
-    }
+const Header = ({ siteTitle, full }) => {
 
-    this.toggleMenu = this.toggleMenu.bind(this);
-    this.toggleViewPort = this.toggleViewPort.bind(this);
-  }
+  const [view, setView] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const [pageYoffset, setPageYoffset] = useState(0);
+  const [scrolling, setScrolling] = useState(false);
+  const [scrollTop, setScrollTop] = useState(0);
 
-  componentDidMount() {
+  useEffect(() => {
     const mediaQuery = window.matchMedia('(min-width: 576px)')
-    mediaQuery.addListener(this.toggleViewPort);
-    this.toggleViewPort(mediaQuery);
-  }
+    mediaQuery.addListener(toggleViewPort);
+    toggleViewPort(mediaQuery);
+  }, []);
 
-  toggleViewPort(e) {
+  useEffect( () => {
+    const height = document.querySelector('.header').offsetHeight;
+    const onScroll = e => {
+        setScrollTop(e.target.documentElement.scrollTop);
+        setScrolling(e.target.documentElement.scrollTop > height || false );
+    };
+    document.addEventListener('scroll', onScroll);
+
+    return () => {
+        document.removeEventListener('scroll', onScroll);
+    }
+  }, [scrollTop]);
+
+  const toggleViewPort = (e) => {
     if (e.matches) {
-      this.setState({
-        view: 'desktop',
-        isOpen: true,
-        pageYoffset: 0
-      })
+      setView('desktop');
+      setIsOpen(true);
+      setPageYoffset(0)
     } else {
-      this.setState({
-        view: 'mobile',
-        isOpen: false
-      })
+      setView('mobile');
+      setIsOpen(false);
     }
   }
 
-  toggleMenu() {
+  const toggleMenu = () => {
     let offset;
-    if( !this.state.isOpen ){
+    if( !isOpen ){
       offset = document.documentElement.scrollTop;
       console.log(offset);
       document.body.classList.add('nav-open');
     }else{
       document.body.classList.remove('nav-open');
-      document.documentElement.scrollTop = this.state.pageYoffset;
+      document.documentElement.scrollTop = pageYoffset;
       offset = 0;
     }
-    this.setState({
-      isOpen: !this.state.isOpen,
-      pageYoffset: offset
-    });
+    setIsOpen(!isOpen);
+    setPageYoffset(offset);
   }
 
-  render() {
-    const { isOpen, view } = this.state;
-    const { siteTitle } = this.props;
-    return (
-      <div className="header w-full bg-white shadow sticky pin-t pin-r pin-l z-10">
-        <div className="md:mx-auto md:w-5/6  p-4 flex justify-between">
-          <Link
-            to="#main-content"
-            className="skip-link"
+
+  return (
+    <div className={`header w-full ${full ? 'fixed' : 'sticky'} pin-t pin-r pin-l z-50 ${full && !scrolling ? '' : 'scrolled bg-white shadow'}`}>
+      <div className="md:mx-auto p-4 flex justify-between container">
+        <Link
+          to="#main-content"
+          className="skip-link"
+        >
+          Skip to content
+        </Link>
+        <Link
+          to="/"
+          className="no-underline"
+        >
+          <img src={!scrolling && full ? logoWhite : logo} width="150" alt="Cascadia Digial" className="header-logo block"/>
+          <span className="hidden">
+            {siteTitle}
+          </span>
+        </Link>
+        <button
+          onClick={toggleMenu}
+          className={`sm:hidden font-sans font-bold text-sm ${!scrolling && full ? 'text-white' : 'text-black'}`}
+          id="main-nav-toggle"
           >
-            Skip to content
-          </Link>
-          <Link
-            to="/"
-            className="no-underline"
-          >
-            <img src={cascadiaSVG} width="150" alt="Cascadia Digial" className="header-logo block"/>
-            <span className="hidden">
-              {siteTitle}
-            </span>
-          </Link>
-          <button
-            onClick={this.toggleMenu} className="sm:hidden font-sans text-sm"
-            id="main-nav-toggle"
-            >
-            &#9776;
-            Menu
-            </button>
-          <nav
-            className={isOpen ? 'main-nav js-is-open sm:flex': 'main-nav'}
-            aria-hidden={isOpen ? 'false' : 'true'}
-          >
-            {view === 'mobile' && isOpen && (
-              <button onClick={this.toggleMenu} className="nav-toggle">&times;</button>
-            )}
-            <MainNav activeClass="is-active" />
-          </nav>
-        </div>
+          &#9776;
+          Menu
+          </button>
+        <nav
+          className={`main-nav sm:flex ${isOpen ? 'main-nav js-is-open fadeIn': ''}`}
+          aria-hidden={isOpen ? 'false' : 'true'}
+        >
+          {view === 'mobile' && isOpen && (
+            <div className="flex justify-end">
+              <button onClick={toggleMenu} className="nav-toggle text-3xl text-black">&times;</button>
+            </div>
+          )}
+          <MainNav
+            activeClass="is-active"
+            linkColor={!scrolling && full && view !== 'mobile' ? 'text-white' : 'text-black'} />
+        </nav>
       </div>
-    )
-  }
+    </div>
+  );
 }
 
 export default Header

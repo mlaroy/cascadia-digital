@@ -7,8 +7,8 @@ module.exports = {
     siteUrl: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
-    metaImage: '/images/cascadia-logo-jpg.jpg',
-    description: 'Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help you create a strategy to execute on better web experiences. We have experience working in a range of tools and frameworks such as WordPress, Vue, and Laravel, with a focus on the front end.'
+    metaImage: '/images/og:meta.jpg',
+    description: 'I help branding agencies deliver better web development projects.'
   },
   plugins: [
     {
@@ -83,7 +83,6 @@ module.exports = {
         printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
-        develop: true,
         debug: true,
         // ignore: '/node_modules/prismjs/themes/prism-okaidia.css',
         content: [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 // import Link from 'gatsby-link';
 import wordpress from '../images/wordpress.svg';
 import jamStack from '../images/static.svg';
@@ -7,6 +7,8 @@ import performance from '../images/performance.svg';
 import programmer from '../images/programmer.svg';
 import accessibility from '../images/accessibility.svg';
 import ecommerce from '../images/ecommerce.svg';
+import gatsby from '../images/gatsby.svg';
+import landingPage from '../images/landing-page.svg';
 
 const ServiceTeaser = () => (
   <StaticQuery
@@ -14,21 +16,29 @@ const ServiceTeaser = () => (
     render={({allMarkdownRemark}) => (
       <>
           {allMarkdownRemark.edges.map(edge => {
-            const { title, description, img } = edge.node.frontmatter;
+            const { title, description, img, published, slug } = edge.node.frontmatter;
+            console.log(edge.node.frontmatter);
             const image = getImage(img);
-            return(
-              <div key={title} className="flex flex-col service-item">
-                <div className="service-item-img-container mb-8">
-                  <img src={image} alt="" width="200" className="block mb-4 w-1/2 md:w-auto" />
-                </div>
-                <div className="md:flex flex-col justify-center">
-                  <h2 className="text-3xl md:text-5xl leading-normal">{title}</h2>
-                  <p className="mb-4 text-lg sm:text-xl sm:text-2xl leading-normal">{description}</p>
-                  {/* <p className="mb-4"><strong>Starts at $10,000</strong></p> */}
-                  {/* <Link to={`/services/${slug}`} className="button button--small">Learn more</Link> */}
-                </div>
-              </div>
-            );
+
+            if( published ) {
+              return(
+                <li key={title} className="flex flex-col service-item shadow-lg p-8 rounded-lg bg-white">
+                  <div className="service-item-img-container">
+                    <img src={image} alt="" className="block mb-4 w-1/2 md:w-auto" />
+                  </div>
+                  <div className="md:flex flex-col justify-center">
+                    <h2 className="text-3xl md:text-4xl leading-normal">
+                      <Link to={`/services${slug}`} className="no-underline text-black hover:text-blue">{title}</Link>
+                    </h2>
+                    <p className="mb-4 text-lg sm:text-xl leading-normal">{description}</p>
+                    {/* <p className="mb-4"><strong>Starts at $10,000</strong></p> */}
+                    {/* <Link to={`/services/${slug}`} className="button button--small">Learn more</Link> */}
+                  </div>
+                </li>
+              );
+            } else {
+              return false;
+            }
           })}
       </>
     )}
@@ -45,8 +55,12 @@ const getImage = img => {
       return performance;
     case 'accessibility':
       return accessibility;
+    case 'gatsby':
+      return gatsby;
     case 'programmer':
       return programmer;
+    case 'landing-page':
+      return landingPage;
     case 'ecommerce':
         return ecommerce;
     default:
@@ -70,6 +84,7 @@ const SERVICE_TEASER_QUERY = graphql`
               slug
               description
               img
+              published
             }
           }
       }
