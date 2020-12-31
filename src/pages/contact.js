@@ -144,11 +144,11 @@ const ContactPage = ({ location }) => {
             <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
             <label className="mb-8 block text-sm">
               Name
-              <input placeholder="Name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+              <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
             </label>
             <label className="mb-8 block text-sm">
               Email
-              <input placeholder="Email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label htmlFor="message" className="block text-sm">Message</label>
             <textarea name="message" className="block mb-8" id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
