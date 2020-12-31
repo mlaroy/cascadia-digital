@@ -40,9 +40,9 @@ const ContactPage = ({ location }) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": form.getAttribute("name"),
-          name,
-          email,
-          message
+          "name": name,
+          "email": email,
+          "message": message
         })
       })
 
@@ -168,12 +168,12 @@ const ContactPage = ({ location }) => {
               </p>
             )}
             <button className="button">Submit</button>
+            {success && (
+              <p className="mt-4 text-jp-indigo">
+                Thank you! I will try to be in touch as soon as possible.
+              </p>
+            )}
           </form>
-          {success && (
-            <p className="mt-4 text-jp-indigo">
-              Thank you! I will try to be in touch as soon as possible.
-            </p>
-          )}
         </Section>
       </div>
       <ServicesBumper className="bg-grey-lightest" />
