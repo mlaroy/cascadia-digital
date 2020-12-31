@@ -135,121 +135,123 @@ const ContactPage = (props) => {
         Tell me the details of your project needs, and see if we are a fit.
       </Hero>
       <div className="bg-grey-lightest">
-        {renderContactLink(hasJS)}
         <Section>
-          <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="consultation">
-            <p className="mb-8 text-base md:text-2xl">
-              It's important for me to know as many details as possible regarding your project.
-              This helps me have a clear picture of what you are looking to accomplish,
-              and it helps to shape our initial conversations.
-            </p>
-            <input
-              type="hidden"
-              name="bot-field"
-            />
-            <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
-            <label className="mb-8 block text-sm">
-              Name
-              <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
-            </label>
-            <label className="mb-8 block text-sm">
-              Email
-              <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </label>
-            <label className="mb-8 block text-sm">
-              Phone
-              <input placeholder="Phone" name="phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
-            </label>
-            <label className="mb-8 block text-sm">
-              Company Name
-              <input placeholder="Company name" name="company" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
-            </label>
-            <label className="mb-8 block text-sm">
-              Website
-              <input placeholder="https://example.com" name="website" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
-            </label>
-            <label className="mb-8 block text-sm">
-              Budget Range
-              <div className="select-wrap">
-                <select name="budget" defaultValue={budget} id="budget" onBlur={(e) => {
-                  setBudget(e.target.value)
-                }}>
-                  <option value="" disabled="disabled">Select budget range</option>
-                  <option value="$5k - $10k">$5k - $10k</option>
-                  <option value="$10k - $15k">$10k - $15k</option>
-                  <option value="$15k - $25k">$15k - $25k</option>
-                  <option value="$25k +">$25k +</option>
-                </select>
-              </div>
-            </label>
-            <label className="mb-8 block text-sm">
-              What kind of relationship do you want to have with Cascadia Digital?
-              <div className="select-wrap">
-                <select name="relationship" id="relationship" defaultValue={relationship} onBlur={(e) => {
-                  setRelationship(e.target.value)
-                }}>
-                  <option value="" disabled="disabled">Select relationship type</option>
-                  <option value="Project based">Project based</option>
-                  <option value="Maintenance">Maintenance</option>
-                  <option value="Retainer">Retainer</option>
-                </select>
-              </div>
-            </label>
-
-            <label className="mb-8 block text-sm">
-              What is the #1 problem you are trying to solve with your project?
-              <input placeholder="My biggest problem..." name="problem" type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
-            </label>
-
-            <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
-            <textarea name="details" className="block mb-8" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
-
-            <label className="mb-8 block text-sm">
-              What is your estimated timeline?
-              <div className="select-wrap">
-                <select name="timeline" id="timeline" defaultValue={timeline} onBlur={(e) => {
-                  setTimeline(e.target.value)
-                }}>
-                  <option value="" disabled="disabled">Select estimated timeline</option>
-                  <option value="1-3 months">1-3 months</option>
-                  <option value="3-6 months">3-6 months</option>
-                  <option value="6-9 months">6-9 months</option>
-                </select>
-              </div>
-            </label>
-
-            <label className="mb-8 block text-sm">
-              How did you hear about Cascadia Digital?
-              <input placeholder="How did you hear about Cascadia Digital?" name="How did you hear" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
-            </label>
-
-            {/* <label className="block text-sm mb-8">
-              <input type="checkbox"/>
-              {' '}Add me to your mailing list
-            </label> */}
-
-            {hasEmptyFields && (
-              <p className="mb-4 text-red">
-                Please ensure all fields are set
+          {renderContactLink(hasJS)}
+          {hasJS && (
+            <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="consultation">
+              <p className="mb-8 text-base md:text-2xl">
+                It's important for me to know as many details as possible regarding your project.
+                This helps me have a clear picture of what you are looking to accomplish,
+                and it helps to shape our initial conversations.
               </p>
-            )}
-            {formHasError && (
-              <p className="mb-4 text-red">
-                There was an unexpected error. Please try again.
-              </p>
-            )}
-            {isRobot && (
-              <p className="mb-4 text-red">
-                You might not be human... are you being nice?
-              </p>
-            )}
-            <button className="button">Submit</button>
-            {success && (
-              <p className="mt-4 text-jp-indigo">
-                Thank you! I will try to be in touch as soon as possible.
-              </p>
-            )}
-          </form>
+              <input
+                type="hidden"
+                name="bot-field"
+              />
+              <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
+              <label className="mb-8 block text-sm">
+                Name
+                <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+              </label>
+              <label className="mb-8 block text-sm">
+                Email
+                <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </label>
+              <label className="mb-8 block text-sm">
+                Phone
+                <input placeholder="Phone" name="phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+              </label>
+              <label className="mb-8 block text-sm">
+                Company Name
+                <input placeholder="Company name" name="company" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
+              </label>
+              <label className="mb-8 block text-sm">
+                Website
+                <input placeholder="https://example.com" name="website" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
+              </label>
+              <label className="mb-8 block text-sm">
+                Budget Range
+                <div className="select-wrap">
+                  <select name="budget" defaultValue={budget} id="budget" onBlur={(e) => {
+                    setBudget(e.target.value)
+                  }}>
+                    <option value="" disabled="disabled">Select budget range</option>
+                    <option value="$5k - $10k">$5k - $10k</option>
+                    <option value="$10k - $15k">$10k - $15k</option>
+                    <option value="$15k - $25k">$15k - $25k</option>
+                    <option value="$25k +">$25k +</option>
+                  </select>
+                </div>
+              </label>
+              <label className="mb-8 block text-sm">
+                What kind of relationship do you want to have with Cascadia Digital?
+                <div className="select-wrap">
+                  <select name="relationship" id="relationship" defaultValue={relationship} onBlur={(e) => {
+                    setRelationship(e.target.value)
+                  }}>
+                    <option value="" disabled="disabled">Select relationship type</option>
+                    <option value="Project based">Project based</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Retainer">Retainer</option>
+                  </select>
+                </div>
+              </label>
+
+              <label className="mb-8 block text-sm">
+                What is the #1 problem you are trying to solve with your project?
+                <input placeholder="My biggest problem..." name="problem" type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
+              </label>
+
+              <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
+              <textarea name="details" className="block mb-8" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
+
+              <label className="mb-8 block text-sm">
+                What is your estimated timeline?
+                <div className="select-wrap">
+                  <select name="timeline" id="timeline" defaultValue={timeline} onBlur={(e) => {
+                    setTimeline(e.target.value)
+                  }}>
+                    <option value="" disabled="disabled">Select estimated timeline</option>
+                    <option value="1-3 months">1-3 months</option>
+                    <option value="3-6 months">3-6 months</option>
+                    <option value="6-9 months">6-9 months</option>
+                  </select>
+                </div>
+              </label>
+
+              <label className="mb-8 block text-sm">
+                How did you hear about Cascadia Digital?
+                <input placeholder="How did you hear about Cascadia Digital?" name="How did you hear" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
+              </label>
+
+              {/* <label className="block text-sm mb-8">
+                <input type="checkbox"/>
+                {' '}Add me to your mailing list
+              </label> */}
+
+              {hasEmptyFields && (
+                <p className="mb-4 text-red">
+                  Please ensure all fields are set
+                </p>
+              )}
+              {formHasError && (
+                <p className="mb-4 text-red">
+                  There was an unexpected error. Please try again.
+                </p>
+              )}
+              {isRobot && (
+                <p className="mb-4 text-red">
+                  You might not be human... are you being nice?
+                </p>
+              )}
+              <button className="button">Submit</button>
+              {success && (
+                <p className="mt-4 text-jp-indigo">
+                  Thank you! I will try to be in touch as soon as possible.
+                </p>
+              )}
+            </form>
+          )}
         </Section>
       </div>
     </Layout>

@@ -135,45 +135,48 @@ const ContactPage = ({ location }) => {
       <div className="bg-white">
       {renderContactLink(hasJS)}
         <Section>
-          <form onSubmit={(e) => handleContactSubmit(e)} className="mx-auto max-w-lg" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
-            <h2>For general inquiries, please send me a note.</h2>
-            <input
-              type="hidden"
-              name="bot-field"
-            />
-            <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
-            <label className="mb-8 block text-sm">
-              Name
-              <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
-            </label>
-            <label className="mb-8 block text-sm">
-              Email
-              <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            </label>
-            <label htmlFor="message" className="block text-sm">Message</label>
-            <textarea name="message" className="block mb-8" id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-            {hasEmptyFields && (
-              <p className="mb-4 text-red">
-                Please ensure all fields are set
-              </p>
-            )}
-            {formHasError && (
-              <p className="mb-4 text-red">
-                There was an unexpected error. Please try again.
-              </p>
-            )}
-            {isRobot && (
-              <p className="mb-4 text-red">
-                You might not be human... are you being nice?
-              </p>
-            )}
-            <button className="button">Submit</button>
-            {success && (
-              <p className="mt-4 text-jp-indigo">
-                Thank you! I will try to be in touch as soon as possible.
-              </p>
-            )}
-          </form>
+          {renderContactLink(hasJS)}
+          {hasJS && (
+            <form onSubmit={(e) => handleContactSubmit(e)} className="mx-auto max-w-lg" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
+              <h2>For general inquiries, please send me a note.</h2>
+              <input
+                type="hidden"
+                name="bot-field"
+              />
+              <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
+              <label className="mb-8 block text-sm">
+                Name
+                <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+              </label>
+              <label className="mb-8 block text-sm">
+                Email
+                <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </label>
+              <label htmlFor="message" className="block text-sm">Message</label>
+              <textarea name="message" className="block mb-8" id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+              {hasEmptyFields && (
+                <p className="mb-4 text-red">
+                  Please ensure all fields are set
+                </p>
+              )}
+              {formHasError && (
+                <p className="mb-4 text-red">
+                  There was an unexpected error. Please try again.
+                </p>
+              )}
+              {isRobot && (
+                <p className="mb-4 text-red">
+                  You might not be human... are you being nice?
+                </p>
+              )}
+              <button className="button">Submit</button>
+              {success && (
+                <p className="mt-4 text-jp-indigo">
+                  Thank you! I will try to be in touch as soon as possible.
+                </p>
+              )}
+            </form>
+          )}
         </Section>
       </div>
       <ServicesBumper className="bg-grey-lightest" />
