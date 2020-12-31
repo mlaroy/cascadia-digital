@@ -19,7 +19,7 @@ const ContactPage = (props) => {
   const [website, setWebsite] = useState('');
   const [budget, setBudget] = useState('');
   const [timeline, setTimeline] = useState('');
-  const [howDidYouHear, setHowDidYouHear] = useState('');
+  const [learn, setLearn] = useState('');
   const [relationship, setRelationship] = useState('');
   const [problem, setProblem] = useState('');
   const [honeypot, setHoneypot] = useState('');
@@ -58,7 +58,7 @@ const ContactPage = (props) => {
           relationship,
           timeline,
           details,
-          "How Did You Hear": howDidYouHear,
+          learn,
         })
       })
 
@@ -89,7 +89,7 @@ const ContactPage = (props) => {
       return false;
     }
 
-    const allowedFields = [email, name, company, website, budget, details, phone, timeline, howDidYouHear, problem];
+    const allowedFields = [email, name, company, website, budget, details, phone, timeline, learn, problem];
 
     // check for bots
     if( honeypot !== '') {
@@ -222,7 +222,7 @@ const ContactPage = (props) => {
 
               <label className="mb-8 block text-sm">
                 How did you hear about Cascadia Digital?
-                <input placeholder="How did you hear about Cascadia Digital?" name="howDidYouHear" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
+                <input placeholder="How did you hear about Cascadia Digital?" name="learn" type="text" id="learn" value={learn} onChange={(e) => setLearn(e.target.value)} />
               </label>
 
               {/* <label className="block text-sm mb-8">
