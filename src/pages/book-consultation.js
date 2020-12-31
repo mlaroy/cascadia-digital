@@ -150,23 +150,23 @@ const ContactPage = (props) => {
             <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
             <label className="mb-8 block text-sm">
               Name
-              <input placeholder="Name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+              <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
             </label>
             <label className="mb-8 block text-sm">
               Email
-              <input placeholder="Email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label className="mb-8 block text-sm">
               Phone
-              <input placeholder="Phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+              <input placeholder="Phone" name="phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </label>
             <label className="mb-8 block text-sm">
               Company Name
-              <input placeholder="Company name" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
+              <input placeholder="Company name" name="company" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
             </label>
             <label className="mb-8 block text-sm">
               Website
-              <input placeholder="https://example.com" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
+              <input placeholder="https://example.com" name="website" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
             </label>
             <label className="mb-8 block text-sm">
               Budget Range
@@ -198,7 +198,7 @@ const ContactPage = (props) => {
 
             <label className="mb-8 block text-sm">
               What is the #1 problem you are trying to solve with your project?
-              <input placeholder="My biggest problem..." type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
+              <input placeholder="My biggest problem..." name="problem" type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
             </label>
 
             <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
@@ -220,7 +220,7 @@ const ContactPage = (props) => {
 
             <label className="mb-8 block text-sm">
               How did you hear about Cascadia Digital?
-              <input placeholder="How did you hear about Cascadia Digital?" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
+              <input placeholder="How did you hear about Cascadia Digital?" name="How did you hear" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
             </label>
 
             {/* <label className="block text-sm mb-8">
