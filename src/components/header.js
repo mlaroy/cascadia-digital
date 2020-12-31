@@ -95,6 +95,7 @@ const Header = ({ siteTitle, full }) => {
           )}
           <MainNav
             activeClass="is-active"
+            hasCTA="true"
             linkColor={!scrolling && full && view !== 'mobile' ? 'text-white' : 'text-black'} />
         </nav>
       </div>

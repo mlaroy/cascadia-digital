@@ -9,7 +9,7 @@ import done from '../images/done.svg'
 import MdCheckmark from 'react-ionicons/lib/MdCheckmark'
 // import CalendlyPopup from '../components/calendlyLink';
 import { Link } from 'gatsby'
-import NewsletterForm from '../components/newsletterForm';
+// import NewsletterForm from '../components/newsletterForm';
 import bg from '../images/snow-capped-mountains-seen-through-the-trees-min.jpg';
 // import mountains from '../images/snowy-plains-and-mountains.jpg';
 
@@ -19,56 +19,76 @@ class IndexPage extends Component {
     return (
       <Layout full={true} >
         <Hero
-          title="I help branding agencies deliver better web development projects."
+          title="I help brands get their message out with reliable, easy website publishing."
           bg={bg}
           bgAlt="Mountain landscape"
           full={true}
         >
-          <p className="mb-16 text-lg md:text-xl">
-            Cascadia Digital provides you with the expertise you <br className="hidden md:block" />
-            need to create better web projects for your clients.
+          <p className="mb-16 text-lg md:text-2xl font-bold">
+            Stop worrying if your website will break <br className="hidden md:block" />
+            at the worst possible time.
           </p>
 
-          <NewsletterForm
+          <Link to="/book-consultation" className="button mt-4">Book your consultation</Link>
+
+          {/* <NewsletterForm
             url="1774006"
             buttonText="Subscribe"
             flex="true">
-            <h2 className="text-2xl mt-2 mb-2 text-white">Subscribe to my mailing list</h2>
-          </NewsletterForm>
+          </NewsletterForm> */}
+          {/* <div>
+            <h2 className="text-2xl md:text-3xl mt-2 mb-2 text-white">Get my free guide to </h2>
+            <Link to="#" className="button">Get Your Free Guide Now</Link>
+          </div> */}
         </Hero>
 
         <div className="mt-24">
           <Section>
             <div className="mx-auto md:w-4/5 lg:w-3/4 has-bg">
               <h2 className="text-xl sm:text-2xl md:text-3xl">
-                Is your agency missing key in-house web development talent?
+                Are you spending too much of your valuable time struggling to update your website content?
               </h2>
               <p className="text-lg lg:text-xl mb-16 md:w-2/3">
-                What if you could have a reliable partner you can call when you don't have the
-                resources available for a project?
+                What if making updates to your website could be as easy as pie?
               </p>
               <h2 className="text-xl sm:text-2xl md:text-3xl">
+                Are you afraid to edit anything your website because it might break something?
+              </h2>
+              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
+                Imagine a website publishing experience that you can rely on to work, without worrying
+                about it breaking at any moment.
+                {/* What if you could have a reliable partner you can call when you don't have the
+                resources available? */}
+              </p>
+              <h2 className="text-xl sm:text-2xl md:text-3xl">
+                Do you need an experience and realiable development partner to help make your website all that it could be?
+              </h2>
+              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
+                What if you had someone you could trust available to help you achieve your website goals?
+              </p>
+              {/* <h2 className="text-xl sm:text-2xl md:text-3xl">
                 Do you scramble to find a good developer to build your beautifully designed websites?
               </h2>
               <p className="text-lg lg:text-xl mb-16 md:w-2/3">
                 Imagine a world where you can stop worrying whether you can rely on
                 another new contractor to deliver.
-              </p>
-              <h2 className="text-xl sm:text-2xl md:text-3xl">
+              </p> */}
+              {/* <h2 className="text-xl sm:text-2xl md:text-3xl">
                 Are you stuck providing basic Squarespace templates for your client projects?
               </h2>
-              <p className="text-lg lg:text-xl md:w-2/3">
+              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
                 Picture landing more and better clients by offering bespoke websites instead.
-              </p>
+              </p> */}
+
               {/* <h2 className="text-2xl sm:text-3xl md:text-4xl">Are you missing out on projects because you aren’t able to include website development at all?</h2>
               <p className="text-lg md:text-xl lg:text-2xl">I can step in to build your website projects for you.</p> */}
               {/* <p className="mt-16">
                 <CalendlyPopup />
               </p> */}
 
-              <div className="p-8 shadow-lg mt-24 mx-auto rounded font-bold text-center bg-white">
-                Not a brand or marketing agency?  I can help your business too. <br/>
-                <Link to="services" className="link text-blue mt-4 inline-block mx-auto">See my services</Link>
+              <div className="p-8 shadow-lg mt-24 mx-auto rounded font-bold text-center bg-jp-indigo text-white">
+                Ready to make publishing easier?<br/>
+                <Link to="/book-consultation" className="button button--small mt-4">Book your consultation</Link>
               </div>
             </div>
           </Section>
@@ -97,26 +117,26 @@ class IndexPage extends Component {
                     <MdCheckmark style={{
                       position: 'absolute',
                       left: '-0.25rem'
-                    }} /> Confidently say yes to more clients
+                    }} /> Stop wasting your valuable time troubleshooting
                   </li>
                   <li className="py-2 text-lg md:text-xl lg:text-2xl relative pl-8">
                     <MdCheckmark style={{
                       position: 'absolute',
                       left: '-0.25rem'
-                    }} /> Offer more complex web projects
+                    }} /> Make updates to your website with confidence
                   </li>
                   <li className="py-2 text-lg md:text-xl lg:text-2xl relative pl-8">
                     <MdCheckmark style={{
                       position: 'absolute',
                       left: '-0.25rem'
-                    }} /> Provide faster and more accessible websites
+                    }} /> Have an experienced and dependable development partner
                   </li>
-                  <li className="py-2 text-lg md:text-xl lg:text-2xl relative pl-8">
+                  {/* <li className="py-2 text-lg md:text-xl lg:text-2xl relative pl-8">
                     <MdCheckmark style={{
                       position: 'absolute',
                       left: '-0.25rem'
-                    }} /> Stop worrying who will build your web projects
-                  </li>
+                    }} /> Stop worrying who can help you
+                  </li> */}
                   {/* <li className="py-2 text-lg md:text-xl lg:text-2xl">
                     <MdCheckmark /> Have priority project booking
                   </li> */}
@@ -124,7 +144,7 @@ class IndexPage extends Component {
                     <MdCheckmark /> Get the best solution, not the cheapest
                   </li> */}
                 </ul>
-                <Link to="contact" className="button inline-block flex-grow-none hover:bg-lighter-blue shadow">
+                <Link to="/book-consultation" className="button inline-block flex-grow-none hover:bg-lighter-blue shadow">
                   Work with me
                 </Link>
               </div>
@@ -149,7 +169,7 @@ class IndexPage extends Component {
 
         <AgencyBumper />
 
-        <div className="bg-grey-lightest">
+        {/* <div className="bg-grey-lightest">
           <Section>
             <h3 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none md:text-center">What clients are saying</h3>
             <div className="service-grid">
@@ -171,19 +191,19 @@ class IndexPage extends Component {
               </div>
             </div>
           </Section>
-        </div>
+        </div> */}
 
         {/* I believe businesses should be able to have high-quality, accessible websites,
         without a complicated or confusing Content Management System, tailored to their needs. */}
 
 
-        {/* <ServicesBumper className="bg-grey-lightest"/> */}
-        <ServicesBumper />
+        <ServicesBumper className="bg-grey-lightest"/>
+        {/* <ServicesBumper /> */}
 
 
 
-        {/* <ContactBumper /> */}
-        <ContactBumper className="bg-grey-lightest"  />
+        <ContactBumper />
+        {/* <ContactBumper className="bg-grey-lightest"  /> */}
 
 
         {/* <div className="bg-white py-32">

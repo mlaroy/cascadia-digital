@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 // import Link from 'gatsby-link';
 import wordpress from '../images/wordpress.svg';
 import jamStack from '../images/static.svg';
@@ -9,6 +9,7 @@ import accessibility from '../images/accessibility.svg';
 import ecommerce from '../images/ecommerce.svg';
 import gatsby from '../images/gatsby.svg';
 import landingPage from '../images/landing-page.svg';
+import developer from '../images/developer.svg'
 
 const ServiceTeaser = () => (
   <StaticQuery
@@ -16,7 +17,7 @@ const ServiceTeaser = () => (
     render={({allMarkdownRemark}) => (
       <>
           {allMarkdownRemark.edges.map(edge => {
-            const { title, description, img, published, slug } = edge.node.frontmatter;
+            const { title, description, img, published } = edge.node.frontmatter;
             console.log(edge.node.frontmatter);
             const image = getImage(img);
 
@@ -28,7 +29,8 @@ const ServiceTeaser = () => (
                   </div>
                   <div className="md:flex flex-col justify-center">
                     <h2 className="text-3xl md:text-4xl leading-normal">
-                      <Link to={`/services${slug}`} className="no-underline text-black hover:text-blue">{title}</Link>
+                      {/* <Link to={`/services${slug}`} className="no-underline text-black hover:text-blue">{title}</Link> */}
+                      {title}
                     </h2>
                     <p className="mb-4 text-lg sm:text-xl leading-normal">{description}</p>
                     {/* <p className="mb-4"><strong>Starts at $10,000</strong></p> */}
@@ -61,6 +63,8 @@ const getImage = img => {
       return programmer;
     case 'landing-page':
       return landingPage;
+    case 'developer':
+      return developer;
     case 'ecommerce':
         return ecommerce;
     default:
@@ -81,7 +85,6 @@ const SERVICE_TEASER_QUERY = graphql`
             frontmatter {
               order
               title
-              slug
               description
               img
               published

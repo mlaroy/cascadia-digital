@@ -160,7 +160,7 @@ blockquote:before {
 }
 
 .button--small {
-  @apply .text-lg .px-4 py-2;
+  @apply .text-base .px-4 py-2;
 }
 
 @media (min-width: 768px) {
@@ -168,8 +168,8 @@ blockquote:before {
     @apply .text-xl;
   }
 
-  .button--small {
-    @apply .text-lg;
+  .button.button--small {
+    @apply .text-base;
   }
 }
 
@@ -295,16 +295,33 @@ h3 {
 
 .has-bg {
   @apply .relative;
+  margin-top: 85px;
+}
+.has-bg:after {
+  content: '';
+  width: 60%;
+  height: calc(60% + 75px);
+  @apply .rounded .bg-grey-light .shadow-md;
+  position: absolute;
+  top: -85px;
+  left: -85px;
+  z-index: 1;
 }
 .has-bg:before {
   content: '';
   width: 60%;
   height: calc(60% + 75px);
-  @apply .rounded .bg-grey-light .opacity-25;
+  @apply .rounded .bg-jp-indigo;
   position: absolute;
   top: -75px;
   left: -75px;
-  z-index: -1;
+  z-index: 0;
+}
+
+.has-bg:before,
+.has-bg:after {
+  height: 75px;
+  width: 75px;
 }
 
 
@@ -335,6 +352,32 @@ h3 {
 
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+select,
+textarea {
   @apply .p-4 .rounded .border .w-full .text-sm;
+}
+
+select {
+  appearance: none;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap:after {
+  content: '\2039';
+  pointer-events: none;
+  position: absolute;
+  height: 20px;
+  /* width: 20px; */
+  right: 1rem;
+  top: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  transform: translateY(-50%) rotate(-90deg);
 }

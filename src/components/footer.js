@@ -12,12 +12,12 @@ const Footer = ({ siteTitle }) => (
         <div>
           <img src={whitelogo} width="150" alt="" className="mb-16"/>
 
-          <NewsletterForm
+          {/* <NewsletterForm
             url="1774006"
             buttonText="Subscribe"
             flex="true">
             <h4 className="text-2xl mt-2 mb-2 text-white">Subscribe to my mailing list</h4>
-          </NewsletterForm>
+          </NewsletterForm> */}
         </div>
         <div className="footer-nav text-center md:text-right">
           <MainNav linkColor="text-white" />

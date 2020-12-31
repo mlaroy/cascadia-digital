@@ -2,13 +2,13 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Cascadia Digital - Helping agencies meet their client needs with expert front-end development',
+    title: 'Cascadia Digital - Helping help brands get their message out with reliable, easy website publishing.',
     footerTitle: 'Cascadia Digital Inc.',
     siteUrl: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
     metaImage: '/images/og:meta.jpg',
-    description: 'I help branding agencies deliver better web development projects.'
+    description: 'I help brands get their message out with reliable, easy website publishing.'
   },
   plugins: [
     {

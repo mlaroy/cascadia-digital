@@ -23,7 +23,7 @@ const NotFoundPage = () => (
           industry leaders in web accessible training, as well as the makers of the WAVE accessibility tool.
         </p>
         <p className="text-xl mb-4">
-          Signup for my mailing list to get this free PDF, <span className="italic">5 Ways to Make Your Website More Accessible.</span>
+          Signup for my mailing list to get this free PDF, <span className="italic">5 Tips for More Accessible Websites.</span>
         </p>
       </div>
       <div className="mx-auto lg:w-2/3">
