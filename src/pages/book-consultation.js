@@ -56,6 +56,7 @@ const ContactPage = (props) => {
           budget,
           oneProblem,
           relationship,
+          timeline,
           details,
           howDidYouHear,
         })
@@ -199,7 +200,7 @@ const ContactPage = (props) => {
 
               <label className="mb-8 block text-sm">
                 What is the #1 problem you are trying to solve with your project?
-                <input placeholder="My biggest problem..." name="problem" type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
+                <input placeholder="My biggest problem..." name="oneProblem" type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
               </label>
 
               <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
@@ -221,7 +222,7 @@ const ContactPage = (props) => {
 
               <label className="mb-8 block text-sm">
                 How did you hear about Cascadia Digital?
-                <input placeholder="How did you hear about Cascadia Digital?" name="How did you hear" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
+                <input placeholder="How did you hear about Cascadia Digital?" name="howDidYouHear" type="text" id="howDidYouHear" value={howDidYouHear} onChange={(e) => setHowDidYouHear(e.target.value)} />
               </label>
 
               {/* <label className="block text-sm mb-8">
@@ -261,7 +262,7 @@ const ContactPage = (props) => {
 const renderContactLink = ({hasJS})  => {
   if(!hasJS) {
     return (
-      <noscript>This requires JavaScript, sorry!</noscript>
+      <noscript>This form requires JavaScript, sorry!</noscript>
     );
   }
 }

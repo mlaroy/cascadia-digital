@@ -133,7 +133,6 @@ const ContactPage = ({ location }) => {
         </Section>
       </div>
       <div className="bg-white">
-      {renderContactLink(hasJS)}
         <Section>
           {renderContactLink(hasJS)}
           {hasJS && (
@@ -187,7 +186,7 @@ const ContactPage = ({ location }) => {
 const renderContactLink = ({hasJS})  => {
   if(!hasJS) {
     return (
-      <noscript>This requires JavaScript, sorry!</noscript>
+      <noscript>This form requires JavaScript, sorry!</noscript>
     );
   } else {
     return (
