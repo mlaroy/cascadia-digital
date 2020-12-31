@@ -21,7 +21,7 @@ const ContactPage = (props) => {
   const [timeline, setTimeline] = useState('');
   const [howDidYouHear, setHowDidYouHear] = useState('');
   const [relationship, setRelationship] = useState('');
-  const [oneProblem, setOneProblem] = useState('');
+  const [problem, setProblem] = useState('');
   const [honeypot, setHoneypot] = useState('');
   const [hasEmptyFields, setHasEmptyFields] = useState(false);
   const [isRobot, setIsRobot] = useState(false);
@@ -54,11 +54,11 @@ const ContactPage = (props) => {
           company,
           website,
           budget,
-          oneProblem,
+          problem,
           relationship,
           timeline,
           details,
-          howDidYouHear,
+          "How Did You Hear": howDidYouHear,
         })
       })
 
@@ -200,7 +200,7 @@ const ContactPage = (props) => {
 
               <label className="mb-8 block text-sm">
                 What is the #1 problem you are trying to solve with your project?
-                <input placeholder="My biggest problem..." name="oneProblem" type="text" id="problem" value={oneProblem} onChange={(e) => setOneProblem(e.target.value)} />
+                <input placeholder="My biggest problem..." name="problem" type="text" id="problem" value={problem} onChange={(e) => setProblem(e.target.value)} />
               </label>
 
               <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
