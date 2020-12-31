@@ -89,7 +89,7 @@ const ContactPage = (props) => {
       return false;
     }
 
-    const allowedFields = [email, name, company, website, budget, details, phone, timeline, howDidYouHear, oneProblem];
+    const allowedFields = [email, name, company, website, budget, details, phone, timeline, howDidYouHear, problem];
 
     // check for bots
     if( honeypot !== '') {
