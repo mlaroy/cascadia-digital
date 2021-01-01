@@ -139,7 +139,7 @@ const ContactPage = (props) => {
         <Section>
           {renderContactLink(hasJS)}
           {hasJS && (
-            <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" method="post" data-netlify="true" name="booking">
+            <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" method="post" data-netlify="true" name="booking" data-netlify-honeypot="bot-field" netlify>
               <p className="mb-8 text-base md:text-2xl">
                 It's important for me to know as many details as possible regarding your project.
                 This helps me have a clear picture of what you are looking to accomplish,
@@ -147,8 +147,7 @@ const ContactPage = (props) => {
               </p>
               <input
                 type="hidden"
-                value="booking"
-                name="form-name"
+                name="bot-field"
               />
               <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
               <label className="mb-8 block text-sm">
