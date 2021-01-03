@@ -139,7 +139,7 @@ const ContactPage = (props) => {
         <Section>
           {renderContactLink(hasJS)}
           {hasJS && (
-            <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" method="post" data-netlify="true" name="book-consultation" data-netlify-honeypot="bot-field" netlify>
+            <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" method="post" data-netlify="true" name="project_questions" data-netlify-honeypot="bot-field">
               <p className="mb-8 text-base md:text-2xl">
                 It's important for me to know as many details as possible regarding your project.
                 This helps me have a clear picture of what you are looking to accomplish,
