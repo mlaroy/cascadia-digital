@@ -21,7 +21,7 @@ class MainNav extends Component {
         {hasCTA && (
           <li className="flex text-center items-center sm:ml-4">
             <Link
-                to="/book-consultation"
+                to="/book-a-consultation"
                 activeClassName={activeClass}
                 className="button button--small mx-auto mt-4 md:mt-0"
               >Book Consultation</Link>

@@ -29,7 +29,7 @@ class IndexPage extends Component {
             at the worst possible time.
           </p>
 
-          <Link to="/book-consultation" className="button mt-4">Book your consultation</Link>
+          <Link to="/book-a-consultation" className="button mt-4">Book your consultation</Link>
 
           {/* <NewsletterForm
             url="1774006"
@@ -88,7 +88,7 @@ class IndexPage extends Component {
 
               <div className="p-8 shadow-lg mt-24 mx-auto rounded font-bold text-center bg-jp-indigo text-white">
                 Ready to make publishing easier?<br/>
-                <Link to="/book-consultation" className="button button--small mt-4">Book your consultation</Link>
+                <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
               </div>
             </div>
           </Section>
@@ -144,7 +144,7 @@ class IndexPage extends Component {
                     <MdCheckmark /> Get the best solution, not the cheapest
                   </li> */}
                 </ul>
-                <Link to="/book-consultation" className="button inline-block flex-grow-none hover:bg-lighter-blue shadow">
+                <Link to="/book-a-consultation" className="button inline-block flex-grow-none hover:bg-lighter-blue shadow">
                   Work with me
                 </Link>
               </div>

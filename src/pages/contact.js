@@ -126,7 +126,7 @@ const ContactPage = ({ location }) => {
               To enquire about starting a project, book a consultation to see if we are a fit to work together.
             </p>
             <Link
-              to="/book-consultation"
+              to="/book-a-consultation"
               className="button"
             >Book Now</Link>
           </div>
