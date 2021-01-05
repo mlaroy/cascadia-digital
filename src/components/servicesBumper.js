@@ -18,7 +18,7 @@ const ServicesBumper = props => {
               How I can help
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-              Start your next website project on the right foot. <br />
+              Start your next website project on the right foot. <br className="hidden lg:block" />
               See how you can make your website better.
             </p>
             <p>

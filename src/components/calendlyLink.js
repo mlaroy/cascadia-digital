@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 
-class CalendlyPopup extends Component {
+const CalendlyPopup = () => {
 
-    componentDidMount() {
+    useEffect( () => {
         const head = document.querySelector('head');
         const script = document.createElement('script');
         script.setAttribute('src',  'https://assets.calendly.com/assets/external/widget.js');
         head.appendChild(script);
-    }
+    }, [] );
 
-    bookCalendlyLink = (e) => {
+    const bookCalendlyLink = (e) => {
         console.log('click');
         window.Calendly.initPopupWidget({url: 'https://calendly.com/cascadia-digital/30-minute-consulatation'});
     }
@@ -18,7 +18,7 @@ class CalendlyPopup extends Component {
         return (
             <>
                 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-                <button className="button" onClick={this.bookCalendlyLink}>Book a free consultation</button>
+                <button className="button" onClick={bookCalendlyLink}>Book a free consultation</button>
             </>
         )
     }

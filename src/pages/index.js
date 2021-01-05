@@ -9,7 +9,7 @@ import done from '../images/done.svg'
 import MdCheckmark from 'react-ionicons/lib/MdCheckmark'
 // import CalendlyPopup from '../components/calendlyLink';
 import { Link } from 'gatsby'
-// import NewsletterForm from '../components/newsletterForm';
+import NewsletterForm from '../components/newsletterForm';
 import bg from '../images/snow-capped-mountains-seen-through-the-trees-min.jpg';
 // import mountains from '../images/snowy-plains-and-mountains.jpg';
 
@@ -19,13 +19,13 @@ class IndexPage extends Component {
     return (
       <Layout full={true} >
         <Hero
-          title="I help brands get their message out with reliable, easy website publishing."
+          title="I help brands get their message out with easy, reliable website publishing."
           bg={bg}
           bgAlt="Mountain landscape"
           full={true}
         >
           <p className="mb-8 text-lg md:text-2xl">
-            Make your editing experience be smooth by <br className="hidden md:block" />
+            Make your website publishing experience smooth by <br className="hidden lg:block" />
             removing the friction causing you headaches.
           </p>
 
@@ -36,10 +36,12 @@ class IndexPage extends Component {
             buttonText="Subscribe"
             flex="true">
           </NewsletterForm> */}
+
           {/* <div>
             <h2 className="text-2xl md:text-3xl mt-2 mb-2 text-white">Get my free guide to </h2>
             <Link to="#" className="button">Get Your Free Guide Now</Link>
           </div> */}
+
         </Hero>
 
         <Section>
@@ -47,21 +49,21 @@ class IndexPage extends Component {
             <h2 className="text-2xl md:text-3xl">
               Are you spending too much of your valuable time struggling to update your website content?
             </h2>
-            <p className="text-lg lg:text-xl mb-16 md:w-3/4">
+            <p className="text-lg lg:text-xl mb-8 md:w-3/4">
               What if making updates to your website could be truly painless?
             </p>
             <h2 className="text-2xl md:text-3xl">
-              Are you afraid to edit anything your website because it might break something?
+              Are you afraid to edit anything on your website because it might break something?
             </h2>
-            <p className="text-lg lg:text-xl mb-16 md:w-3/4">
-              Imagine a website publishing experience that you can rely on to work, without worrying
-              about it breaking at any moment.
+            <p className="text-lg lg:text-xl mb-8 md:w-3/4">
+              Imagine a website publishing experience that you can rely on to work consistently,
+              without worrying about it breaking at any moment.
             </p>
             <h2 className="text-2xl md:text-3xl">
               Do you need an experienced and realiable development partner to help realize your vision for your website?
             </h2>
-            <p className="text-lg lg:text-xl mb-16 md:w-3/4">
-              What if you had someone you could trust available to help you achieve your website goals?
+            <p className="text-lg lg:text-xl mb-8 md:w-3/4">
+              What if you had a development partner you could trust who could help make your vision a reality?
             </p>
 
             {/* <p className="mt-16">
@@ -69,7 +71,7 @@ class IndexPage extends Component {
             </p> */}
 
             <div className="p-8 shadow mt-24 mx-auto rounded font-bold text-center bg-jp-indigo">
-              <h3 className="text-lg sm:text-xl md:text-2xl text-white">Ready to make publishing easier?</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white">Ready to make web publishing easier?</h3>
               <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
             </div>
           </div>
@@ -125,7 +127,7 @@ class IndexPage extends Component {
           <Section>
             <h3 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none md:text-center">What clients are saying</h3>
             <div className="service-grid">
-              <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="bg-white rounded-lg shadow p-8">
                 <blockquote>
                   <p className="mb-4">Cascadia Digital has the tools to help you get the
                     website solution you really need to help your business succeed
@@ -133,7 +135,7 @@ class IndexPage extends Component {
                   <span className="text-sm italic">&mdash; Zach, Domain7</span>
                 </blockquote>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="bg-white rounded-lg shadow p-8">
                 <blockquote>
                   <p className="mb-4">Cascadia Digital has the tools to help you get the
                     website solution you really need to help your business succeed
