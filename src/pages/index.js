@@ -24,7 +24,7 @@ class IndexPage extends Component {
           bgAlt="Mountain landscape"
           full={true}
         >
-          <p className="mb-16 text-lg md:text-2xl">
+          <p className="mb-8 text-lg md:text-2xl">
             Make your editing experience be smooth by <br className="hidden md:block" />
             removing the friction causing you headaches.
           </p>

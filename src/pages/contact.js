@@ -120,9 +120,9 @@ const ContactPage = ({ location }) => {
       </Hero>
       <div className="bg-grey-lightest">
         <Section className="md:text-center">
-          <div className="mx-auto max-w-lg">
+          <div className="mx-auto max-w-xl">
             <h2 className="text-2xl md:text-3xl lg:text-4xl">Are you ready to book a consultation?</h2>
-            <p className="mb-8">
+            <p className="mb-8 text-lg md:text-xl">
               To enquire about starting a project, book a consultation to see if we are a fit to work together.
             </p>
             <Link
