@@ -11,14 +11,14 @@ module.exports = {
     description: 'I help brands get their message out with reliable, easy website publishing.'
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'mtd5qkl'
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     typekit: {
+    //       id: 'mtd5qkl'
+    //     }
+    //   }
+    // },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {

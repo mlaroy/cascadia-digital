@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
-import fun from '../images/fun.svg'
+import meeting from '../images/calendar.svg'
 // import ServicesBumper from '../components/servicesBumper'
 import Section from '../components/section'
 
@@ -132,7 +132,7 @@ const ContactPage = (props) => {
         <meta property="og:title" content="Book Consultation | Cascadia Digital" />
         <meta property="og:url" content={ location.href } />
       </Helmet>
-      <Hero title="Book your consultation" img={fun} fade={true}>
+      <Hero title="Book your consultation" img={meeting} fade={true}>
         Tell me the details of your project needs, and see if we are a fit.
       </Hero>
       <div className="bg-grey-lightest">
@@ -152,28 +152,28 @@ const ContactPage = (props) => {
               <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
               <label className="mb-8 block text-sm">
                 Name
-                <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+                <input className="mt-1" placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
               </label>
               <label className="mb-8 block text-sm">
                 Email
-                <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className="mt-1" placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </label>
               <label className="mb-8 block text-sm">
                 Phone
-                <input placeholder="Phone" name="phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <input className="mt-1" placeholder="Phone" name="phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
               </label>
               <label className="mb-8 block text-sm">
                 Company Name
-                <input placeholder="Company name" name="company" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
+                <input className="mt-1" placeholder="Company name" name="company" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
               </label>
               <label className="mb-8 block text-sm">
                 Website
-                <input placeholder="https://example.com" name="website" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
+                <input className="mt-1" placeholder="https://example.com" name="website" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
               </label>
               <label className="mb-8 block text-sm">
                 Budget Range
                 <div className="select-wrap">
-                  <select name="budget" defaultValue={budget} id="budget" onBlur={(e) => {
+                  <select className="mt-1" name="budget" defaultValue={budget} id="budget" onBlur={(e) => {
                     setBudget(e.target.value)
                   }}>
                     <option value="" disabled="disabled">Select budget range</option>
@@ -187,7 +187,7 @@ const ContactPage = (props) => {
               <label className="mb-8 block text-sm">
                 What kind of relationship do you want to have with Cascadia Digital?
                 <div className="select-wrap">
-                  <select name="relationship" id="relationship" defaultValue={relationship} onBlur={(e) => {
+                  <select className="mt-1" name="relationship" id="relationship" defaultValue={relationship} onBlur={(e) => {
                     setRelationship(e.target.value)
                   }}>
                     <option value="" disabled="disabled">Select relationship type</option>
@@ -200,16 +200,16 @@ const ContactPage = (props) => {
 
               <label className="mb-8 block text-sm">
                 What is the #1 problem you are trying to solve with your project?
-                <input placeholder="My biggest problem..." name="problem" type="text" id="problem" value={problem} onChange={(e) => setProblem(e.target.value)} />
+                <input className="mt-1" placeholder="My biggest problem..." name="problem" type="text" id="problem" value={problem} onChange={(e) => setProblem(e.target.value)} />
               </label>
 
               <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
-              <textarea name="details" className="block mb-8" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
+              <textarea name="details" className="block mb-8 mt-1" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
 
               <label className="mb-8 block text-sm">
                 What is your estimated timeline?
                 <div className="select-wrap">
-                  <select name="timeline" id="timeline" defaultValue={timeline} onBlur={(e) => {
+                  <select className="mt-1" name="timeline" id="timeline" defaultValue={timeline} onBlur={(e) => {
                     setTimeline(e.target.value)
                   }}>
                     <option value="" disabled="disabled">Select estimated timeline</option>
@@ -222,7 +222,7 @@ const ContactPage = (props) => {
 
               <label className="mb-8 block text-sm">
                 How did you hear about Cascadia Digital?
-                <input placeholder="How did you hear about Cascadia Digital?" name="learn" type="text" id="learn" value={learn} onChange={(e) => setLearn(e.target.value)} />
+                <input className="mt-1" placeholder="How did you hear about Cascadia Digital?" name="learn" type="text" id="learn" value={learn} onChange={(e) => setLearn(e.target.value)} />
               </label>
 
               {/* <label className="block text-sm mb-8">

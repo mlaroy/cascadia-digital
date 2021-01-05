@@ -23,7 +23,7 @@ const ServicesBumper = props => {
             </p>
             <p>
               <Link to="/services" className="button hover:bg-lighter-blue shadow">
-                See my services
+                See Services
               </Link>
             </p>
           </div>

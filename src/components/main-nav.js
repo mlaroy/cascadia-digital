@@ -39,12 +39,12 @@ const pages = [
   //   text: 'Work'
   // },
   {
-    url: '/services',
-    text: 'Services'
-  },
-  {
     url: '/about',
     text: 'About'
+  },
+  {
+    url: '/services',
+    text: 'Services'
   },
   {
     url: '/contact',

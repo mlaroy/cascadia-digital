@@ -121,7 +121,7 @@ const ContactPage = ({ location }) => {
       <div className="bg-grey-lightest">
         <Section className="md:text-center">
           <div className="mx-auto max-w-lg">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">Are you ready to book a consultation?</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl">Are you ready to book a consultation?</h2>
             <p className="mb-8">
               To enquire about starting a project, book a consultation to see if we are a fit to work together.
             </p>
@@ -137,22 +137,22 @@ const ContactPage = ({ location }) => {
           {renderContactLink(hasJS)}
           {hasJS && (
             <form onSubmit={(e) => handleContactSubmit(e)} className="mx-auto max-w-lg" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
-              <h2>For general inquiries, please send me a note.</h2>
+              <h2 className="text-2xl md:text-3xl">For general inquiries, please send me a note.</h2>
               <input
                 type="hidden"
                 name="bot-field"
               />
-              <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
+              <input type="text" className="hidden mt-1" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
               <label className="mb-8 block text-sm">
                 Name
                 <input placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
               </label>
               <label className="mb-8 block text-sm">
                 Email
-                <input placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className="mt-1" placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </label>
               <label htmlFor="message" className="block text-sm">Message</label>
-              <textarea name="message" className="block mb-8" id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+              <textarea name="message" className="block mb-8 mt-1" id="message" cols="30" rows="10" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
               {hasEmptyFields && (
                 <p className="mb-4 text-red">
                   Please ensure all fields are set

@@ -24,12 +24,12 @@ class IndexPage extends Component {
           bgAlt="Mountain landscape"
           full={true}
         >
-          <p className="mb-16 text-lg md:text-2xl font-bold">
-            Stop worrying if your website will break <br className="hidden md:block" />
-            at the worst possible time.
+          <p className="mb-16 text-lg md:text-2xl">
+            Make your editing experience be smooth by <br className="hidden md:block" />
+            removing the friction causing you headaches.
           </p>
 
-          <Link to="/book-a-consultation" className="button mt-4">Book your consultation</Link>
+          <Link to="/book-a-consultation" className="button mt-4">Book Your Consultation</Link>
 
           {/* <NewsletterForm
             url="1774006"
@@ -42,61 +42,40 @@ class IndexPage extends Component {
           </div> */}
         </Hero>
 
-        <div className="mt-24">
-          <Section>
-            <div className="mx-auto md:w-4/5 lg:w-3/4 has-bg">
-              <h2 className="text-xl sm:text-2xl md:text-3xl">
-                Are you spending too much of your valuable time struggling to update your website content?
-              </h2>
-              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
-                What if making updates to your website could be as easy as pie?
-              </p>
-              <h2 className="text-xl sm:text-2xl md:text-3xl">
-                Are you afraid to edit anything your website because it might break something?
-              </h2>
-              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
-                Imagine a website publishing experience that you can rely on to work, without worrying
-                about it breaking at any moment.
-                {/* What if you could have a reliable partner you can call when you don't have the
-                resources available? */}
-              </p>
-              <h2 className="text-xl sm:text-2xl md:text-3xl">
-                Do you need an experience and realiable development partner to help make your website all that it could be?
-              </h2>
-              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
-                What if you had someone you could trust available to help you achieve your website goals?
-              </p>
-              {/* <h2 className="text-xl sm:text-2xl md:text-3xl">
-                Do you scramble to find a good developer to build your beautifully designed websites?
-              </h2>
-              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
-                Imagine a world where you can stop worrying whether you can rely on
-                another new contractor to deliver.
-              </p> */}
-              {/* <h2 className="text-xl sm:text-2xl md:text-3xl">
-                Are you stuck providing basic Squarespace templates for your client projects?
-              </h2>
-              <p className="text-lg lg:text-xl mb-16 md:w-2/3">
-                Picture landing more and better clients by offering bespoke websites instead.
-              </p> */}
+        <Section>
+          <div className="mx-auto md:w-4/5 lg:w-3/4 has-bg">
+            <h2 className="text-2xl md:text-3xl">
+              Are you spending too much of your valuable time struggling to update your website content?
+            </h2>
+            <p className="text-lg lg:text-xl mb-16 md:w-3/4">
+              What if making updates to your website could be truly painless?
+            </p>
+            <h2 className="text-2xl md:text-3xl">
+              Are you afraid to edit anything your website because it might break something?
+            </h2>
+            <p className="text-lg lg:text-xl mb-16 md:w-3/4">
+              Imagine a website publishing experience that you can rely on to work, without worrying
+              about it breaking at any moment.
+            </p>
+            <h2 className="text-2xl md:text-3xl">
+              Do you need an experienced and realiable development partner to help realize your vision for your website?
+            </h2>
+            <p className="text-lg lg:text-xl mb-16 md:w-3/4">
+              What if you had someone you could trust available to help you achieve your website goals?
+            </p>
 
-              {/* <h2 className="text-2xl sm:text-3xl md:text-4xl">Are you missing out on projects because you aren’t able to include website development at all?</h2>
-              <p className="text-lg md:text-xl lg:text-2xl">I can step in to build your website projects for you.</p> */}
-              {/* <p className="mt-16">
-                <CalendlyPopup />
-              </p> */}
+            {/* <p className="mt-16">
+              <CalendlyPopup />
+            </p> */}
 
-              <div className="p-8 shadow-lg mt-24 mx-auto rounded font-bold text-center bg-jp-indigo text-white">
-                Ready to make publishing easier?<br/>
-                <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
-              </div>
+            <div className="p-8 shadow mt-24 mx-auto rounded font-bold text-center bg-jp-indigo">
+              <h3 className="text-lg sm:text-xl md:text-2xl text-white">Ready to make publishing easier?</h3>
+              <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
             </div>
-          </Section>
-        </div>
-
+          </div>
+        </Section>
 
         <div className="bg-grey-lightest">
-
           <Section>
             {/* <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold leading-normal mb-8 leading-none md:text-center">
               By working with me, you can:
@@ -105,11 +84,11 @@ class IndexPage extends Component {
 
               <div className="md:w-1/2 flex flex-col justify-center">
                 <div>
-                  <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 mx-auto"  alt="Cascadia Logo"/>
+                  <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 mx-auto"  alt="check list"/>
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold leading-normal mb-8 leading-none text-left">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-8 leading-none text-left">
                   By working with me, you can:
                 </h3>
                 <ul className="list-reset text-left mb-12">
@@ -131,18 +110,6 @@ class IndexPage extends Component {
                       left: '-0.25rem'
                     }} /> Have an experienced and dependable development partner
                   </li>
-                  {/* <li className="py-2 text-lg md:text-xl lg:text-2xl relative pl-8">
-                    <MdCheckmark style={{
-                      position: 'absolute',
-                      left: '-0.25rem'
-                    }} /> Stop worrying who can help you
-                  </li> */}
-                  {/* <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                    <MdCheckmark /> Have priority project booking
-                  </li> */}
-                  {/* <li className="py-2 text-lg md:text-xl lg:text-2xl">
-                    <MdCheckmark /> Get the best solution, not the cheapest
-                  </li> */}
                 </ul>
                 <Link to="/book-a-consultation" className="button inline-block flex-grow-none hover:bg-lighter-blue shadow">
                   Work with me
@@ -151,21 +118,6 @@ class IndexPage extends Component {
             </div>
           </Section>
         </div>
-
-        {/* <div className="bg-grey-lightest">
-          <Section>
-            <p className="text-lg md:text-xl lg:text-2xl leading-normal mx-auto md:w-4/5 lg:w-3/4">
-              <img src={cascadiaSVG} width="200" className="block mb-8"  alt="Cascadia Logo"/>
-              I help agencies and businesses deliver on their web development projects. As a Shopify Partner, and with
-              experience working in WordPress, Vue, React (and more), Cascadia Digital has the tools to help you get the
-              website solution you really need to help your business succeed.
-            </p>
-            <p className="sm:w-3/4 ">
-              <Link to="about" className="button hover:bg-lighter-blue shadow">Read more</Link>
-            </p>
-
-          </Section>
-        </div> */}
 
         <AgencyBumper />
 

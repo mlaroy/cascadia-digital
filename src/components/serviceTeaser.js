@@ -23,7 +23,7 @@ const ServiceTeaser = () => (
 
             if( published ) {
               return(
-                <li key={title} className="flex flex-col service-item shadow-lg p-8 rounded-lg bg-white">
+                <li key={title} className="flex flex-col service-item shadow p-8 rounded-sm bg-white">
                   <div className="service-item-img-container">
                     <img src={image} alt="" className="block mb-4 w-1/2 md:w-auto" />
                   </div>

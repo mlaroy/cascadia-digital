@@ -8,29 +8,32 @@ html > * {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("./fonts/RedHatText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Red Hat Text Bold";
+  src: url("./fonts/RedHatText-Medium.ttf");
+}
+
+@font-face {
+  font-family: "DM Serif Text";
+  src: url("./fonts/DMSerifText-Regular.ttf");
+}
+
 :root {
   --jp-indigo:#223843;
   --cream: #C8F0FF;
   --light-blue: #53ABCF;
   --lighter-blue: #67D6FF;
   --greyish-blue: #637780;
-  --font-sans: /*brandon-grotesque, Futura,*/ benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
-  --font-serif: benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Times New Roman, serif;
-  --font-heading: /*adobe-caslon-pro,*/ benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Georgia, Times New Roman, serif;
-  --font-body: /*brandon-grotesque, Futura,*/ benton-sans, helvetica, Helvetica Neue, arial, sans-serif;
-}
-
-.wf-loading {
-  opacity: 0;
-}
-
-.wf-active {
-  transition: opacity 0.25s ease-in;
-  opacity: 1;
-}
-
-.wf-inactive {
-  opacity: 1;
+  --font-sans: /*brandon-grotesque, Futura,*/ 'Red Hat Text', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
+  --font-sans-bold: /*brandon-grotesque, Futura,*/ 'Red Hat Text Bold', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
+  --font-serif: 'DM Serif Text', benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Times New Roman, serif;
+  --font-heading: /*adobe-caslon-pro,*/'DM Serif Text', benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Georgia, Times New Roman, serif;
+  --font-body: /*brandon-grotesque, Futura,*/ 'Red Hat Text', 'Mulish', 'Libre Franklin', benton-sans, helvetica, Helvetica Neue, arial, sans-serif;
 }
 
 @keyframes fadeIn {
@@ -70,6 +73,7 @@ html {
 body {
   @apply .text-jp-indigo .text-lg;
   font-family: var(--font-sans);
+  font-weight: regular;
 }
 
 main {
@@ -145,9 +149,9 @@ blockquote:before {
 }
 
 .button {
-  @apply .text-white .text-base .bg-light-blue .px-8 .py-4 .no-underline .rounded;
+  @apply .text-white .text-base .bg-light-blue .px-8 .py-4 .no-underline .rounded .tracking-loose;
   /* font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif; */
-  font-family: var(--font-sans);
+  font-family: var(--font-sans-bold);
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -200,6 +204,7 @@ blockquote:before {
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-weight: 700;
+  font-weight: normal;
   @apply .text-jp-indigo;
 }
 
@@ -212,7 +217,7 @@ h2 {
 }
 
 h3 {
-  @apply .mb-4;
+  @apply .mb-2;
 }
 
 .hero {
@@ -303,8 +308,8 @@ h3 {
   height: calc(60% + 75px);
   @apply .rounded .bg-grey-light .shadow-md;
   position: absolute;
-  top: -85px;
-  left: -85px;
+  top: -95px;
+  left: 0px;
   z-index: 1;
 }
 .has-bg:before {
@@ -313,10 +318,20 @@ h3 {
   height: calc(60% + 75px);
   @apply .rounded .bg-jp-indigo;
   position: absolute;
-  top: -75px;
-  left: -75px;
+  top: -85px;
+  left: 10px;
   z-index: 0;
 }
+  @media (min-width: 768px) {
+    .has-bg:before {
+      top: -75px;
+      left: -75px;
+    }
+    .has-bg:after {
+      top: -85px;
+      left: -85px;
+    }
+  }
 
 .has-bg:before,
 .has-bg:after {
@@ -358,9 +373,12 @@ input[type="tel"],
 select,
 textarea {
   @apply .p-4 .rounded .border .w-full .text-sm;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 select {
+  -webkit-appearance: none;
   appearance: none;
 }
 

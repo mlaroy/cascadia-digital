@@ -196,9 +196,8 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'benton-sans',
+      'Red Hat Text',
       'Helvetica Neue',
-      // 'brandon-grotesque',
       'Futura',
       'system-ui',
       'BlinkMacSystemFont',
@@ -213,7 +212,7 @@ module.exports = {
 
     ],
     'serif': [
-      'benton-modern-display',
+      'DM Serif Text',
       'Garamond',
       'Georgia',
       'Constantia',
@@ -329,6 +328,7 @@ module.exports = {
   tracking: {
     'tight': '-0.05em',
     'normal': '0',
+    'loose': '0.025em',
     'wide': '0.05em',
   },
 

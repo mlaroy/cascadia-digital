@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Section from '../components/section'
-import A11yMagnet from '../components/a11yMagnet';
+import Layout from './layout'
+import Section from './section'
+import A11yMagnet from './a11yMagnet';
 
 const NotFoundPage = () => (
   <Layout>

@@ -29,7 +29,7 @@ const About = props => (
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3">
             <figure className="w-64 mx-auto block text-center px-4 pb-16 responsive-img">
-              <img src={portrait} alt="" className="shadow-md rounded block mb-4 responsive-img"/>
+              <img src={portrait} alt="" className="shadow rounded block mb-4 responsive-img"/>
               <figcaption>
                 <a href="https://mikelaroy.ca" className="link hover:underline block mb-4">Michael LaRoy</a>
                 <a href="https://twitter.com/laroymike" className="link mx-2">
@@ -48,18 +48,18 @@ const About = props => (
               with an easy and reliable Content Management System, tailored to their needs.
             </p>
             <p className="text-lg md:text-2xl leading-normal mb-8">
-              Cascadia Digital is Michael LaRoy, a front-end developer from Vancouver
-              with a concern for accessibilty and good user experiences. My vision is
-              to be the preferred development partner for brands who want easy and reliable
-              website publishing.
-            </p>
-            <p className="text-lg md:text-2xl leading-normal">
               I have worked with small startups, mid-size agencies, as well as large national corporations.
               My experience enables me to work right along side your dev team, or to lead
               and execute your website project from start to finish.
             </p>
             <hr className="my-16 block"/>
-            <p className="text-lg md:text-2xl leading-normal">
+            <p className="text-lg md:text-xl leading-normal mb-8">
+              Hi, my name is Michael LaRoy - I’m a front-end developer from Vancouver
+              with a concern for accessibilty and good user experiences. My vision is
+              to be the preferred development partner for brands who want easy and reliable
+              website publishing.
+            </p>
+            <p className="text-lg md:text-xl leading-normal">
               Cascadia Digital is based in British Columbia’s Fraser Valley. I parter with businesses in nearby Vancouver
               and across the country.
             </p>

@@ -10,10 +10,10 @@ class Hero extends Component {
         {bg && (
           <img src={bg} alt={bgAlt} className="hero-bg mx-auto block absolute h-full w-full pin-t z-0 opacity-25"/>
         )}
-        <Section className={`pt-32 ${fladeClass} ${full ? 'md:mt-16' : ''}`}>
+        <Section className={`pt-24 md:pt-32 ${fladeClass} ${full ? 'md:mt-16' : ''}`}>
           <div className="md:py-12">
             {img && (
-              <div className="w-1/3 mb-8 md:w-auto md:absolute pin-r md:opacity-75 z-10 hero-image">
+              <div className="w-1/2 md:w-1/3 lg:w-auto mb-8 md:absolute pin-r md:opacity-75 z-10 hero-image">
                 <img src={img} alt="" width="320" className="mx-auto block"/>
               </div>
             )}
