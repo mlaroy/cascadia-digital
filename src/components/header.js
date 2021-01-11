@@ -85,7 +85,7 @@ const Header = ({ siteTitle, full }) => {
           Menu
           </button>
         <nav
-          className={`main-nav sm:flex ${isOpen ? 'main-nav js-is-open fadeIn': ''}`}
+          className={`main-nav sm:flex ${isOpen ? 'main-nav js-is-open': ''}`}
           aria-hidden={isOpen ? 'false' : 'true'}
         >
           {view === 'mobile' && isOpen && (

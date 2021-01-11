@@ -18,7 +18,7 @@ const ContactBumper = props => {
               Work with Cascadia Digital
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-              Are you ready to get your web project started?
+              Are you ready to get your project started?
             </p>
             <p>
               <Link to="/book-a-consultation" className="button hover:bg-lighter-blue shadow">

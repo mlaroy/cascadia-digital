@@ -27,17 +27,17 @@ const images = [
     title: 'Canada Life'
   },
   {
-    src: domain7,
-    title: 'Domain7'
-  },
-  {
     src: bch,
     title: 'BC Hydro'
   },
   {
     src: engine,
     title: 'Engine Digital'
-  }
+  },
+  {
+    src: domain7,
+    title: 'Domain7'
+  },
 ]
 
 export default Partners;
