@@ -8,7 +8,7 @@ module.exports = {
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
     metaImage: '/images/og-meta.png',
-    description: 'Helping help brands get their message out with easy, reliable website publishing.'
+    description: 'Helping help brands get their message out without the friction.'
   },
   plugins: [
     // {

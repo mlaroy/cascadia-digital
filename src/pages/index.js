@@ -19,7 +19,7 @@ class IndexPage extends Component {
     return (
       <Layout full={true} >
         <Hero
-          title="I help brands get their message without the friction."
+          title="I help brands get their out message without the friction."
           bg={bg}
           bgAlt="Mountain landscape"
           full={true}
