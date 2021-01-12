@@ -11,16 +11,19 @@ html > * {
 @font-face {
   font-family: "Red Hat Text";
   src: url("./fonts/RedHatText-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Red Hat Text Bold";
   src: url("./fonts/RedHatText-Medium.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "DM Serif Text";
   src: url("./fonts/DMSerifText-Regular.ttf");
+  font-display: swap;
 }
 
 :root {

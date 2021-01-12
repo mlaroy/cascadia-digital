@@ -8,7 +8,7 @@ class Hero extends Component {
     return (
       <div className={`hero relative ${full ? 'min-h-screen' : ''} ${bg ? 'bg-jp-indigo text-white' : ''}`}>
         {bg && (
-          <img src={bg} alt={bgAlt} className="hero-bg mx-auto block absolute h-full w-full pin-t z-0 opacity-25"/>
+          <img src={bg} alt={bgAlt} className="hero-bg mx-auto block absolute h-full w-full pin-t z-0 opacity-25" width="1440" height="792"/>
         )}
         <Section className={`pt-24 md:pt-32 ${full ? 'md:mt-16' : ''}`}>
           <div className="md:py-12">

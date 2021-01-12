@@ -19,7 +19,7 @@ class IndexPage extends Component {
     return (
       <Layout full={true} >
         <Hero
-          title="I help brands get their out message without the friction."
+          title="I help brands get their message out without the friction."
           bg={bg}
           bgAlt="Mountain landscape"
           full={true}
@@ -115,7 +115,7 @@ class IndexPage extends Component {
 
               <div className="md:w-1/2 flex flex-col justify-center">
                 <div>
-                  <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 mx-auto"  alt="check list"/>
+                  <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 mx-auto"  alt="check list" width="389" height="276"/>
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start">

@@ -11,7 +11,7 @@ const ServicesBumper = props => {
       <Section>
         <div className="md:flex flex-row-reverse">
           <div className="md:w-1/2 md:text-center">
-            <img src={servicesSVG} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt=""/>
+            <img src={servicesSVG} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt="" width="389" height="300"/>
           </div>
           <div className="md:w-1/2 flex flex-col justify-center">
             <h2 className="text-2xl sm:text-4xl mb-8 leading-none">

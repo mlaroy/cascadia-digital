@@ -12,7 +12,7 @@ class Partners extends Component {
       {images.map(item => {
         return (
           <li className="flex flex-col justify-center py-8 px-4 w-1/2 md:w-1/4 " key={item.title}>
-            <img src={item.src} alt={item.title} className="block w-full mx-auto"/>
+            <img src={item.src} alt={item.title} className="block w-full mx-auto" width="179px"/>
           </li>
         )
       })}
