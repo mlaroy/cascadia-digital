@@ -137,8 +137,8 @@ const ContactPage = (props) => {
       </Hero>
       <div className="bg-grey-lightest">
         <Section>
-          {renderContactLink(hasJS)}
-          {hasJS && (
+          {/* {renderContactLink(hasJS)} */}
+          {/* {hasJS && ( */}
             <form onSubmit={handleContactSubmit} className="mx-auto max-w-lg" data-netlify="true" name="project_questions" data-netlify-honeypot="bot-field">
               <p className="mb-8 text-base md:text-2xl">
                 It's important for me to know as many details as possible regarding your project.
@@ -253,7 +253,7 @@ const ContactPage = (props) => {
                 </p>
               )}
             </form>
-          )}
+          {/* )} */}
         </Section>
       </div>
     </Layout>
