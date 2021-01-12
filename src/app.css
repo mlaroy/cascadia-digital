@@ -152,7 +152,8 @@ blockquote:before {
 }
 
 .button {
-  @apply .text-white .text-base .bg-light-blue .px-8 .py-4 .no-underline .rounded .tracking-loose;
+  @apply .text-white .text-base .px-8 .py-4 .no-underline .rounded .tracking-loose;
+  background: var(--light-blue);
   /* font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif; */
   font-family: var(--font-sans-bold);
   font-weight: 600;

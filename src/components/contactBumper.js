@@ -11,7 +11,7 @@ const ContactBumper = props => {
       <Section>
         <div className="md:flex">
           <div className="md:w-1/2 md:text-center">
-            <img src={team} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt="" width="389" height="300"/>
+            <img src={team} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt="" width="389" height="300" loading="lazy"/>
           </div>
           <div className="md:w-1/2 flex flex-col justify-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none">

@@ -115,7 +115,7 @@ class IndexPage extends Component {
 
               <div className="md:w-1/2 flex flex-col justify-center">
                 <div>
-                  <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 mx-auto"  alt="check list" width="389" height="276"/>
+                  <img src={done} className="block p-4 mb-4 w-1/2 md:w-2/3 mx-auto"  alt="check list" width="389" height="276" loading="lazy"/>
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start">

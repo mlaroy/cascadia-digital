@@ -71,7 +71,7 @@ const Header = ({ siteTitle, full }) => {
           to="/"
           className="no-underline"
         >
-          <img src={!scrolling && full ? logoWhite : logo} width="150" alt="Cascadia Digial" className="header-logo block"/>
+          <img src={!scrolling && full ? logoWhite : logo} width="150" height="50" alt="Cascadia Digial" className="header-logo block"/>
           <span className="hidden">
             {siteTitle}
           </span>
