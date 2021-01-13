@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import meeting from '../images/calendar.svg'
+import Input from '../components/input';
 // import ServicesBumper from '../components/servicesBumper'
 import Section from '../components/section'
 
@@ -23,6 +24,7 @@ const ContactPage = (props) => {
   const [relationship, setRelationship] = useState('');
   const [problem, setProblem] = useState('');
   const [honeypot, setHoneypot] = useState('');
+  const [emptyFields, setEmptyFields] = useState([]);
   const [hasEmptyFields, setHasEmptyFields] = useState(false);
   const [isRobot, setIsRobot] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -69,7 +71,6 @@ const ContactPage = (props) => {
           console.warn(err);
           setFormHasError(true)
         }
-
       }
     }catch(err) {
       console.warn(err);
@@ -98,17 +99,19 @@ const ContactPage = (props) => {
     }
 
     // check for empty fields
-    const emptyFields = allowedFields.some( field => field === '');
+    const hasEmptyFields = allowedFields.some( field => field === '');
+    const empty = allowedFields.filter( field => field === '');
 
     // stop function because fields are not filled
-    if( emptyFields ) {
-      console.table(allowedFields);
+    if( hasEmptyFields ) {
+      setEmptyFields(empty);
+      console.table(empty);
       setHasEmptyFields(true);
       return false;
     }
 
     // check for bad words
-    const badWords = ['sex', 'hot women', 'get laid', 'ass', 'tits', ' boobs', 'shit', 'fuck'];
+    const badWords = [' sex', 'hot women', 'get laid', ' ass', ' tits', ' boobs', ' shit', ' fuck'];
     const hasBadWords = badWords.some( word => {
       return details.includes(word);
     })
@@ -151,26 +154,49 @@ const ContactPage = (props) => {
                 name="bot-field"
               />
               <input type="text" className="hidden" value={honeypot} onChange={e => setHoneypot(e.target.value) } />
-              <label className="mb-8 block text-sm">
-                Name
-                <input className="mt-1" placeholder="Name" name="name" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
-              </label>
-              <label className="mb-8 block text-sm">
-                Email
-                <input className="mt-1" placeholder="Email" name="email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-              </label>
-              <label className="mb-8 block text-sm">
-                Phone
-                <input className="mt-1" placeholder="Phone" name="phone" type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
-              </label>
-              <label className="mb-8 block text-sm">
-                Company Name
-                <input className="mt-1" placeholder="Company name" name="company" type="text" id="company" value={company} onChange={(e) => setCompany(e.target.value)}/>
-              </label>
-              <label className="mb-8 block text-sm">
-                Website
-                <input className="mt-1" placeholder="https://example.com" name="website" type="url" id="website" value={website} onChange={(e) => setWebsite(e.target.value)}/>
-              </label>
+              <Input
+                value={name}
+                name="name"
+                placeholder="Name"
+                label="Name"
+                changeHandler={setName}
+                isEmpty={emptyFields.includes(name)}
+              />
+              <Input
+                value={email}
+                type="email"
+                name="email"
+                placeholder="Email"
+                label="Email"
+                changeHandler={setEmail}
+                isEmpty={emptyFields.includes(email)}
+              />
+              <Input
+                value={phone}
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                label="Phone"
+                changeHandler={setPhone}
+                isEmpty={emptyFields.includes(phone)}
+              />
+              <Input
+                value={company}
+                name="company"
+                placeholder="Company name"
+                label="Company name"
+                changeHandler={setCompany}
+                isEmpty={emptyFields.includes(company)}
+              />
+              <Input
+                value={website}
+                name="website"
+                placeholder="https://example.com"
+                label="Website"
+                changeHandler={setWebsite}
+                isEmpty={emptyFields.includes(website)}
+              />
+
               <label className="mb-8 block text-sm">
                 Budget Range
                 <div className="select-wrap">
@@ -184,6 +210,9 @@ const ContactPage = (props) => {
                     <option value="$25k +">$25k +</option>
                   </select>
                 </div>
+                {emptyFields.includes(budget) && (
+                  <span className="text-sm text-red">This field is requred</span>
+                )}
               </label>
               <label className="mb-8 block text-sm">
                 What kind of relationship do you want to have with Cascadia Digital?
@@ -197,15 +226,27 @@ const ContactPage = (props) => {
                     <option value="Retainer">Retainer</option>
                   </select>
                 </div>
+                {emptyFields.includes(relationship) && (
+                  <span className="text-sm text-red">This field is requred</span>
+                )}
               </label>
 
-              <label className="mb-8 block text-sm">
-                What is the #1 problem you are trying to solve with your project?
-                <input className="mt-1" placeholder="My biggest problem..." name="problem" type="text" id="problem" value={problem} onChange={(e) => setProblem(e.target.value)} />
-              </label>
+              <Input
+                value={problem}
+                name="problem"
+                placeholder="My biggest problem..."
+                label="What is the #1 problem you are trying to solve with your project?"
+                changeHandler={setProblem}
+                isEmpty={emptyFields.includes(problem)}
+              />
 
-              <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
-              <textarea name="details" className="block mb-8 mt-1" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
+              <div className="form-field mb-8">
+                <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
+                <textarea name="details" className="block mb-1 mt-1" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
+                {emptyFields.includes(details) && (
+                  <span className="text-sm text-red">This field is requred</span>
+                )}
+              </div>
 
               <label className="mb-8 block text-sm">
                 What is your estimated timeline?
@@ -219,17 +260,19 @@ const ContactPage = (props) => {
                     <option value="6-9 months">6-9 months</option>
                   </select>
                 </div>
+                {emptyFields.includes(timeline) && (
+                  <span className="text-sm text-red">This field is requred</span>
+                )}
               </label>
 
-              <label className="mb-8 block text-sm">
-                How did you hear about Cascadia Digital?
-                <input className="mt-1" placeholder="How did you hear about Cascadia Digital?" name="learn" type="text" id="learn" value={learn} onChange={(e) => setLearn(e.target.value)} />
-              </label>
-
-              {/* <label className="block text-sm mb-8">
-                <input type="checkbox"/>
-                {' '}Add me to your mailing list
-              </label> */}
+              <Input
+                value={learn}
+                name="learn"
+                placeholder="How did you hear about Cascadia Digital?"
+                label="How did you hear about Cascadia Digital?"
+                changeHandler={setLearn}
+                isEmpty={emptyFields.includes(learn)}
+              />
 
               {hasEmptyFields && (
                 <p className="mb-4 text-red">

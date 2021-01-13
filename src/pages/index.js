@@ -9,7 +9,7 @@ import done from '../images/done.svg'
 import MdCheckmark from 'react-ionicons/lib/MdCheckmark'
 // import CalendlyPopup from '../components/calendlyLink';
 import { Link } from 'gatsby'
-import NewsletterForm from '../components/newsletterForm';
+// import NewsletterForm from '../components/newsletterForm';
 import bg from '../images/snow-capped-mountains-seen-through-the-trees-min.jpg';
 // import mountains from '../images/snowy-plains-and-mountains.jpg';
 
@@ -87,8 +87,8 @@ class IndexPage extends Component {
               for the better, freeing you to focus on what matters most: your content.
             </p>
             <p className="text-lg lg:text-xl mb-8">
-              Visual page builders have a tendency to be clunky and problematic. I prefer a tailored content entry experience,
-              designed to work with your website’s design seemlessly.
+              For example, some themes or plugins using visual page builders have a tendency to be clunky, difficult to use, and functionally
+              problematic. I prefer a tailored content entry experience, designed to work with your website’s design seemlessly.
             </p>
             <p className="text-lg lg:text-xl">
               Book a consultation to see how we can fix the things causing you headaches on your website, and make

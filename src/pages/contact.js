@@ -9,7 +9,7 @@ import Hero from '../components/hero'
 import fun from '../images/fun.svg'
 import ServicesBumper from '../components/servicesBumper'
 import Section from '../components/section'
-import { encode } from '../utilities/formHelpers';
+// import { encode } from '../utilities/formHelpers';
 
 
 const ContactPage = ({ location }) => {
