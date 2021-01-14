@@ -9,7 +9,7 @@ const Bumper = props => (
       <h3 className="mb-8 text-white">
        {props.text}
       </h3>
-      <Link to={props.url} className="button hover:bg-lighter-blue shadow">Learn more</Link>
+      <Link to={props.url} className="button shadow">Learn more</Link>
     </Section>
   </div>
 )

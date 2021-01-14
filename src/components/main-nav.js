@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 class MainNav extends Component {
   render() {
-    const { activeClass, linkColor } = this.props;
+    const { activeClass, linkColor, hasCTA = false } = this.props;
     const linkClass = `${linkColor || ''} link hover:underline py-4 block w-full sm:inline-block`
     return (
       <ul className="list-reset sm:flex justify-between">
@@ -18,20 +18,30 @@ class MainNav extends Component {
             </li>
           )
         })}
+        {hasCTA && (
+          <li className="flex text-center items-center sm:ml-4">
+            <Link
+                to="/book-a-consultation"
+                activeClassName={activeClass}
+                className="button button--small mx-auto mt-4 md:mt-0"
+              >Book Consultation</Link>
+          </li>
+        )}
       </ul>
     );
   }
 }
 
 const pages = [
-  {
-    url: '/about',
-    text: 'About'
-  },
+
   // {
   //   url: '/work',
   //   text: 'Work'
   // },
+  {
+    url: '/about',
+    text: 'About'
+  },
   {
     url: '/services',
     text: 'Services'

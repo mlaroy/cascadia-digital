@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import Layout from './layout'
 import Section from '../components/section'
+import Hero from './hero';
+import ContactBumper from '../components/contactBumper';
 // import Helmet from 'react-helmet';
 
 
@@ -12,13 +14,15 @@ class ServiceLayout extends Component {
     console.log(this.props);
     return(
       <Layout>
+        <Hero title={data.markdownRemark.frontmatter.title}>
+            {data.markdownRemark.frontmatter.description}
+        </Hero>
         <Section>
           <div>
-            <h1>
-              {data.file.childMarkdownRemark.frontmatter.title}
-            </h1>
+            Content
           </div>
         </Section>
+        <ContactBumper />
       </Layout>
     )
   }
@@ -31,14 +35,13 @@ export const query = graphql`
        title
      }
    }
-   file(id: {
+   markdownRemark(id: {
       eq: $id
     }) {
-      childMarkdownRemark {
-        frontmatter {
-          title
-          slug
-        }
+      frontmatter {
+        title
+        slug
+        description
       }
     }
   }

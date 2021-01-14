@@ -8,11 +8,11 @@ import bch from '../images/bchydro.svg';
 class Partners extends Component {
   render() {
     return (
-      <ul className="list-reset flex flex-col md:flex-row mx-auto">
+      <ul className="list-reset flex flex-wrap md:flex-row mx-auto">
       {images.map(item => {
         return (
-          <li className="flex flex-col justify-center mx-2 py-8 lg:mx-8 " key={item.title}>
-            <img src={item.src} alt={item.title} className="block w-48"/>
+          <li className="flex flex-col justify-center py-8 px-4 w-1/2 md:w-1/4 " key={item.title}>
+            <img src={item.src} alt={item.title} className="block w-full mx-auto" width="179px" loading="lazy"/>
           </li>
         )
       })}
@@ -27,17 +27,17 @@ const images = [
     title: 'Canada Life'
   },
   {
-    src: domain7,
-    title: 'Domain7'
-  },
-  {
     src: bch,
     title: 'BC Hydro'
   },
   {
     src: engine,
     title: 'Engine Digital'
-  }
+  },
+  {
+    src: domain7,
+    title: 'Domain7'
+  },
 ]
 
 export default Partners;

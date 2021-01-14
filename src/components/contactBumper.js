@@ -11,17 +11,19 @@ const ContactBumper = props => {
       <Section>
         <div className="md:flex">
           <div className="md:w-1/2 md:text-center">
-            <img src={team} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt=""/>
+            <img src={team} className="mb-4 w-1/2 md:w-2/3 mx-auto" alt="" width="389" height="300" loading="lazy"/>
           </div>
           <div className="md:w-1/2 flex flex-col justify-center">
-            <h2 className="text-2xl sm:text-4xl leading-normal mb-8 leading-none">
-              Team up with Cascadia Digital
+            <h2 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none">
+              Work with Cascadia Digital
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl leading-normal mb-8">
-              Let's team up to meet your business goals.
+              Are you ready to get your project started?
             </p>
             <p>
-              <Link to="contact" className="button hover:bg-lighter-blue shadow">Schedule your project</Link>
+              <Link to="/book-a-consultation" className="button shadow">
+                Book a Consultation
+              </Link>
             </p>
           </div>
         </div>
