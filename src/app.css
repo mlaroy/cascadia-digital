@@ -32,6 +32,9 @@ html > * {
   --light-blue: #53ABCF;
   --lighter-blue: #67D6FF;
   --greyish-blue: #637780;
+  --ochre: #d17a22ff;
+  --medium-spring-green: #50ffb1ff;
+  --nadeshiko-pink: #efaac4ff;
   --font-sans: /*brandon-grotesque, Futura,*/ 'Red Hat Text', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
   --font-sans-bold: /*brandon-grotesque, Futura,*/ 'Red Hat Text Bold', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
   --font-serif: 'DM Serif Text', benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Times New Roman, serif;
@@ -153,7 +156,7 @@ blockquote:before {
 
 .button {
   @apply .text-white .text-base .px-8 .py-4 .no-underline .rounded .tracking-loose;
-  background: var(--light-blue);
+  background: var(--ochre);
   /* font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif; */
   font-family: var(--font-sans-bold);
   font-weight: 600;
@@ -164,7 +167,12 @@ blockquote:before {
 
 .button:hover,
 .button:focus {
-  @apply .bg-lighter-blue;
+  background: var(--light-blue);
+}
+
+.button.button--white {
+  background: #fff;
+  color: var(--jp-indigo);
 }
 
 .button--small {
@@ -182,7 +190,7 @@ blockquote:before {
 }
 
 .link {
-  @apply .text-jp-indigo;
+  color: var(--jp-indigo);
   font-family: var(--font-sans);
   font-weight: 400;
   transition: all 0.2s ease;
@@ -194,7 +202,7 @@ blockquote:before {
 
 .link:hover,
 .link:focus {
-  @apply .text-light-blue;
+  color: var(--light-blue);
 
   svg {
     fill: var(--light-blue) !important;

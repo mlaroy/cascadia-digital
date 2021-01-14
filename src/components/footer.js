@@ -20,7 +20,7 @@ const Footer = ({ siteTitle }) => (
           </NewsletterForm> */}
         </div>
         <div className="footer-nav text-center md:text-right">
-          <MainNav linkColor="text-white" hasCTA={true} />
+          <MainNav linkColor="text-white" />
           <h3 className="text-white text-md md:justify-end mt-8">Follow</h3>
           <div className="flex justify-center md:justify-end">
             <a href="https://twitter.com/digitalcascadia" className="link text-white text-sm block">Twitter</a>

@@ -29,7 +29,7 @@ const About = props => (
       <Section>
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3">
-            <figure className="w-64 mx-auto block text-center px-4 pb-16 responsive-img">
+            <figure className="w-64 md:w-auto mx-auto block text-center px-4 pb-16 responsive-img">
               <img src={portrait} alt="" className="shadow rounded block mb-4 responsive-img"/>
               <figcaption>
                 <a href="https://mikelaroy.ca" className="link hover:underline block mb-4">Michael LaRoy</a>

@@ -22,7 +22,7 @@ const ServicesBumper = props => {
               See how you can make your website work for you.
             </p>
             <p>
-              <Link to="/services" className="button hover:bg-lighter-blue shadow">
+              <Link to="/services" className="button shadow">
                 See Services
               </Link>
             </p>

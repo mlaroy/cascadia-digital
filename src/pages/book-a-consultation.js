@@ -197,7 +197,7 @@ const ContactPage = (props) => {
                 isEmpty={emptyFields.includes(website)}
               />
 
-              <label className="mb-8 block text-sm">
+              <label className="mb-4 block text-sm">
                 Budget Range
                 <div className="select-wrap">
                   <select className="mt-1" name="budget" defaultValue={budget} id="budget" onBlur={(e) => {
@@ -214,7 +214,7 @@ const ContactPage = (props) => {
                   <span className="text-sm text-red">This field is requred</span>
                 )}
               </label>
-              <label className="mb-8 block text-sm">
+              <label className="mb-4 block text-sm">
                 What kind of relationship do you want to have with Cascadia Digital?
                 <div className="select-wrap">
                   <select className="mt-1" name="relationship" id="relationship" defaultValue={relationship} onBlur={(e) => {
@@ -240,7 +240,7 @@ const ContactPage = (props) => {
                 isEmpty={emptyFields.includes(problem)}
               />
 
-              <div className="form-field mb-8">
+              <div className="form-field mb-4">
                 <label htmlFor="details" className="block text-sm">Project Details - please be specific!</label>
                 <textarea name="details" className="block mb-1 mt-1" id="details" cols="30" rows="10" value={details} onChange={(e) => setDetails(e.target.value)}></textarea>
                 {emptyFields.includes(details) && (
@@ -248,7 +248,7 @@ const ContactPage = (props) => {
                 )}
               </div>
 
-              <label className="mb-8 block text-sm">
+              <label className="mb-4 block text-sm">
                 What is your estimated timeline?
                 <div className="select-wrap">
                   <select className="mt-1" name="timeline" id="timeline" defaultValue={timeline} onBlur={(e) => {
@@ -289,7 +289,7 @@ const ContactPage = (props) => {
                   You might not be human... are you being nice?
                 </p>
               )}
-              <button className="button">Submit</button>
+              <button className="button mt-8">Submit</button>
               {success && (
                 <p className="mt-4 text-jp-indigo">
                   Thank you! I will try to be in touch as soon as possible.

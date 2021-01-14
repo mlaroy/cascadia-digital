@@ -8,7 +8,7 @@ const NotFoundPage = () => (
     <Section>
       <div className="mx-auto lg:w-2/3 has-bg">
 
-        <h1>Improve your website with these tips</h1>
+        <h1>Free PDF: 3 Things You Can Do To Improve Your Website</h1>
         <p className="text-xl mb-8">
           Did you know that search engines like Google factor in how fast your site is in its search results
           algorithm?
@@ -49,7 +49,7 @@ const NotFoundPage = () => (
           industry leaders in web accessible training, as well as the makers of the WAVE accessibility tool.
         </p> */}
         <p className="text-xl">
-          Enter your email to get this free PDF, <span className="italic">Making Better Websites</span> right in your inbox.
+          Enter your email to get this free PDF, <span className="italic">3 Things You Can Do To Improve Your Website</span> right in your inbox.
         </p>
       </div>
       <div className="mx-auto lg:w-2/3">
