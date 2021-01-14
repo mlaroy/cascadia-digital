@@ -155,7 +155,7 @@ blockquote:before {
 }
 
 .button {
-  @apply .text-white .text-base .px-8 .py-4 .no-underline .rounded .tracking-loose;
+  @apply .text-white .text-base .px-8 .py-4 .no-underline .rounded .tracking-loose .shadow;
   background: var(--ochre);
   /* font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif; */
   font-family: var(--font-sans-bold);
@@ -278,7 +278,7 @@ h3 {
 @media (min-width: 768px) {
   .service-grid {
     /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   }
 }
 

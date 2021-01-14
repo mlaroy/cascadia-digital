@@ -30,8 +30,9 @@ class IndexPage extends Component {
           </p>
 
           <div className="md:flex items-center">
+            {/* <Link to="/make-better-websites" className="button button--white">Download free guide to better websites &rarr;</Link> */}
+            {/* mt-8 md:ml-8 md:mt-0 */}
             <Link to="/book-a-consultation" className="button">Book Your Consultation</Link>
-            <Link to="/make-better-websites" className="link mt-8 md:ml-12 md:mt-0 text-lg text-white block">Download free guide to better websites &rarr;</Link>
           </div>
 
           {/* <NewsletterForm
@@ -142,7 +143,7 @@ class IndexPage extends Component {
                     }} /> Have an experienced and dependable development partner
                   </li>
                 </ul>
-                <Link to="/book-a-consultation" className="button inline-block flex-grow-none hover:bg-lighter-blue shadow">
+                <Link to="/book-a-consultation" className="button inline-block flex-grow-none">
                   Work with me
                 </Link>
               </div>
@@ -152,41 +153,43 @@ class IndexPage extends Component {
 
         <AgencyBumper />
 
-        {/* <div className="bg-grey-lightest">
+        <div className="bg-grey-lightest">
           <Section>
             <h3 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none md:text-center">What clients are saying</h3>
             <div className="service-grid">
-              <div className="bg-white rounded-lg shadow p-8">
+              <div className="bg-white rounded-lg shadow p-8 md:w-2/3 mx-auto">
+                <blockquote>
+                  <p className="mb-4">
+                    I'd highly recommend working with Michael - it's rare to find someone who acts as a bridge for so many areas,
+                    but specifically because of his ability to communicate and lead digital projects well. I deeply appreciate
+                    his ability to find the optimal solution considering the bigger picture.
+                  </p>
+                  <span className="text-sm italic">&mdash; Zach, Domain7</span>
+                </blockquote>
+              </div>
+              {/* <div className="bg-white rounded-lg shadow p-8">
                 <blockquote>
                   <p className="mb-4">Cascadia Digital has the tools to help you get the
                     website solution you really need to help your business succeed
                   </p>
                   <span className="text-sm italic">&mdash; Zach, Domain7</span>
                 </blockquote>
-              </div>
-              <div className="bg-white rounded-lg shadow p-8">
-                <blockquote>
-                  <p className="mb-4">Cascadia Digital has the tools to help you get the
-                    website solution you really need to help your business succeed
-                  </p>
-                  <span className="text-sm italic">&mdash; Zach, Domain7</span>
-                </blockquote>
-              </div>
+              </div> */}
             </div>
           </Section>
-        </div> */}
+        </div>
 
         {/* I believe businesses should be able to have high-quality, accessible websites,
         without a complicated or confusing Content Management System, tailored to their needs. */}
 
 
-        <ServicesBumper className="bg-grey-lightest"/>
-        {/* <ServicesBumper /> */}
+        {/* <ServicesBumper className="bg-grey-lightest"/> */}
+        <ServicesBumper />
 
 
 
-        <ContactBumper />
-        {/* <ContactBumper className="bg-grey-lightest"  /> */}
+        {/* <ContactBumper /> */}
+        <ContactBumper className="bg-grey-lightest"  />
 
 
         {/* <div className="bg-white py-32">
@@ -196,7 +199,7 @@ class IndexPage extends Component {
             </h2>
             <WorkTeaser />
             <p className="sm:w-3/4 sm:mx-auto sm:text-center mt-8">
-              <Link to="work" className="button hover:bg-lighter-blue shadow">More work</Link>
+              <Link to="work" className="button">More work</Link>
             </p>
           </div>
         </div> */}
