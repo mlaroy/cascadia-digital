@@ -11,7 +11,7 @@ import ContactBumper from '../components/contactBumper';
 class ServiceLayout extends Component {
   render() {
     const { data } = this.props;
-    console.log(this.props);
+    // console.log(this.props);
     return(
       <Layout>
         <Hero title={data.markdownRemark.frontmatter.title}>

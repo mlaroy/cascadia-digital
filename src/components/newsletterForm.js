@@ -47,7 +47,7 @@ const NewsletterForm = props => {
             }
         } catch (err) {
             setStatus('ERROR');
-            console.log(err);
+            console.error(err);
         } finally {
             setEmail('');
             setFirstName('')

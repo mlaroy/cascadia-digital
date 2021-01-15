@@ -46,7 +46,7 @@ const Header = ({ siteTitle, full }) => {
     let offset;
     if( !isOpen ){
       offset = document.documentElement.scrollTop;
-      console.log(offset);
+      // console.log(offset);
       document.body.classList.add('nav-open');
     }else{
       document.body.classList.remove('nav-open');

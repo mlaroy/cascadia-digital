@@ -18,7 +18,7 @@ const ServiceTeaser = () => (
       <>
           {allMarkdownRemark.edges.map(edge => {
             const { title, description, img, published } = edge.node.frontmatter;
-            console.log(edge.node.frontmatter);
+            // console.log(edge.node.frontmatter);
             const image = getImage(img);
 
             if( published ) {

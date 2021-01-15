@@ -10,7 +10,7 @@ const CalendlyPopup = () => {
     }, [] );
 
     const bookCalendlyLink = (e) => {
-        console.log('click');
+        // console.log('click');
         window.Calendly.initPopupWidget({url: 'https://calendly.com/cascadia-digital/30-minute-consulatation'});
     }
 
