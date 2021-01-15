@@ -2,7 +2,7 @@ import React from 'react'
 
 const Section = props =>  {
   const css = props.className || '';
-  const className = `md:mx-auto px-4 md:w-5/6 py-16 md:py-24 ${css}`;
+  const className = `container relative md:mx-auto px-4 py-16 w-full md:py-24 ${css}`;
 
   return (
     <section className={className}>

@@ -87,7 +87,7 @@ const Layout = props => (
           </script>
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} full={props.full} />
           <main id="main-content">
             {props.children}
           </main>

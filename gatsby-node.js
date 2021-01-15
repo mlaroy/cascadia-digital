@@ -13,34 +13,46 @@ const path = require('path');
 //   return new Promise( (resolve, reject) => {
 //     graphql(`
 //       {
-//         allFile{
+//         allMarkdownRemark(filter: {
+//             frontmatter: {
+//                 type: {
+//                     eq: "services"
+//                 }
+//             }
+//             }) {
 //             edges {
 //               node {
 //                 id
-//                 childMarkdownRemark {
-//                   frontmatter {
-//                     slug
-//                     type
-//                   }
+//                 frontmatter {
+//                   title
+//                   slug
+//                   type
+//                   order
+//                   description
+//                   img
+//                   published
 //                 }
 //               }
 //             }
 //           }
 //         }
 //     `).then(results => {
-//       const posts = results.data.allFile.edges;
-//       posts.forEach( ({node}) => {
-//         const { slug, type } = node.childMarkdownRemark.frontmatter
-//         const layout = `${type}Layout.js`;
-//         createPage({
-//           path: `/${type}${slug}`,
-//           component: path.resolve(`./src/components/${layout}`),
-//           context: {
-//             id: node.id,
-//           }
-//         })
+//         const posts = results.data.allMarkdownRemark.edges;
+//         //   console.log(results.data.allMarkdownRemark.edges[0]);
+//         posts
+//             .filter(post => post.node.frontmatter.published == true )
+//             .forEach( ({node}) => {
+//                 const { slug, type } = node.frontmatter
+//                 const layout = `${type}Layout.js`;
+//                 createPage({
+//                     path: `/${type}${slug}`,
+//                     component: path.resolve(`./src/components/${layout}`),
+//                     context: {
+//                         id: node.id,
+//                     }
+//                 })
+//             })
 //         resolve();
-//       })
 //     })
 //   });
 // };

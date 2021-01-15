@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 
 class Input extends Component {
   render() {
-    const { value, name, label = false, type = 'text' } = this.props;
-    const inputClass = 'shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline';
-    const buttonClass = 'button hover:bg-jp-indigo shadow';
+    const { value, name, changeHandler, label, isEmpty, type = 'text', placeholder } = this.props;
     return (
-      <div className="form-field">
-        {label && <label htmlFor={name} className="block">{name}</label>}
-        <input
-          className={type !== 'submit' ? inputClass : buttonClass }
-          type={type}
-          name={name}
-          id={name}
-          value={value} />
+      <div className="form-field mb-4">
+        <label className="block mb-1 text-sm">
+          {label}
+          <input className="mt-1" placeholder={placeholder} name={name} type={type} id={name} value={value} onChange={(e) => changeHandler(e.target.value)} />
+        </label>
+        {isEmpty && (
+          <span className="text-sm text-red">This field is requred</span>
+        )}
       </div>
     );
   }

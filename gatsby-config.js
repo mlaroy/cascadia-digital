@@ -2,23 +2,23 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Cascadia Digital - Helping agencies meet their client needs with expert front-end development',
+    title: 'Cascadia Digital',
     footerTitle: 'Cascadia Digital Inc.',
     siteUrl: 'https://cascadia.digital',
     twitter: '@digitalcascadia',
     instagram: '@cascadiadigital',
-    metaImage: '/images/cascadia-logo-jpg.jpg',
-    description: 'Cascadia Digital is your trusted web development partner. Based in Abbotsford BC, we help you create a strategy to execute on better web experiences. We have experience working in a range of tools and frameworks such as WordPress, Vue, and Laravel, with a focus on the front end.'
+    metaImage: '/images/og-meta.png',
+    description: 'Helping help brands get their message out without the friction.'
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'mtd5qkl'
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     typekit: {
+    //       id: 'mtd5qkl'
+    //     }
+    //   }
+    // },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
@@ -83,7 +83,6 @@ module.exports = {
         printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
-        develop: true,
         debug: true,
         // ignore: '/node_modules/prismjs/themes/prism-okaidia.css',
         content: [
