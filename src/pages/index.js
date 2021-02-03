@@ -157,9 +157,9 @@ class IndexPage extends Component {
           <Section>
             <h3 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none md:text-center">What clients are saying</h3>
             <div className="service-grid">
-              <div className="bg-white rounded-lg shadow p-8 md:w-2/3 mx-auto">
+              <div className="bg-white rounded-lg shadow p-4 md:p-8 md:w-2/3 mx-auto">
                 <blockquote>
-                  <p className="mb-4">
+                  <p className="mb-4 text-base md:text-lg">
                     I'd highly recommend working with Michael - it's rare to find someone who acts as a bridge for so many areas,
                     but specifically because of his ability to communicate and lead digital projects well. I deeply appreciate
                     his ability to find the optimal solution considering the bigger picture.
