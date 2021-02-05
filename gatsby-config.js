@@ -24,10 +24,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Cascadia Digital',
+        short_name: 'Cascadia',
         start_url: '/',
-        background_color: '#003846',
+        background_color: '#223843',
         theme_color: '#2AACD2',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
