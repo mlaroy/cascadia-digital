@@ -112,19 +112,25 @@ body.nav-open {
   transition: all 0.25s ease;
 }
 
+/* .main-nav {
+  transform: none;
+} */
+
 @media (max-width: 575px) {
   .header-logo {
     max-width: 120px;
   }
   .main-nav {
     @apply .fixed .w-full .pin-t .pin-r .p-4 .bg-white .h-screen .shadow-lg;
-    display: none;
-    /* transition: transform 0.3s cubic-bezier(0, 0, 0.58, 1.0);
-    transform: translateX(100%); */
+    visibility: hidden;
+    transform: translateX(100%);
   }
-  .main-nav.js-is-open {
-    /* transform: translateX(0); */
-    display: block;
+  .animate-nav .main-nav {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1), visibility 0.5s ease;
+  }
+  .animate-nav .main-nav.js-is-open {
+    visibility: visible;
+    transform: translateX(0);
   }
 }
 

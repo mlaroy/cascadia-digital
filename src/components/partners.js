@@ -4,6 +4,7 @@ import domain7 from '../images/domain7.svg';
 import engine from '../images/engine.svg';
 import cl from '../images/canadalife.svg';
 import bch from '../images/bchydro.svg';
+import pandg from '../images/pandg.svg';
 
 class Partners extends Component {
   render() {
@@ -22,10 +23,10 @@ class Partners extends Component {
 }
 
 const images = [
-  {
-    src: cl,
-    title: 'Canada Life'
-  },
+  // {
+  //   src: cl,
+  //   title: 'Canada Life'
+  // },
   {
     src: bch,
     title: 'BC Hydro'
@@ -37,6 +38,10 @@ const images = [
   {
     src: domain7,
     title: 'Domain7'
+  },
+  {
+    src: pandg,
+    title: 'Pound & Grain'
   },
 ]
 

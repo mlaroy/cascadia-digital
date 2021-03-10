@@ -13,12 +13,12 @@ const NotFoundPage = () => (
       full={true}
     >
 
-      <NewsletterForm
+      {/* <NewsletterForm
         url="1774006"
         buttonText="Subscribe"
         flex="true">
         <h2 className="text-2xl mt-2 mb-2 text-white">Subscribe to my mailing list</h2>
-      </NewsletterForm>
+      </NewsletterForm> */}
     </Hero>
   </Layout>
 )

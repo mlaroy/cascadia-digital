@@ -33,12 +33,18 @@ const Header = ({ siteTitle, full }) => {
 
   const toggleViewPort = (e) => {
     if (e.matches) {
+      document.body.classList.remove('animate-nav');
       setView('desktop');
       setIsOpen(true);
       setPageYoffset(0)
     } else {
-      setView('mobile');
+      console.log('here');
+      document.body.classList.remove('animate-nav');
       setIsOpen(false);
+      setView('mobile');
+      setTimeout( () => {
+        document.body.classList.add('animate-nav');
+      }, 1000);
     }
   }
 
@@ -88,7 +94,7 @@ const Header = ({ siteTitle, full }) => {
           className={`main-nav sm:flex ${isOpen ? 'main-nav js-is-open': ''}`}
           aria-hidden={isOpen ? 'false' : 'true'}
         >
-          {view === 'mobile' && isOpen && (
+          {view === 'mobile' && (
             <div className="flex justify-end">
               <button onClick={toggleMenu} className="nav-toggle text-3xl text-black">&times;</button>
             </div>
