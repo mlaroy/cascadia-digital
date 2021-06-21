@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../components/layout'
-import Section from '../components/section'
-import BetterWebsitesMagnet from '../components/betterWebsitesMagnet';
+import Layout from './layout'
+import Section from './section'
+import BetterWebsitesMagnet from './betterWebsitesMagnet';
 
 const NotFoundPage = () => (
   <Layout>
