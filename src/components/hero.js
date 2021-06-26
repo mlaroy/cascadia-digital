@@ -3,7 +3,7 @@ import Section from './section';
 
 class Hero extends Component {
   render() {
-    const { title, children, bg, bgAlt = '', img, fade = false, full = false } = this.props;
+    const { title, children, bg, bgAlt = '', img, full = false } = this.props;
     // const fladeClass = fade ? "fadeIn" : '';
     return (
       <div className={`hero relative ${full ? 'min-h-screen' : ''} ${bg ? 'bg-jp-indigo text-white' : ''}`}>
@@ -13,7 +13,7 @@ class Hero extends Component {
         <Section className={`pt-24 md:pt-32 ${full ? 'md:mt-16' : ''}`}>
           <div className="md:py-12">
             {img && (
-              <div className="w-1/2 md:w-1/3 lg:w-auto mb-8 md:absolute pin-r md:opacity-75 z-10 hero-image">
+              <div className="w-1/2 md:w-1/3 lg:w-auto mb-8 md:absolute right-0 md:opacity-75 z-10 hero-image">
                 <img src={img} alt="" width="320" className="mx-auto block"/>
               </div>
             )}

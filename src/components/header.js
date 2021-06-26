@@ -38,7 +38,6 @@ const Header = ({ siteTitle, full }) => {
       setIsOpen(true);
       setPageYoffset(0)
     } else {
-      console.log('here');
       document.body.classList.remove('animate-nav');
       setIsOpen(false);
       setView('mobile');
@@ -65,8 +64,8 @@ const Header = ({ siteTitle, full }) => {
 
 
   return (
-    <div className={`header w-full ${full ? 'fixed' : 'sticky'} pin-t pin-r pin-l z-50 ${full && !scrolling ? '' : 'scrolled bg-white shadow'}`}>
-      <div className="md:mx-auto p-4 flex justify-between container">
+    <div className={`header w-full ${full ? 'fixed' : 'sticky'} top-0 left-0 z-50 ${full && !scrolling ? '' : 'scrolled bg-white shadow'}`}>
+      <div className="md:mx-auto p-4 flex items-center justify-between container">
         <Link
           to="#main-content"
           className="skip-link"
@@ -84,7 +83,7 @@ const Header = ({ siteTitle, full }) => {
         </Link>
         <button
           onClick={toggleMenu}
-          className={`sm:hidden font-sans font-bold text-sm ${!scrolling && full ? 'text-white' : 'text-black'}`}
+          className={`sm:hidden font-red-hat font-bold text-sm ${!scrolling && full ? 'text-white' : 'text-black'}`}
           id="main-nav-toggle"
           >
           &#9776;
@@ -94,7 +93,7 @@ const Header = ({ siteTitle, full }) => {
           className={`main-nav sm:flex ${isOpen ? 'main-nav js-is-open': ''}`}
           aria-hidden={isOpen ? 'false' : 'true'}
         >
-          {view === 'mobile' && (
+          {view === 'mobile' && isOpen && (
             <div className="flex justify-end">
               <button onClick={toggleMenu} className="nav-toggle text-3xl text-black">&times;</button>
             </div>

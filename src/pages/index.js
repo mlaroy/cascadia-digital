@@ -6,6 +6,12 @@ import ContactBumper from '../components/contactBumper'
 import ServicesBumper from '../components/servicesBumper'
 import AgencyBumper from '../components/agencyBumper'
 import done from '../images/done.svg'
+
+import headInHands from '../images/head-in-hands.jpg'
+// import glasses from '../images/glasses-smiles.jpg'
+import smiles from '../images/smiles-laptop-screen-min.jpg'
+
+
 import MdCheckmark from 'react-ionicons/lib/MdCheckmark'
 // import CalendlyPopup from '../components/calendlyLink';
 import { Link } from 'gatsby'
@@ -49,67 +55,79 @@ class IndexPage extends Component {
         </Hero>
 
         <Section>
-          <div className="mx-auto md:w-4/5 lg:w-3/4 has-bg">
-            <h2 className="text-2xl md:text-3xl">
-              Are you spending too much of your valuable time struggling to update your website content?
-            </h2>
-            <ul className="mb-8 leading-normal">
-              <li className="text-xl mb-4 md:w-3/4">Are you afraid to edit anything on your website because it might break something?</li>
-              <li className="text-xl mb-4 md:w-3/4">Do you need an experienced and realiable development partner to help realize your vision for your website?</li>
-              <li className="text-xl mb-4 md:w-3/4">Are you tired of the trial and error that comes with using generic visual page builders?</li>
-            </ul>
-            {/* <p className="text-lg lg:text-xl mb-8 md:w-3/4">
-              What if making updates to your website could be truly painless?
-            </p> */}
-            {/* <h2 className="text-2xl md:text-3xl">
-              Are you afraid to edit anything on your website because it might break something?
-            </h2>
-            <p className="text-lg lg:text-xl mb-8 md:w-3/4">
-              Imagine a website publishing experience that you can rely on to work consistently,
-              without worrying about it breaking at any moment.
-            </p> */}
-            {/* <h2 className="text-2xl md:text-3xl">
-              Do you need an experienced and realiable development partner to help realize your vision for your website?
-            </h2> */}
-            <h2 className="text-2xl md:text-3xl">
-              What if making updates to your website could be truly painless?
-            </h2>
-            <ul className="mb-8 leading-normal">
-              <li className="text-xl mb-4 md:w-3/4">Imagine a website publishing experience that you can rely on to work consistently,
-              without worrying about it breaking at any moment.</li>
-              <li className="text-xl mb-4 md:w-3/4">Imagine having a development partner you could trust who could help make your vision a reality.</li>
-              <li className="text-xl mb-4 md:w-3/4">Imagine being able to enter content and be confident that it will always looks just how it’s supposed to.</li>
-            </ul>
-            <h2 className="text-2xl md:text-3xl">
-              Partnering with Cascadia Digital is the answer.
-            </h2>
-            <p className="text-lg lg:text-xl mb-8">
-              By working with me, we can make the improvements necessary to change your website content editing experience
-              for the better, freeing you to focus on what matters most: your content.
-            </p>
-            <p className="text-lg lg:text-xl mb-8">
-              For example, some themes or plugins using visual page builders have a tendency to be clunky, difficult to use, and functionally
-              problematic. I prefer a tailored content entry experience, designed to work with your website’s design seemlessly.
-            </p>
-            <p className="text-lg lg:text-xl">
-              Book a consultation to see how we can fix the things causing you headaches on your website, and make
-              things simpler and easier for you with a straightforward approach.
-            </p>
+          <div className="mx-auto">
+            <div className="grid md:grid-cols-2 items-center py-16">
+              <div>
+                <img src={headInHands} alt="" className="rounded block w-2/3 mx-auto md:w-full" />
+              </div>
+              <div>
+                <div className="relative px-8 py-12 bg-white transform -translate-y-12 md:-translate-x-12 md:translate-y-0 rounded shadow-lg">
+                  <h2 className="text-2xl md:text-3xl">
+                    Are you wasting time struggling to update your website content?
+                  </h2>
+                  <ul className="leading-normal list-disc list-outside pl-8">
+                    <li className="text-lg mb-4">You fear making changes that might break it</li>
+                    <li className="text-lg mb-4">You are tired of the trial and error with using generic visual page builders</li>
+                    <li className="text-lg">You need experienced and realiable development partner to help realize your vision</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="py-16">
+              <div className="grid md:grid-cols-2 items-center">
+                <div className="order-1 md:order-2">
+                  <img src={smiles} alt="" className="rounded block w-2/3 mx-auto md:w-full" />
+                </div>
+                <div className="order-2 md:order-1 relative px-8 py-12 bg-white transform -translate-y-12 md:translate-x-12 md:translate-y-0 rounded shadow-lg">
+                  <h2 className="text-2xl md:text-3xl">
+                    What if making updates to your website could be truly painless?
+                  </h2>
+                  <ul className="leading-normal list-disc list-outside pl-8">
+                    <li className="text-lg mb-4">
+                      Imagine a website publishing experience that you can rely on to work consistently,
+                      without worrying about it breaking at any moment.
+                    </li>
+                    <li className="text-lg">Imagine having a development partner you could trust who could help make your vision a reality.</li>
+                    {/* <li className="text-lg">Imagine being able to enter content and be confident that it will always looks just how it’s supposed to.</li> */}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="has-bg md:w-2/3 mx-auto mt-24">
+              <h2 className="text-2xl md:text-3xl">
+                Partnering with Cascadia Digital is the answer.
+              </h2>
+              <p className="text-lg lg:text-xl mb-8">
+                By working with me, we can make the improvements necessary to change your website content editing experience
+                for the better, freeing you to focus on what matters most: your content.
+              </p>
+              <p className="text-lg lg:text-xl mb-8">
+                Sites using visual page builders have a tendency to be clunky, difficult to use, and functionally
+                problematic. I prefer a tailored content entry experience, designed to work with your website’s design seemlessly.
+              </p>
+              <p className="text-lg lg:text-xl mb-16">
+                Book a consultation to see how we can fix the things causing you headaches on your website, and make
+                things simpler and easier for you with a straightforward approach.
+              </p>
+
+              <div className="p-8 shadow mt-12 mx-auto rounded font-bold text-center bg-jp-indigo">
+                <h3 className="text-lg sm:text-xl md:text-2xl text-white">Ready to make web publishing easier?</h3>
+                <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
+              </div>
+            </div>
 
             {/* <p className="mt-16">
               <CalendlyPopup />
             </p> */}
 
-            <div className="p-8 shadow mt-12 mx-auto rounded font-bold text-center bg-jp-indigo">
-              <h3 className="text-lg sm:text-xl md:text-2xl text-white">Ready to make web publishing easier?</h3>
-              <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
-            </div>
           </div>
         </Section>
 
         <div className="bg-grey-lightest">
           <Section>
-            {/* <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold leading-normal mb-8 leading-none md:text-center">
+            {/* <p className="text-2xl sm:text-3xl md:text-4xl font-dm-serif font-bold leading-normal mb-8 leading-none md:text-center">
               By working with me, you can:
             </p> */}
             <div className="flex flex-col md:flex-row">
@@ -120,10 +138,10 @@ class IndexPage extends Component {
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-8 leading-none text-left">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-dm-serif mb-8 leading-none text-left">
                   By working with me, you can:
                 </h3>
-                <ul className="list-reset text-left mb-12">
+                <ul className="list-none text-left mb-12">
                   <li className="py-2 text-lg md:text-xl lg:text-2xl relative pl-8">
                     <MdCheckmark style={{
                       position: 'absolute',

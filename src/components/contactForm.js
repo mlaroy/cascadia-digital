@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { navigate } from "gatsby-link";
+// import { navigate } from "gatsby-link";
 import { encode } from '../utilities/formHelpers';
 
 
@@ -87,7 +87,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={(e) => handleContactSubmit(e)} className="mx-auto max-w-lg" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
+    <form onSubmit={(e) => handleContactSubmit(e)} className="mx-auto md:px-48" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
       <h2 className="text-2xl md:text-3xl">For general inquiries, please send me a note.</h2>
       <input
         type="hidden"

@@ -41,7 +41,7 @@ const ContactPage = ({ location }) => {
       </Hero>
       <div className="bg-grey-lightest">
         {/* <Section>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif">But first, let me answer some questions you may have</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-dm-serif">But first, let me answer some questions you may have</h2>
           <p></p>
 
         </Section> */}

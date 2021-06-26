@@ -6,7 +6,7 @@ class MainNav extends Component {
     const { activeClass, linkColor, hasCTA = false } = this.props;
     const linkClass = `${linkColor || ''} link hover:underline py-4 block w-full sm:inline-block`
     return (
-      <ul className="list-reset sm:flex justify-between">
+      <ul className="list-none sm:flex justify-between">
         {pages && pages.map(page => {
           return (
             <li className="flex text-center items-center sm:ml-4" key={page.url}>
@@ -23,7 +23,7 @@ class MainNav extends Component {
             <Link
                 to="/book-a-consultation"
                 activeClassName={activeClass}
-                className="button button--small mx-auto mt-4 md:mt-0"
+                className="button button--small mx-auto md:mt-0"
               >Book Consultation</Link>
           </li>
         )}

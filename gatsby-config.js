@@ -1,4 +1,5 @@
-const path = require('path');
+const resolveConfig = require("tailwindcss/resolveConfig");
+const tailwindConfig = require("./tailwind.config.js");
 
 module.exports = {
   siteMetadata: {
@@ -75,24 +76,36 @@ module.exports = {
         cookieDomain: 'cascadia.digital'
       }
     },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     printRejected: true, // Print removed selectors and processed file names
+    //     // develop: true, // Enable while using `gatsby develop`
+    //     tailwind: true, // Enable tailwindcss support
+    //     debug: true,
+    //     // ignore: '/node_modules/prismjs/themes/prism-okaidia.css',
+    //     content: [
+    //       path.join(process.cwd(), 'src/**/!(*.d).{ts,js,jsx,tsx}')
+    //       // path.join(process.cwd(), 'node_modules/prismjs/themes/prism-okaidia.css')
+    //     ],
+    //     whitelist: [
+    //       '.article-body .gatsby-resp-image-wrapper',
+    //     ], // Don't remove this selector
+    //     // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
+    //     // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+    //   }
+    // },
     {
-      resolve: `gatsby-plugin-purgecss`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        printRejected: true, // Print removed selectors and processed file names
-        // develop: true, // Enable while using `gatsby develop`
-        tailwind: true, // Enable tailwindcss support
-        debug: true,
-        // ignore: '/node_modules/prismjs/themes/prism-okaidia.css',
-        content: [
-          path.join(process.cwd(), 'src/**/!(*.d).{ts,js,jsx,tsx}')
-          // path.join(process.cwd(), 'node_modules/prismjs/themes/prism-okaidia.css')
+        postCssPlugins: [
+          require(`tailwindcss`)(tailwindConfig),
+          require(`autoprefixer`),
+          ...(process.env.NODE_ENV === `production`
+            ? [require(`cssnano`)]
+            : []),
         ],
-        whitelist: [
-          '.article-body .gatsby-resp-image-wrapper',
-        ], // Don't remove this selector
-        // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
-        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
-      }
+      },
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-netlify'
