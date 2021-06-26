@@ -42,7 +42,7 @@ const NotFoundPage = () => (
           site compliant, you can not only avoid legal issues, but <em>you are also making your site more accessible to
           more people</em>, which is good for everyone, right?
         </p>
-        <p className="text-2xl mb-4 font-bold font-serif">How do I know this stuff?</p>
+        <p className="text-2xl mb-4 font-bold font-dm-serif">How do I know this stuff?</p>
         <p className="text-xl mb-8">
           I have been working on making websites more accessible throughout my entire career
           as a front-end developer. I also studied accessibility with <a href="https://webaim.org/" className="link">WebAIM</a> in Logan, Utah,

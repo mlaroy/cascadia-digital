@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Section from './section'
 import MainNav from './main-nav';
 import whitelogo from '../images/cascadia-logo-5-white.svg'
-import NewsletterForm from '../components/newsletterForm';
+// import NewsletterForm from '../components/newsletterForm';
 
 const Footer = ({ siteTitle }) => (
   <footer className="footer bg-jp-indigo text-white">

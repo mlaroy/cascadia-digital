@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 // import notFound from '../images/not-found.svg'
-import NewsletterForm from '../components/newsletterForm';
+// import NewsletterForm from '../components/newsletterForm';
 import bg from '../images/snow-capped-mountains-seen-through-the-trees-min.jpg';
 
 const NotFoundPage = () => (

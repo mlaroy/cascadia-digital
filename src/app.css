@@ -1,4 +1,5 @@
-@tailwind preflight;
+@tailwind base;
+@tailwind components;
 
 html {
   box-sizing: border-box;
@@ -35,9 +36,9 @@ html > * {
   --ochre: #d17a22ff;
   --medium-spring-green: #50ffb1ff;
   --nadeshiko-pink: #efaac4ff;
-  --font-sans: /*brandon-grotesque, Futura,*/ 'Red Hat Text', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
-  --font-sans-bold: /*brandon-grotesque, Futura,*/ 'Red Hat Text Bold', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
-  --font-serif: 'DM Serif Text', benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Times New Roman, serif;
+  --font-red-hat: /*brandon-grotesque, Futura,*/ 'Red Hat Text', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
+  --font-red-hat-bold: /*brandon-grotesque, Futura,*/ 'Red Hat Text Bold', 'Mulish', 'Libre Franklin', benton-sans, helvetica,  Helvetica Neue, arial, sans-serif;
+  --font-dm-serif: 'DM Serif Text', benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Times New Roman, serif;
   --font-heading: /*adobe-caslon-pro,*/'DM Serif Text', benton-modern-display, /* benton-modern-display-conden */ Georgia, Garamond, Georgia, Times New Roman, serif;
   --font-body: /*brandon-grotesque, Futura,*/ 'Red Hat Text', 'Mulish', 'Libre Franklin', benton-sans, helvetica, Helvetica Neue, arial, sans-serif;
 }
@@ -77,8 +78,8 @@ html {
 }
 
 body {
-  @apply .text-jp-indigo .text-lg;
-  font-family: var(--font-sans);
+  @apply text-jp-indigo text-lg p-0 m-0;
+  font-family: var(--font-red-hat);
   font-weight: regular;
 }
 
@@ -91,11 +92,16 @@ body.nav-open {
   overflow: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .skip-link {
   position: absolute;
   left: -9999px;
   top: 5px;
-  @apply .px-8 .py-4 .bg-white;
+  @apply px-8 py-4 bg-white;
 }
 
 .skip-link:focus {
@@ -103,10 +109,9 @@ body.nav-open {
   z-index: 100;
 }
 
-.container {
-  max-width: 1200px;
-  @apply .mx-auto;
-}
+/* .container {
+  max-width: 1400px;
+} */
 
 .header {
   transition: all 0.25s ease;
@@ -121,7 +126,7 @@ body.nav-open {
     max-width: 120px;
   }
   .main-nav {
-    @apply .fixed .w-full .pin-t .pin-r .p-4 .bg-white .h-screen .shadow-lg;
+    @apply fixed w-full top-0 left-0 p-4 bg-white h-screen shadow-lg;
     visibility: hidden;
     transform: translateX(100%);
   }
@@ -136,20 +141,20 @@ body.nav-open {
 
 .footer .link,
 .main-nav .link {
-  @apply .no-underline;
+  @apply no-underline;
 }
 
 .main-nav .link.is-active {
-  @apply .underline .text-light-blue;
+  @apply underline text-light-blue;
 }
 
 blockquote {
-  @apply .text-xl .font-sans .my-8 .pl-4 .relative;
+  @apply text-xl my-8 pl-4 relative;
 }
 
 blockquote:before {
   content: '“';
-  @apply .font-serif;
+  @apply font-dm-serif;
   font-size: 6rem;
   color: var(--light-blue);
   line-height: 1rem;
@@ -160,11 +165,18 @@ blockquote:before {
   line-height: 2;
 }
 
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .button {
-  @apply .text-white .text-base .px-8 .py-4 .no-underline .rounded .tracking-loose .shadow;
+  @apply text-white text-base px-8 py-4 no-underline rounded tracking-wide shadow;
   background: var(--ochre);
   /* font-family: Helvetica Neue, pragmatica, helvetica, arial, sans-serif; */
-  font-family: var(--font-sans-bold);
+  font-family: var(--font-red-hat-bold);
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -182,22 +194,22 @@ blockquote:before {
 }
 
 .button--small {
-  @apply .text-base .px-4 py-2;
+  @apply text-base px-4 py-2;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .button {
-    @apply .text-xl;
+    @apply text-xl;
   }
 
   .button.button--small {
-    @apply .text-base;
+    @apply text-base;
   }
 }
 
 .link {
   color: var(--jp-indigo);
-  font-family: var(--font-sans);
+  font-family: var(--font-red-hat);
   font-weight: 400;
   transition: all 0.2s ease;
 
@@ -216,30 +228,30 @@ blockquote:before {
 }
 
 .field {
-  @apply .mb-8;
+  @apply mb-8;
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-dm-serif);
   font-weight: 700;
   font-weight: normal;
-  @apply .text-jp-indigo;
+  @apply text-jp-indigo;
 }
 
 h1 {
-  @apply .text-5xl .mb-8;
+  @apply text-5xl mb-8;
 }
 
 h2 {
-  @apply .text-3xl .mb-8;
+  @apply text-3xl mb-8;
 }
 
 h3 {
-  @apply .mb-2;
+  @apply mb-2;
 }
 
 .hero {
-  @apply .w-full .flex .justify-center .flex-col;
+  @apply w-full flex justify-center flex-col;
   /* height: 70vh; */
   overflow: hidden;
 }
@@ -267,7 +279,7 @@ h3 {
 } */
 
 .bg-gradient {
-  @apply .bg-jp-indigo .text-white .flex .justify-center .flex-col;
+  @apply bg-jp-indigo text-white flex justify-center flex-col;
   background-color: var(--jp-indigo);
   background: linear-gradient(120deg, var(--jp-indigo) 0%, var(--jp-indigo) 20%, var(--light-blue) 100%);
 }
@@ -312,19 +324,15 @@ h3 {
   height: auto;
 }
 
-/* .service-item + .service-item {
-  @apply .mt-24;
-} */
-
 .has-bg {
-  @apply .relative;
+  @apply relative;
   margin-top: 85px;
 }
 .has-bg:after {
   content: '';
   width: 60%;
   height: calc(60% + 75px);
-  @apply .rounded .bg-grey-light .shadow-md;
+  @apply rounded bg-grey-light shadow-md;
   position: absolute;
   top: -95px;
   left: 0px;
@@ -334,7 +342,7 @@ h3 {
   content: '';
   width: 60%;
   height: calc(60% + 75px);
-  @apply .rounded .bg-jp-indigo;
+  @apply rounded bg-jp-indigo;
   position: absolute;
   top: -85px;
   left: 10px;
@@ -357,31 +365,24 @@ h3 {
   width: 75px;
 }
 
-
-.services-list {
-  @apply .list-reset;
-}
-
 .services-list li {
-  @apply .mb-16 .block;
+  @apply mb-16 block;
 }
 
 .newsletter-form {
  max-width: 400px;
- @apply .relative;
+ @apply relative;
 }
 
 .newsletter-form .button {
   /* border-radius: 0; */
-  @apply .text-base;
+  @apply text-base;
 }
 
 .newsletter-form .form-message {
-  @apply .absolute;
+  @apply absolute;
   bottom: -2rem;
 }
-
-@tailwind utilities;
 
 
 input[type="text"],
@@ -390,7 +391,7 @@ input[type="url"],
 input[type="tel"],
 select,
 textarea {
-  @apply .p-4 .rounded .border .w-full .text-sm;
+  @apply p-4 rounded border w-full text-sm;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -417,3 +418,5 @@ select {
   line-height: 20px;
   transform: translateY(-50%) rotate(-90deg);
 }
+
+@tailwind utilities;

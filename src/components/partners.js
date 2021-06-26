@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import domain7 from '../images/domain7.svg';
 import engine from '../images/engine.svg';
-import cl from '../images/canadalife.svg';
+// import cl from '../images/canadalife.svg';
 import monday from '../images/monday.svg';
 import bch from '../images/bchydro.svg';
 import pandg from '../images/pandg.svg';

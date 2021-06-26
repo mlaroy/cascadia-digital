@@ -34,10 +34,10 @@ const About = props => (
               <img src={headshot} alt="" className="shadow rounded block mb-4 responsive-img"/>
               <figcaption>
                 <a href="https://mikelaroy.ca" className="link hover:underline block mb-4">Michael LaRoy</a>
-                <a href="https://twitter.com/laroymike" className="link mx-2">
+                <a href="https://twitter.com/laroymike" className="link inline-block mx-2">
                   <LogoTwitter color="#223843" />
                 </a>
-                <a href="https://ca.linkedin.com/in/mikelaroy" className="link mx-2">
+                <a href="https://ca.linkedin.com/in/mikelaroy" className="link inline-block mx-2">
                   <LogoLinkedin color="#223843" />
                 </a>
               </figcaption>
