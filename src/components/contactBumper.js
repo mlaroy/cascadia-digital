@@ -22,7 +22,7 @@ const ContactBumper = props => {
             </p>
             <p>
               <Link to="/book-a-consultation" className="button shadow">
-                Book a Consultation
+                Book a Conversation
               </Link>
             </p>
           </div>

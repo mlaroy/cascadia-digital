@@ -131,11 +131,11 @@ const ContactPage = (props) => {
   return(
     <Layout>
       <Helmet>
-        <title>Book Consultation | Cascadia Digital</title>
+        <title>Book Converation | Cascadia Digital</title>
         <meta property="og:title" content="Book Consultation | Cascadia Digital" />
         <meta property="og:url" content={ location.href } />
       </Helmet>
-      <Hero title="Book your consultation" img={meeting} fade={true}>
+      <Hero title="Book your conversation" img={meeting} fade={true}>
         Tell me the details of your project needs, and see if we are a fit.
       </Hero>
       <div className="bg-grey-lightest">

@@ -14,14 +14,13 @@ const CalendlyPopup = () => {
         window.Calendly.initPopupWidget({url: 'https://calendly.com/cascadia-digital/30-minute-consulatation'});
     }
 
-    render() {
-        return (
-            <>
-                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-                <button className="button" onClick={bookCalendlyLink}>Book a free consultation</button>
-            </>
-        )
-    }
+    return (
+        <>
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+            <button className="button" onClick={bookCalendlyLink}>Book a free consultation</button>
+        </>
+    )
+
 };
 
 export default CalendlyPopup;

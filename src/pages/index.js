@@ -38,7 +38,7 @@ class IndexPage extends Component {
           <div className="md:flex items-center">
             {/* <Link to="/make-better-websites" className="button button--white">Download free guide to better websites &rarr;</Link> */}
             {/* mt-8 md:ml-8 md:mt-0 */}
-            <Link to="/book-a-consultation" className="button">Book Your Consultation</Link>
+            <Link to="/book-a-consultation" className="button">Book Your Conversation</Link>
           </div>
 
           {/* <NewsletterForm
@@ -61,7 +61,7 @@ class IndexPage extends Component {
                 <img src={headInHands} alt="" className="rounded block w-2/3 mx-auto md:w-full" />
               </div>
               <div>
-                <div className="relative px-8 py-12 bg-white transform -translate-y-12 md:-translate-x-12 md:translate-y-0 rounded shadow-lg">
+                <div className="relative px-8 py-12 bg-white transform -translate-y-12 md:-translate-x-12 md:translate-y-0 rounded shadow-xl">
                   <h2 className="text-2xl md:text-3xl">
                     Are you wasting time struggling to update your website content?
                   </h2>
@@ -79,7 +79,7 @@ class IndexPage extends Component {
                 <div className="order-1 md:order-2">
                   <img src={smiles} alt="" className="rounded block w-2/3 mx-auto md:w-full" />
                 </div>
-                <div className="order-2 md:order-1 relative px-8 py-12 bg-white transform -translate-y-12 md:translate-x-12 md:translate-y-0 rounded shadow-lg">
+                <div className="order-2 md:order-1 relative px-8 py-12 bg-white transform -translate-y-12 md:translate-x-12 md:translate-y-0 rounded shadow-xl">
                   <h2 className="text-2xl md:text-3xl">
                     What if making updates to your website could be truly painless?
                   </h2>
@@ -108,13 +108,13 @@ class IndexPage extends Component {
                 problematic. I prefer a tailored content entry experience, designed to work with your website’s design seemlessly.
               </p>
               <p className="text-lg lg:text-xl mb-16">
-                Book a consultation to see how we can fix the things causing you headaches on your website, and make
+                Book a conversation to see how we can fix the things causing you headaches on your website, and make
                 things simpler and easier for you with a straightforward approach.
               </p>
 
-              <div className="p-8 shadow mt-12 mx-auto rounded font-bold text-center bg-jp-indigo">
+              <div className="p-8 shadow-2xl mt-12 mx-auto rounded font-bold text-center bg-jp-indigo">
                 <h3 className="text-lg sm:text-xl md:text-2xl text-white">Ready to make web publishing easier?</h3>
-                <Link to="/book-a-consultation" className="button button--small mt-4">Book your consultation</Link>
+                <Link to="/book-a-consultation" className="button button--small mt-4">Book your conversation</Link>
               </div>
             </div>
 
@@ -175,14 +175,14 @@ class IndexPage extends Component {
           <Section>
             <h3 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none md:text-center">What clients are saying</h3>
             <div className="service-grid">
-              <div className="bg-white rounded-lg shadow p-4 md:p-8 md:w-2/3 mx-auto">
+              <div className="bg-white rounded-lg shadow-2xl p-4 md:p-8 md:w-2/3 mx-auto">
                 <blockquote>
-                  <p className="mb-4 text-base md:text-lg">
+                  <p className="mb-6 text-base md:text-2xl">
                     I'd highly recommend working with Michael - it's rare to find someone who acts as a bridge for so many areas,
                     but specifically because of his ability to communicate and lead digital projects well. I deeply appreciate
                     his ability to find the optimal solution considering the bigger picture.
                   </p>
-                  <span className="text-sm italic">&mdash; Zach, Domain7</span>
+                  <span className="italic">&mdash; Zach, Domain7</span>
                 </blockquote>
               </div>
               {/* <div className="bg-white rounded-lg shadow p-8">

@@ -24,7 +24,7 @@ class MainNav extends Component {
                 to="/book-a-consultation"
                 activeClassName={activeClass}
                 className="button button--small mx-auto md:mt-0"
-              >Book Consultation</Link>
+              >Book Conversation</Link>
           </li>
         )}
       </ul>
