@@ -2,32 +2,35 @@ import React, { Component } from 'react';
 
 import domain7 from '../images/domain7.svg';
 import engine from '../images/engine.svg';
-// import cl from '../images/canadalife.svg';
+import cl from '../images/canadalife.svg';
 import monday from '../images/monday.svg';
 import bch from '../images/bchydro.svg';
 import pandg from '../images/pandg.svg';
+import tenup from '../images/10up-logo-full.svg';
 
 class Partners extends Component {
   render() {
     return (
-      <ul className="list-reset flex flex-wrap md:flex-row mx-auto justify-between">
-      {images.map(item => {
-        return (
-          <li className="flex flex-col justify-center py-8 px-4 w-1/2 md:w-1/3 lg:w-1/5" key={item.title}>
-            <img src={item.src} alt={item.title} className="block w-full mx-auto" width="179px" loading="lazy"/>
-          </li>
-        )
-      })}
+      <ul className="list-reset grid grid-cols-2 md:flex flex-wrap mx-auto justify-center">
+        {images.map(item => {
+          const width = item.width || '179';
+
+          return (
+            <li className="flex flex-col justify-center py-8 px-4" key={item.title}>
+              <img src={item.src} alt={item.title} className="block mx-auto" width={`${width}px`} loading="lazy"/>
+            </li>
+          )
+        })}
       </ul>
     );
   }
 }
 
 const images = [
-  // {
-  //   src: cl,
-  //   title: 'Canada Life'
-  // },
+  {
+    src: cl,
+    title: 'Canada Life'
+  },
   {
     src: bch,
     title: 'BC Hydro'
@@ -39,6 +42,11 @@ const images = [
   {
     src: domain7,
     title: 'Domain7'
+  },
+  {
+    src: tenup,
+    title: '10up',
+    width: '125'
   },
   {
     src: pandg,

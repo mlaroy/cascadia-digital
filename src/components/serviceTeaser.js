@@ -27,7 +27,7 @@ const ServiceTeaser = () => (
                   <div className="service-item-img-container">
                     <img src={image} alt="" className="block mb-4 w-1/2 md:w-auto" />
                   </div>
-                  <div className="md:flex flex-col justify-center">
+                  <div className="md:flex flex-col justify-between">
                     <h2 className="text-3xl md:text-4xl leading-normal">
                       {/* <Link to={`/services${slug}`} className="no-underline text-black hover:text-blue">{title}</Link> */}
                       {title}
