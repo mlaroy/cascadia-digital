@@ -94,7 +94,7 @@ const NewsletterForm = props => {
                     />
                 </label>
 
-                <button className={flex ? 'button mb-2 w-full' : 'button mt-2 mb-4' }>
+                <button className={flex ? 'flex button mb-2 w-full items-center justify-center' : 'flex button mt-2 mb-4' }>
                     {icon && (
                         <MdCloudDownload color="white" fontSize="24px" style={{
                             verticalAlign: 'text-top',
