@@ -31,7 +31,7 @@ const BetterWebsitesMagnet = () => {
                 }} /> Download PDF
             </button> */}
             <div className="text-sm">
-                I respect your privacy and will never send you spam. Unsubscribe at anytime.
+                I respect your privacy and will <span className="italic">never</span> send you spam or share your email.
             </div>
         </div>
     )
