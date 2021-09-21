@@ -34,13 +34,19 @@ class ServiceLayout extends Component {
           imgAlt="woman holding magnifying glass over illustrated web browser"
           >
             <p className="mb-12">{data.markdownRemark.frontmatter.description}</p>
-            <a href={stripeLink} className="button button-small">Buy now for {data.markdownRemark.frontmatter.price}</a>
+            <a href={stripeLink} className="button button-small divide-white divide-x-0 divide-opacity-50">
+              <span className="pr-4">Buy now</span>
+              <span className="pl-4">{data.markdownRemark.frontmatter.price}</span>
+            </a>
         </Hero>
         <div className="bg-grey-lightest">
           <Section>
             <div className="md:w-2/3 mx-auto">
               <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
-              <a href={stripeLink} className="button button-small">Buy now for {data.markdownRemark.frontmatter.price}</a>
+              <a href={stripeLink} className="button button-small divide-white divide-x-0 divide-opacity-50">
+                <span className="pr-4">Buy now</span>
+                <span className="pl-4">{data.markdownRemark.frontmatter.price}</span>
+              </a>
             </div>
           </Section>
         </div>
