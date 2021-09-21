@@ -3,7 +3,7 @@ title: 'Technical SEO audit'
 slug: '/technical-seo-audit'
 order: 1
 type: 'services'
-description: 'See how accessible your site is, and what improvements might be needed to make it more WCAG compliant.'
+description: 'Get an analysis of the technical aspects of your search engine optimization, and advice on how to do it better.'
 img: 'search'
 published: true
 price: '$1,299'
@@ -37,7 +37,7 @@ stripeLink: 'https://buy.stripe.com/test_eVaeUW36Edht7VS7ss'
 <p class="mb-4">With my <span>Technical SEO Audit</span>, you will get a broad analysis of these factors (and more) that can affect your SEO ranking, over and above the quality of your actual content.</p>
 <p class="mb-12">You will receive a report indentifying these issues, along with recommendations on how to go about fixing them.</p>
 
-<p class="mb-8"><strong>Click the button below to purchase your SEO audit.</strong> I’ll follow up with an email to the address you provide, outlining the information I’ll need from you in order to conduct the audit of your website.</p>
+<p class="mb-8"><strong>Click below to purchase your SEO audit.</strong> I’ll follow up with an email to the address you provide, outlining the information I’ll need from you in order to conduct the audit of your website.</p>
 
 </div>
 
