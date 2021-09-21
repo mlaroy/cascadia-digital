@@ -34,7 +34,12 @@ const ContactPage = ({ location }) => {
         <meta property="og:title" content="Contact | Cascadia Digital" />
         <meta property="og:url" content={ location.href } />
       </Helmet>
-      <Hero title="Contact me" img={fun} fade={true}>
+      <Hero
+        title="Contact me"
+        img={fun}
+        imgAlt="friends toasting with drinks at a party"
+        fade={true}
+        >
         <p className="mb-4">
           Looking to get in touch? Send me a note below.
         </p>

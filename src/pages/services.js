@@ -14,13 +14,18 @@ const ServicesPage = props => (
       <meta property="og:title" content="Services | Cascadia Digital" />
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
-    <Hero title="Services" img={business} fade={true}>
+    <Hero
+      title="Services"
+      img={business}
+      imgAlt="handshake between client and consultant in business meeting"
+      fade={true}
+    >
       Let’s work together to find the solution for your project. <br className="hidden md:block" />
       Here are some of the ways I can help.
     </Hero>
     <div className="bg-grey-lightest">
       <Section>
-        <ul className="service-grid">
+        <ul className="service-grid gap-8 grid md:grid-cols-2">
           <Services />
         </ul>
       </Section>

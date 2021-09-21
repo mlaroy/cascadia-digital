@@ -5,7 +5,7 @@ import NewsletterForm from './newsletterForm';
 const A11yMagnet = () => {
 
     //FORM_URL should be the same as the form action url pointed out above
-    const FORM_URL = `815128`;
+    const FORM_URL = `1815128`;
 
     return (
         <div className="p-8 shadow-lg rounded">

@@ -6,4 +6,5 @@ order: 4
 type: 'services'
 img: 'gatsby'
 published: true
+price: 'From $5,000'
 ---

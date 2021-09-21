@@ -21,7 +21,12 @@ const About = props => (
       <meta property="og:title" content="About | Cascadia Digital" />
       <meta property="og:url" content={ props.location.href } />
     </Helmet>
-    <Hero title="About Cascadia Digital" img={collaborate} fade={true}>
+    <Hero
+      title="About Cascadia Digital"
+      img={collaborate}
+      fade={true}
+      imgAlt="teammates discussing post-it notes on project wall"
+    >
       I help brands get their message out with less friction.
       {/* <br className="hidden md:block" />easy website publishing. */}
       {/* I help branding agencies deliver better web  development projects. */}

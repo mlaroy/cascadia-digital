@@ -20,7 +20,7 @@ const ContactPage = ({ location }) => {
 
 
   const checkPassword = () => {
-    setValidPass( pass == 'meetwithmichael' ? true : false );
+    setValidPass( pass === 'meetwithmichael' ? true : false );
   }
 
   useEffect(() => {
