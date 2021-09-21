@@ -18,7 +18,7 @@ class Hero extends Component {
               </div>
             )}
             <div className={`w-full relative z-20 ${img ? 'lg:w-2/3' : 'md:w-5/6'}`}>
-              {/* {subTitle && <p className="font-bold text-sm capitalize mb-4 bg-grey-light py-2 px-4 rounded-sm inline-flex">{subTitle}</p>} */}
+              {subTitle && <p className="font-bold text-sm capitalize mb-4 bg-grey-lightest py-2 px-4 rounded-sm inline-flex">{subTitle}</p>}
               <h1 className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${bg ? 'text-white' : ''}`}>{title}</h1>
               {children && (
                 <div className={`text-xl sm:text-2xl leading-normal ${bg ? 'text-white' : ''}`}>

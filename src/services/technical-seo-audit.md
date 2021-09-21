@@ -15,7 +15,7 @@ stripeLink: 'https://buy.stripe.com/test_eVaeUW36Edht7VS7ss'
 <p class="mb-4">Let’s face it - you work hard on your website, but you’re not seeing the kinds of results you’re looking for. So what’s missing? The problem is, you might not know what you don’t know.</p>
 <p class="mb-8">When it comes to search engine optimization, there are a lot more factors that contribute to your success than simply using the right collection of key words in your copy. What else is there?</p>
 
-<h2 class="mb-4">What a technical <abbr title="search engine optimization">SEO</abbr> audit can reveal</h2>
+<h2 class="mb-4">What a technical SEO audit can reveal</h2>
 
 
 <p class="mb-4">Digging in deeper, a technical audit can uncover many things you might not yet have considered. Some of these things might include: </p>

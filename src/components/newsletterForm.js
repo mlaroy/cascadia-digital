@@ -94,7 +94,7 @@ const NewsletterForm = props => {
                     />
                 </label>
 
-                <button className={flex ? 'flex button mb-2 w-full items-center justify-center' : 'flex button mt-2 mb-4' }>
+                <button className={flex ? 'flex button mb-2 w-full items-center justify-center' : 'flex button mt-2 mb-12' }>
                     {icon && (
                         <MdCloudDownload color="white" fontSize="24px" style={{
                             verticalAlign: 'text-top',
@@ -104,9 +104,9 @@ const NewsletterForm = props => {
                     )}
                     {buttonText}
                 </button>
-                {status === 'SUCCESS' && <p className="form-message mt-4 text-base md:text-lg flex items-center"><MdCheckmark color="#fff" style={{ marginRight: '8px' }}/> Please go confirm your subscription!</p>}
-                {status === 'FAILED' && <p className="form-message mt-4 text-base md:textlgl flex items-center"><MdWarning color="#fff" style={{ marginRight: '8px' }}/> Please ensure all fields are filled.</p>}
-                {status === 'ERROR' && <p className="form-message mt-4 text-base md:text-lg flex items-center"><MdClose color="#fff" style={{ marginRight: '8px' }}/> Oops, Something went wrong! Try again.</p>}
+                {status === 'SUCCESS' && <p className="form-message mt-4 text-base md:text-lg flex items-center"><MdCheckmark color="#68abcc" style={{ marginRight: '8px' }}/> Please go confirm your subscription!</p>}
+                {status === 'FAILED' && <p className="form-message mt-4 text-base md:textlgl flex items-center"><MdWarning color="#f00" style={{ marginRight: '8px' }}/> Please ensure all fields are filled.</p>}
+                {status === 'ERROR' && <p className="form-message mt-4 text-base md:text-lg flex items-center"><MdClose color="#f00" style={{ marginRight: '8px' }}/> Oops, Something went wrong! Try again.</p>}
             </form>
         </>
     )
