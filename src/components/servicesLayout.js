@@ -5,17 +5,28 @@ import Section from '../components/section'
 import Hero from './hero';
 import ContactBumper from '../components/contactBumper';
 import { getImage } from '../utilities/imageHelpers';
-// import Helmet from 'react-helmet';
+import Helmet from 'react-helmet';
 
 
 
 class ServiceLayout extends Component {
   render() {
     const { data } = this.props;
+    console.log({ data });
     const image = getImage(data.markdownRemark.frontmatter.img);
     const { stripeLink } = data.markdownRemark.frontmatter;
+
+    const capitalized = str => str.charAt(0).toUpperCase() + str.slice(1);
+
     return(
       <Layout>
+        <Helmet>
+          <title>{data.markdownRemark.frontmatter.title} | {capitalized(data.markdownRemark.frontmatter.type)} | Cascadia Digital</title>
+          <meta property="description" content={data.markdownRemark.frontmatter.description} />
+          <meta property="og:description" content={data.markdownRemark.frontmatter.description} />
+          <meta property="og:title" content={`${data.markdownRemark.frontmatter.title} | Cascadia Digital`} />
+          <meta property="og:url" content={ data.site.siteMetadata.siteUrl + '/' + data.markdownRemark.frontmatter.type + data.markdownRemark.frontmatter.slug} />
+        </Helmet>
         <Hero
           subTitle={data.markdownRemark.frontmatter.type}
           title={data.markdownRemark.frontmatter.title}
@@ -44,6 +55,7 @@ export const query = graphql`
    site {
      siteMetadata {
        title
+       siteUrl
      }
    }
    markdownRemark(id: {

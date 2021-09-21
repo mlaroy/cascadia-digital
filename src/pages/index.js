@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Section from '../components/section'

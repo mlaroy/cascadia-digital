@@ -35,7 +35,7 @@ const ContactPage = ({ location }) => {
         <meta property="og:url" content={ location.href } />
       </Helmet>
       <Hero
-        itle="Contact me"
+        title="Contact me"
         img={fun}
         imgAlt="friends toasting with drinks at a party"
         fade={true}
