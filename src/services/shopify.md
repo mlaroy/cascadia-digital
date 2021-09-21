@@ -6,4 +6,5 @@ order: 3
 type: 'services'
 img: 'ecommerce'
 published: true
+price: 'From $17,900'
 ---

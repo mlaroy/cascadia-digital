@@ -3,7 +3,7 @@ import Section from './section';
 
 class Hero extends Component {
   render() {
-    const { title, children, bg, bgAlt = '', img, full = false } = this.props;
+    const { title, subTitle, children, bg, bgAlt = '', img, imgAlt, full = false } = this.props;
     // const fladeClass = fade ? "fadeIn" : '';
     return (
       <div className={`hero relative ${full ? 'min-h-screen' : ''} ${bg ? 'bg-jp-indigo text-white' : ''}`}>
@@ -14,10 +14,11 @@ class Hero extends Component {
           <div className="md:py-12">
             {img && (
               <div className="w-1/2 md:w-1/3 lg:w-auto mb-8 md:absolute right-0 md:opacity-75 z-10 hero-image">
-                <img src={img} alt="" width="320" className="mx-auto block"/>
+                <img src={img} alt="" width="320" className="mx-auto block" alt={imgAlt}/>
               </div>
             )}
-            <div className={`w-full lg:w-5/6 relative z-20`}>
+            <div className={`w-full relative z-20 ${img ? 'lg:w-2/3' : 'md:w-5/6'}`}>
+              {/* {subTitle && <p className="font-bold text-sm capitalize mb-4 bg-grey-light py-2 px-4 rounded-sm inline-flex">{subTitle}</p>} */}
               <h1 className={`text-3xl md:text-4xl lg:text-5xl xl:text-6xl ${bg ? 'text-white' : ''}`}>{title}</h1>
               {children && (
                 <div className={`text-xl sm:text-2xl leading-normal ${bg ? 'text-white' : ''}`}>

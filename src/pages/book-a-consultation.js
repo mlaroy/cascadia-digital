@@ -135,7 +135,12 @@ const ContactPage = (props) => {
         <meta property="og:title" content="Book Consultation | Cascadia Digital" />
         <meta property="og:url" content={ location.href } />
       </Helmet>
-      <Hero title="Book your conversation" img={meeting} fade={true}>
+      <Hero
+        title="Book your conversation"
+        img={meeting}
+        imgAlt="calender and clock"
+        fade={true}
+      >
         Tell me the details of your project needs, and see if we are a fit.
       </Hero>
       <div className="bg-grey-lightest">

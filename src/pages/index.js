@@ -25,6 +25,7 @@ class IndexPage extends Component {
     return (
       <Layout full={true} >
         <Hero
+          // title="I help brands get more sales leads with better SEO"
           title="I help brands get their message out without the friction."
           bg={bg}
           bgAlt="Mountain landscape"
@@ -33,12 +34,15 @@ class IndexPage extends Component {
           <p className="mb-12 md:mb-24 text-lg md:text-2xl">
             Make your website editing experience smooth by <br className="hidden lg:block" />
             removing the issues causing you headaches.
+            {/* Make your website work for you and get more traffic <br className="hidden lg:block" />
+            by fixing your technical SEO problems. */}
           </p>
 
-          <div className="md:flex items-center">
-            {/* <Link to="/make-better-websites" className="button button--white">Download free guide to better websites &rarr;</Link> */}
+          <div className="flex flex-wrap items-center gap-4">
+            {/* <Link to="/book-a-consultation" className="button">Book Your conversation</Link> */}
+            {/* <Link to="/services/technical-seo-audit" className="button">Schedule Your SEO Audit</Link> */}
+            <Link to="/make-better-websites" className="button">Download free guide to better websites &rarr;</Link>
             {/* mt-8 md:ml-8 md:mt-0 */}
-            <Link to="/book-a-consultation" className="button">Book Your Conversation</Link>
           </div>
 
           {/* <NewsletterForm
@@ -58,7 +62,7 @@ class IndexPage extends Component {
           <div className="mx-auto">
             <div className="grid md:grid-cols-2 items-center py-16">
               <div>
-                <img src={headInHands} alt="" className="rounded block w-2/3 mx-auto md:w-full" />
+                <img src={headInHands} alt="distressed man holding head in his hands" className="rounded block w-2/3 mx-auto md:w-full" />
               </div>
               <div>
                 <div className="relative px-8 py-12 bg-white transform -translate-y-12 md:-translate-x-12 md:translate-y-0 rounded shadow-xl">
@@ -77,7 +81,7 @@ class IndexPage extends Component {
             <div className="py-16">
               <div className="grid md:grid-cols-2 items-center">
                 <div className="order-1 md:order-2">
-                  <img src={smiles} alt="" className="rounded block w-2/3 mx-auto md:w-full" />
+                  <img src={smiles} alt="relaxed woman smiling with her laptop on her couch" className="rounded block w-2/3 mx-auto md:w-full" />
                 </div>
                 <div className="order-2 md:order-1 relative px-8 py-12 bg-white transform -translate-y-12 md:translate-x-12 md:translate-y-0 rounded shadow-xl">
                   <h2 className="text-2xl md:text-3xl">

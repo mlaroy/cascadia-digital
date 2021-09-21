@@ -6,4 +6,5 @@ order: 2
 type: 'services'
 img: 'landing-page'
 published: false
+price: 'From $3,500'
 ---

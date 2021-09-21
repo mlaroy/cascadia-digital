@@ -4,6 +4,7 @@ import Layout from './layout'
 import Section from '../components/section'
 import Hero from './hero';
 import ContactBumper from '../components/contactBumper';
+import { getImage } from '../utilities/imageHelpers';
 // import Helmet from 'react-helmet';
 
 
@@ -11,17 +12,27 @@ import ContactBumper from '../components/contactBumper';
 class ServiceLayout extends Component {
   render() {
     const { data } = this.props;
-    // console.log(this.props);
+    const image = getImage(data.markdownRemark.frontmatter.img);
+    const { stripeLink } = data.markdownRemark.frontmatter;
     return(
       <Layout>
-        <Hero title={data.markdownRemark.frontmatter.title}>
-            {data.markdownRemark.frontmatter.description}
+        <Hero
+          subTitle={data.markdownRemark.frontmatter.type}
+          title={data.markdownRemark.frontmatter.title}
+          img={image}
+          imgAlt="woman holding magnifying glass over illustrated web browser"
+          >
+            <p className="mb-12">{data.markdownRemark.frontmatter.description}</p>
+            <a href={stripeLink} className="button button-small">Buy now for {data.markdownRemark.frontmatter.price}</a>
         </Hero>
-        <Section>
-          <div>
-            Content
-          </div>
-        </Section>
+        <div className="bg-grey-lightest">
+          <Section>
+            <div className="md:w-2/3 mx-auto">
+              <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+              <a href={stripeLink} className="button button-small">Buy now for {data.markdownRemark.frontmatter.price}</a>
+            </div>
+          </Section>
+        </div>
         <ContactBumper />
       </Layout>
     )
@@ -38,10 +49,15 @@ export const query = graphql`
    markdownRemark(id: {
       eq: $id
     }) {
+      html
       frontmatter {
         title
+        type
         slug
         description
+        price
+        img
+        stripeLink
       }
     }
   }
