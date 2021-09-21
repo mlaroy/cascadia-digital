@@ -8,7 +8,7 @@ img: 'search'
 published: true
 price: '$1,299'
 hasPage: true
-stripeLink: 'https://buy.stripe.com/test_eVaeUW36Edht7VS7ss'
+stripeLink: 'https://buy.stripe.com/cN2bIQ4OmdVRb96eUU'
 ---
 
 <div class="text-lg md:text-xl">
