@@ -1,10 +1,17 @@
 import React from 'react'
+import Helmet from 'react-helmet';
 import Layout from '../components/layout'
 import Section from '../components/section'
 import BetterWebsitesMagnet from '../components/betterWebsitesMagnet';
 
 const NotFoundPage = () => (
   <Layout>
+    <Helmet>
+        <title>Free PDF: 3 Ways To Improve Your Website’s Quality | Cascadia Digital</title>
+        <meta name="description" property="og:description" content="Learn what improvements you can make to make your website load
+          faster, how you can improve your SEO, and how to properly use HTML tags in a way that makes sense." />
+        <meta property="og:title" content="Free PDF: 3 Ways To Improve Your Website’s Quality | Cascadia Digital" />
+      </Helmet>
     <Section>
       <div className="mx-auto lg:w-2/3 has-bg">
 
