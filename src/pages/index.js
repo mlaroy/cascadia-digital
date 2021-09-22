@@ -39,10 +39,10 @@ class IndexPage extends Component {
             by fixing your technical SEO problems. */}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            {/* <Link to="/book-a-consultation" className="button">Book Your conversation</Link> */}
+          <div className="flex flex-wrap items-center gap-8">
+            <Link to="/book-a-consultation" className="button">Book Your conversation</Link>
             {/* <Link to="/services/technical-seo-audit" className="button">Schedule Your SEO Audit</Link> */}
-            <Link to="/make-better-websites" className="button">Download free guide to better websites &rarr;</Link>
+            <Link to="/make-better-websites" className="link text-white underline">Free PDF: 3 Ways To Improve Your Website’s Quality &rarr;</Link>
             {/* mt-8 md:ml-8 md:mt-0 */}
           </div>
 
