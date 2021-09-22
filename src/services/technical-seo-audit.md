@@ -24,7 +24,7 @@ stripeLink: 'https://buy.stripe.com/cN2bIQ4OmdVRb96eUU'
   <li>How does your site look on small or mobile devices?</li>
   <li>Does your website take a long time to load?</li>
   <li>Are you using the proper HTML tags for your content?</li>
-  <li>What are you primary sources of traffic?</li>
+  <li>What are your primary sources of traffic?</li>
   <li>How many other websites link back to yours?</li>
 </ul>
 
