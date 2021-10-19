@@ -7,6 +7,8 @@ import monday from '../images/monday.svg';
 import bch from '../images/bchydro.svg';
 import pandg from '../images/pandg.svg';
 import tenup from '../images/10up-logo-full.svg';
+import verblio from '../images/verblio.png';
+import databand from '../images/databand.svg';
 
 class Partners extends Component {
   render() {
@@ -55,6 +57,14 @@ const images = [
   {
     src: monday,
     title: 'Monday Creative'
+  },
+  {
+    src: verblio,
+    title: 'Verblio'
+  },
+  {
+    src: databand,
+    title: 'Databand'
   },
 ]
 
