@@ -65,7 +65,7 @@ const Header = ({ siteTitle, full }) => {
 
   return (
     <div className={`header w-full ${full ? 'fixed' : 'sticky'} top-0 left-0 z-50 ${full && !scrolling ? '' : 'scrolled bg-white shadow'}`}>
-      <div className="md:mx-auto p-4 flex items-center justify-between container">
+      <div className="md:mx-auto p-4 flex items-center justify-between container--large">
         <Link
           to="#main-content"
           className="skip-link"
