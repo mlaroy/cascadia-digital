@@ -179,25 +179,32 @@ class IndexPage extends Component {
         <div className="bg-grey-lightest">
           <Section>
             <h3 className="text-2xl sm:text-3xl md:text-4xl leading-normal mb-8 leading-none md:text-center">What clients are saying</h3>
-            <div className="service-grid">
-              <div className="bg-white rounded-lg shadow-2xl p-4 md:p-8 md:w-2/3 mx-auto">
+            <div className="service-grid flex flex-col lg:grid lg:grid-cols-2 gap-12">
+              <div className="bg-white rounded-lg shadow-2xl p-4 md:p-8 mx-auto">
                 <blockquote>
-                  <p className="mb-6 text-base md:text-2xl">
+                  <p className="mb-6 text-base md:text-xl">
                     I'd highly recommend working with Michael - it's rare to find someone who acts as a bridge for so many areas,
                     but specifically because of his ability to communicate and lead digital projects well. I deeply appreciate
                     his ability to find the optimal solution considering the bigger picture.
                   </p>
-                  <span className="italic">&mdash; Zach, Domain7</span>
+                  <span className="block">
+                     &mdash; Zach
+                    <span className="block font-bold">Domain7</span>
+                  </span>
                 </blockquote>
               </div>
-              {/* <div className="bg-white rounded-lg shadow p-8">
+              <div className="bg-white rounded-lg shadow-2xl p-4 md:p-8 mx-auto">
                 <blockquote>
-                  <p className="mb-4">Cascadia Digital has the tools to help you get the
-                    website solution you really need to help your business succeed
-                  </p>
-                  <span className="text-sm italic">&mdash; Zach, Domain7</span>
+                  <p className="mb-6 text-base md:text-xl">
+                    I have the best experiences with Michael’s skills and attention in how he delivers and responds to our requirements.
+                    Compared to other vendors, his quality of work, level of analysis and response is way better than the rest.
+                    </p>
+                  <span className="block">
+                    &mdash; Tom
+                    <span className="block font-bold">BC Hydro</span>
+                  </span>
                 </blockquote>
-              </div> */}
+              </div>
             </div>
           </Section>
         </div>
