@@ -8,7 +8,8 @@ import bch from '../images/bchydro.svg';
 import pandg from '../images/pandg.svg';
 import tenup from '../images/10up-logo-full.svg';
 import verblio from '../images/verblio.png';
-import databand from '../images/databand.svg';
+// import databand from '../images/databand.svg';
+import floorspace from '../images/floorspace.svg';
 import wallop from '../images/wallop.svg';
 
 class Partners extends Component {
@@ -67,9 +68,13 @@ const images = [
     src: verblio,
     title: 'Verblio'
   },
+  // {
+  //   src: databand,
+  //   title: 'Databand'
+  // },
   {
-    src: databand,
-    title: 'Databand'
+    src: floorspace,
+    title: 'Floorspace'
   },
 ]
 
