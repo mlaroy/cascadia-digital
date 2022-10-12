@@ -5,7 +5,7 @@ import Section from '../components/section'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 // import portrait from '../images/portrait.jpg';
-import headshot from '../images/headshot_large.jpg';
+import headshot from '../images/headshot.jpg';
 import collaborate from '../images/collaborate.svg';
 // import mark from '../images/cascadia-mark-5.svg'
 import ContactBumper from '../components/contactBumper'

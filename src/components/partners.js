@@ -10,7 +10,7 @@ import tenup from '../images/10up-logo-full.svg';
 import verblio from '../images/verblio.png';
 // import databand from '../images/databand.svg';
 import floorspace from '../images/floorspace.svg';
-import wallop from '../images/wallop.svg';
+// import wallop from '../images/wallop.svg';
 
 class Partners extends Component {
   render() {
@@ -60,10 +60,10 @@ const images = [
     src: monday,
     title: 'Monday Creative'
   },
-  {
-    src: wallop,
-    title: 'Wallop'
-  },
+  // {
+  //   src: wallop,
+  //   title: 'Wallop'
+  // },
   {
     src: verblio,
     title: 'Verblio'
